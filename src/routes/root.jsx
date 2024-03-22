@@ -1,9 +1,7 @@
 export default function Root() {
-    return (
-      <>
-        <header>
-            
-        </header>
-      </>
-    );
-  }
+  return (
+    <>
+      <header></header>
+    </>
+  );
+}
