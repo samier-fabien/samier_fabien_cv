@@ -11,15 +11,16 @@ export default function Root() {
     <>
       <div className="container-fluid bg-primary full-page">
         <div className="row">
-          <div className="col position-absolute top-50 start-50 translate-middle text-center">
+          <div className="col position-absolute top-50 start-50 translate-middle text-center text-light">
             <img
               src="../../src/assets/bitmaps/head-square.jpg"
-              className="rounded-circle border border-5 border-primary-subtle"
+              className="rounded-circle shadow"
               alt="Une photo de moi"
             />
-            <h1 className="h1 m-4 text-light">Samier Fabien</h1>
-            <button onClick={handleClick} type="button" class="btn btn-lg btn-outline-light">
-              Go !
+            <h1 className="h1 mt-3">Samier Fabien</h1>
+            <h2 className="h5 mb-5">Concepteur, développeur d'applications</h2>
+            <button onClick={handleClick} type="button" class="btn btn btn-light">
+              Jeter un œil
             </button>
           </div>
         </div>
