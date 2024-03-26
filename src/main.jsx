@@ -8,11 +8,17 @@ import Error from "./routes/Error";
 import "./scss/main.scss";
 // importe tout le js bootstrap
 import * as bootstrap from "bootstrap";
+import Test from "./routes/Test";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/test",
+    element: <Test />,
     errorElement: <Error />,
   },
 ]);
