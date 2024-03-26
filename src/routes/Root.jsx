@@ -1,6 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Root() {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/test");
+  }
+
   return (
     <>
       <div className="container-fluid bg-primary full-page">
@@ -12,7 +18,7 @@ export default function Root() {
               alt="Une photo de moi"
             />
             <h1 className="h1 m-4 text-light">Samier Fabien</h1>
-            <button type="button" class="btn btn-lg btn-outline-light">
+            <button onClick={handleClick} type="button" class="btn btn-lg btn-outline-light">
               Go !
             </button>
           </div>
