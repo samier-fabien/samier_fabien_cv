@@ -1,12 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Root() {
-  const navigate = useNavigate();
-
-  function handleClick() {
-    navigate("/test");
-  }
-
   return (
     <>
       <div className="container-fluid bg-primary full-page">
@@ -19,9 +14,11 @@ export default function Root() {
             />
             <h1 className="h1 mt-3">Samier Fabien</h1>
             <h2 className="h5 mb-5">Concepteur, développeur d'applications</h2>
-            <button onClick={handleClick} type="button" class="btn btn btn-light">
-              Jeter un œil
-            </button>
+            <Link to="/test">
+              <button type="button" class="btn btn btn-light">
+                Jeter un œil
+              </button>
+            </Link>
           </div>
         </div>
       </div>
