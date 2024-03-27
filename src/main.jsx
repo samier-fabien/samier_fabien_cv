@@ -10,6 +10,7 @@ import "./scss/main.scss";
 import * as bootstrap from "bootstrap";
 import Test from "./routes/Test";
 import Presentation from "./routes/Presentation";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const router = createBrowserRouter([
   {
