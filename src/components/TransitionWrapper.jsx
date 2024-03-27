@@ -30,7 +30,7 @@ export default function TransitionWrapper({
     setTransitioning(true);
     setTimeout(() => {
       navigate(path); // commande à react router dom d'aller à la page donnée par la prop "path"
-    }, transitionTime); // Temps de transition, ajuster selon vos besoins
+    }, parseInt(transitionTime)); // Temps de transition, ajuster selon vos besoins
   }
 
   // Lorsque la transition est terminée, réinitialisez l'état
