@@ -9,6 +9,7 @@ import "./scss/main.scss";
 // importe tout le js bootstrap
 import * as bootstrap from "bootstrap";
 import Test from "./routes/Test";
+import Presentation from "./routes/Presentation";
 
 const router = createBrowserRouter([
   {
@@ -17,8 +18,13 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: "/test",
+    path: "/test", // TODO: route à supprimer avant prod
     element: <Test />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/accueil",
+    element: <Presentation />,
     errorElement: <Error />,
   },
 ]);
