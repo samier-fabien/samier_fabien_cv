@@ -15,6 +15,11 @@ body {
   animation: jig 2s linear 2s infinite none;
 }
 
+.anim-translate-bounce {
+  position: relative;
+  animation: translate-bounce 0.5s linear 0.5s both;
+}
+
 .anim-fade-out {
   animation: fade 0.5s ease-out 0s 1 normal forwards;
 }
@@ -69,6 +74,21 @@ body {
   }
   40%, 100% {
     transform: rotateZ(0);
+  }
+}
+
+@keyframes translate-bounce {
+  0% {
+    transform: translateY(-200px)
+  }
+  35% {
+    transform: translateY(0) scaleX(100%) scaleY(100%)
+  }
+  50% {
+    transform: translateY(35px) scaleX(150%) scaleY(50%)
+  }
+  90%, 100% {
+    transform: translateY(0) scaleX(100%)
   }
 }
 
