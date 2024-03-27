@@ -45,7 +45,7 @@ export default function TransitionWrapper({
 
   return (
     <div
-      className={`${wrapperClass} transition-wrapper ${transitioning ? transitionClass : ""}`}
+      className={`${wrapperClass} ${transitioning ? transitionClass : ""}`}
       // onTransitionEnd={handleTransitionEnd}// TODO: Utile ?
     >
       {children}
