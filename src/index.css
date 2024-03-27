@@ -1,11 +1,100 @@
+body {
+  overflow: hidden !important;
+}
 .full-page {
     height: 100vh;
+    overflow: hidden !important;
 }
 
-.transition-opacity {
-    transition: opacity 0.3s ease-in-out;
+.anim-rotate-translate {
+  position: relative;
+  animation: rotate-translate 1s ease-out 0.5s both;
 }
 
-.fade-out {
+.anim-jig {
+  animation: jig 2s linear 2s infinite none;
+}
+
+.anim-fade-out {
+  animation: fade 0.5s ease-out 0s 1 normal forwards;
+}
+.anim-fade-in {
+  animation: fade 0.5s ease-out 0s 1 reverse forwards;
+}
+
+.anim-left-outside {
+  animation: left-translate 0.5s ease-out 0s 1 normal forwards;
+}
+.anim-left-inside {
+  animation: left-translate 0.5s ease-out 0s 1 reverse forwards;
+}
+
+.anim-right-outside {
+  animation: right-translate 0.5s ease-out 0s 1 normal forwards;
+}
+.anim-right-inside {
+  animation: right-translate 0.5s ease-out 0s 1 reverse forwards;
+}
+
+@keyframes rotate-translate {
+  0% {
+    transform: translateX(-100vw) rotate(-100deg);
+  }
+  80% {
+    transform: translateX(2vw) rotate(370deg)
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+@keyframes jig {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
+  }
+}
+
+@keyframes left-translate {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes right-translate {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
 }
