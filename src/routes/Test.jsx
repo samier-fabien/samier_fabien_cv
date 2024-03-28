@@ -1,13 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import BubblesContainer from "../components/BubblesContainer";
+import BubblesContainer from "../components/bubbles/BubblesContainer";
 
 export default function Test() {
-  const componentRef = useRef(null);
-  const [rowWidth, setRowWidth] = useState(0);
+  const rowRef = useRef(null);
 
-  useEffect(() => {
-    setRowWidth(componentRef.current.offsetWidth);
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div className="container-fluid bg-primary full-page instantOutsideAnim">
@@ -16,9 +13,9 @@ export default function Test() {
           <h1 className="h1 mt-3">Test Page</h1>
         </div>
       </div>
-      <div className="row" ref={componentRef}>
+      <div className="row" ref={rowRef}>
         <div className="col p-0">
-          <BubblesContainer w={rowWidth} h={500} />
+          <BubblesContainer w={1000} h={500} />
         </div>
       </div>
     </div>
