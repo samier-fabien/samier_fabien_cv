@@ -9,7 +9,7 @@ import "./scss/main.scss";
 // importe tout le js bootstrap
 import * as bootstrap from "bootstrap";
 import Test from "./routes/Test";
-import Presentation from "./routes/Presentation";
+import Presentation from "./routes/Home";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const router = createBrowserRouter([
