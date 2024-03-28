@@ -1,9 +1,15 @@
-body {
-  overflow: hidden !important;
-}
 .full-page {
     height: 100vh;
     overflow: hidden !important;
+}
+
+.bubble-container {
+
+}
+
+/* Pour ajouter du contenu à l'intérieur de la .bubble-container */
+.bubble-content {
+
 }
 
 .anim-rotate-translate {

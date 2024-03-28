@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TransitionWrapper from "../components/TransitionWrapper";
+import "../css/root.css";
 
 export default function Root() {
   const [pageLoaded, setPageLoaded] = useState(false);
@@ -9,6 +10,10 @@ export default function Root() {
     setTimeout(() => {
       setPageLoaded(true);
     }, 1000);
+    document.body.classList.add("page-root");
+    return () => {
+      document.body.classList.remove("page-root");
+    };
   }, []);
 
   return (
