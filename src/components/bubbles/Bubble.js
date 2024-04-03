@@ -1,35 +1,25 @@
-export default class Bubble {
-  constructor(x, y, r, color, canvas, ctx, clean = true) {
-    this.x = x;
-    this.y = y;
-    this.r = r;
-    this.color = color;
+class Bubble {
+  constructor(canvas, ctx, xPos, yPos, dx, dy, r, color, density = 1) {
     this.canvas = canvas;
     this.ctx = ctx;
-    this.clean = clean;
+    this.x = xPos;
+    this.y = yPos;
+    this.dx = dx;
+    this.dy = dy;
+    this.r = r;
+    this.c = color;
+    this.d = density;
+    this.m = this.d * Math.PI * this.r ** 2; // masse = densité * surface
+    this.draw();
   }
 
   draw() {
     this.ctx.beginPath();
-    this.ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-    this.ctx.fillStyle = "#0095DD";
+    this.ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+    this.ctx.fillStyle = this.c;
     this.ctx.fill();
-    this.ctx.closePath();
-  }
-
-  paint(dx = 0, dy = 0) {
-    this.updatePosition(dx, dy);
-    this.draw();
-  }
-
-  move(dx = 0, dy = 0) {
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    this.updatePosition(dx, dy);
-    this.draw();
-  }
-
-  updatePosition(dx = 0, dy = 0) {
-    this.x += dx;
-    this.y += dy;
+    this.ctx.stroke();
   }
 }
+
+export default Bubble;
