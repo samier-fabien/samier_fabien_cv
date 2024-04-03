@@ -15,7 +15,15 @@ export default function Test() {
       </div>
       <div className="row" ref={rowRef}>
         <div className="col p-0">
-          <BubblesContainer w={1000} h={500} />
+          <BubblesContainer
+            w={1000}
+            h={500}
+            number={5}
+            speed={2}
+            minRadius={20}
+            maxRadius={80}
+            framerate={30}
+          />
         </div>
       </div>
     </div>

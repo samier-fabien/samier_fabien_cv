@@ -6,14 +6,17 @@ import Bubble from "./Bubble";
 export default function BubblesContainer({
   w = 100,
   h = 100,
-  number = 10,
+  number = 1,
   speed = 2,
   minRadius = 10,
   maxRadius = 20,
+  framerate = 10,
   clear = true,
 }) {
   const canvasRef = useRef(null);
   const bubbles = [];
+  const fpsInterval = 1000 / framerate; // Limite à 60 FPS
+  let lastFrameTime = 0;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -21,17 +24,14 @@ export default function BubblesContainer({
 
     generateBubbles(canvas, ctx);
     generateNewFrame(canvas, ctx);
-    // setInterval(() => {
-    //   ctx.clearRect(0, 0, canvas.width, canvas.height);
-    //   generateNewFrame(canvas);
-    // }, 40);
+
   }, []);
 
   function generateBubbles(canvas, ctx) {
     for (let i = 0; i < number; i++) {
       let r = Math.floor(Math.random() * (maxRadius - minRadius) + minRadius);
-      let dx = Math.floor(Math.random() * speed * 1);
-      let dy = Math.floor(Math.random() * speed * 1);
+      let dx = Math.floor(Math.random() * speed);
+      let dy = Math.floor(Math.random() * speed);
       let x = 0;
       let y = 0;
       console.log(dx, dy);
@@ -78,18 +78,42 @@ export default function BubblesContainer({
   }
 
   function generateNewFrame(canvas, ctx) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const currentFrameTime = performance.now();
+    const elapsedTime = currentFrameTime - lastFrameTime;
+
+    // Si le temps écoulé depuis le dernier appel est inférieur à l'intervalle souhaité, on ne fait rien
+    if (elapsedTime < fpsInterval) {
+      window.requestAnimationFrame(function () {
+        generateNewFrame(canvas, ctx);
+      });
+      return;
+    }
+
+    lastFrameTime = currentFrameTime;
+
+    clear ? ctx.clearRect(0, 0, canvas.width, canvas.height) : null;
     handleCollisions(canvas);
+
     bubbles.forEach((bubble, index) => {
-      // console.log(`Bulle ${index} draw`, bubble);
       bubble.draw();
     });
-    // bubbles.forEach((bubble) => {
-    //   bubble.draw(canvas, bubbles, bubbles.indexOf(bubble));
-    // });
+
     window.requestAnimationFrame(function () {
       generateNewFrame(canvas, ctx);
     });
+
+    // clear ? ctx.clearRect(0, 0, canvas.width, canvas.height) : null;
+    // handleCollisions(canvas);
+    // bubbles.forEach((bubble, index) => {
+    //   // console.log(`Bulle ${index} draw`, bubble);
+    //   bubble.draw();
+    // });
+    // // bubbles.forEach((bubble) => {
+    // //   bubble.draw(canvas, bubbles, bubbles.indexOf(bubble));
+    // // });
+    // window.requestAnimationFrame(function () {
+    //   generateNewFrame(canvas, ctx);
+    // });
   }
 
   function handleCollisions(canvas) {
