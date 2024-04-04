@@ -23,7 +23,14 @@ export default function BubblesContainer({
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
-    generateBubbles(canvas, ctx);
+    bubbles.push(new Bubble(canvas, ctx, 200, 200, 2, 3, 100, "#fff", "#fff", 1, "Vite"));
+    bubbles.push(new Bubble(canvas, ctx, 800, 200, -2, 2, 100, "#fff", "#fff", 1, "JS"));
+    bubbles.push(new Bubble(canvas, ctx, 400, 400, 2, -2, 100, "#fff", "#fff", 1, "React"));
+    bubbles.push(new Bubble(canvas, ctx, 500, 600, -2, 0, 100, "#fff", "#fff", 1, "CSS"));
+    bubbles.push(new Bubble(canvas, ctx, 700, 800, 3, 0, 100, "#fff", "#fff", 1, "HTML"));
+    bubbles.push(new Bubble(canvas, ctx, 0, 0, 0, 0, 0, "#fff"));
+
+    // generateBubbles(canvas, ctx);
     generateNewFrame(canvas, ctx);
   }, []);
 
