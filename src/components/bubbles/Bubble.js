@@ -7,10 +7,10 @@ class Bubble {
     dx,
     dy,
     r,
+    text = "",
     color = "black",
     bg = "white",
-    density = 1,
-    text = ""
+    density = 1
   ) {
     this.canvas = canvas;
     this.ctx = ctx;

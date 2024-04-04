@@ -23,6 +23,7 @@ export default function Test() {
             minRadius={20}
             maxRadius={80}
             framerate={30}
+            bubblesText={["Vite", "JS", "React", "CSS", "HTML"]}
           />
         </div>
       </div>

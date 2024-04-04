@@ -12,6 +12,7 @@ export default function BubblesContainer({
   maxRadius = 20,
   framerate = 10,
   clear = true,
+  bubblesText = [],
 }) {
   const canvasRef = useRef(null);
   const bubbles = [];
@@ -22,24 +23,18 @@ export default function BubblesContainer({
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
-    bubbles.push(new Bubble(canvas, ctx, 200, 200, 2, 3, 100, "#fff", "#fff", 1, "Vite"));
-    bubbles.push(new Bubble(canvas, ctx, 800, 200, -2, 2, 100, "#fff", "#fff", 1, "JS"));
-    bubbles.push(new Bubble(canvas, ctx, 400, 400, 2, -2, 100, "#fff", "#fff", 1, "React"));
-    bubbles.push(new Bubble(canvas, ctx, 500, 600, -2, 0, 100, "#fff", "#fff", 1, "CSS"));
-    bubbles.push(new Bubble(canvas, ctx, 700, 800, 3, 0, 100, "#fff", "#fff", 1, "HTML"));
-
-    // generateBubbles(canvas, ctx);
+    generateBubbles(canvas, ctx, bubblesText);
     generateNewFrame(canvas, ctx);
   }, []);
 
-  function generateBubbles(canvas, ctx) {
+  function generateBubbles(canvas, ctx, bubblesText) {
     for (let i = 0; i < number; i++) {
+      let text = bubblesText[i] ? bubblesText[i] : "";
       let r = Math.floor(Math.random() * (maxRadius - minRadius) + minRadius);
       let dx = Math.floor(Math.random() * speed);
       let dy = Math.floor(Math.random() * speed);
       let x = 0;
       let y = 0;
-      console.log(dx, dy);
 
       let goodLocation = false;
       while (!goodLocation) {
@@ -55,11 +50,8 @@ export default function BubblesContainer({
         }
       }
 
-      let bubble = new Bubble(canvas, ctx, x, y, dx, dy, r, "#fff");
-      bubbles.push(bubble);
-      console.log(bubble.x, bubble.y, bubble.dx, bubble.dy);
+      bubbles.push(new Bubble(canvas, ctx, x, y, dx, dy, r, text, "#fff"));
     }
-    bubbles.push(new Bubble(canvas, ctx, 0, 0, 0, 0, 0, "#fff"));
   }
 
   function isThereConnexion(
