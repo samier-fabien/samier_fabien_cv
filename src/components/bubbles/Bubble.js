@@ -49,7 +49,7 @@ class Bubble {
     this.ctx.fillText(this.text, this.x, this.y);
 
     const radialGradient = this.ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.r);
-    radialGradient.addColorStop(0, `rgba(255, 255, 255, 0.4)`);
+    radialGradient.addColorStop(0, `rgba(255, 255, 255, 0.2)`);
     radialGradient.addColorStop(1, `rgba(255, 255, 255, 0)`);
 
     this.ctx.beginPath();

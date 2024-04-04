@@ -1,19 +1,22 @@
-import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
+import React, { useRef, useEffect, useImperativeHandle } from "react";
 import "../../css/bubbles.css";
 import Bubble from "./Bubble";
-// import World from "./World";
 
-export default function BubblesContainer({
-  w = 100,
-  h = 100,
-  number = 1,
-  speed = 2,
-  minRadius = 10,
-  maxRadius = 20,
-  framerate = 10,
-  clear = true,
-  bubblesText = [],
-}) {
+const BubblesContainer = (
+  {
+    w = 100,
+    h = 100,
+    number = 1,
+    speed = 2,
+    minRadius = 10,
+    maxRadius = 20,
+    framerate = 10,
+    clear = true,
+    bubblesText = [],
+    forwardedRef,
+  },
+  ref
+) => {
   const canvasRef = useRef(null);
   const bubbles = [];
   const fpsInterval = 1000 / framerate; // Limite à 60 FPS
@@ -26,6 +29,14 @@ export default function BubblesContainer({
     generateBubbles(canvas, ctx, bubblesText);
     generateNewFrame(canvas, ctx);
   }, []);
+
+  useImperativeHandle(forwardedRef, () => ({
+    updateCanvasWidth: (newWidth) => {
+      if (canvasRef.current) {
+        canvasRef.current.width = newWidth;
+      }
+    },
+  }));
 
   function generateBubbles(canvas, ctx, bubblesText) {
     for (let i = 0; i < number; i++) {
@@ -222,4 +233,6 @@ export default function BubblesContainer({
   }
 
   return <canvas ref={canvasRef} id="bubbles-container" width={w} height={h} />;
-}
+};
+
+export default BubblesContainer;
