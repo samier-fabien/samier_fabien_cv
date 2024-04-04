@@ -17,7 +17,6 @@ export default function BubblesContainer({
   const bubbles = [];
   const fpsInterval = 1000 / framerate; // Limite à 60 FPS
   let lastFrameTime = 0;
-  // let collisionCount = 0;// TODO: pour debug dans handleBubbleCollision: bug agglomération des bulles
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -28,7 +27,6 @@ export default function BubblesContainer({
     bubbles.push(new Bubble(canvas, ctx, 400, 400, 2, -2, 100, "#fff", "#fff", 1, "React"));
     bubbles.push(new Bubble(canvas, ctx, 500, 600, -2, 0, 100, "#fff", "#fff", 1, "CSS"));
     bubbles.push(new Bubble(canvas, ctx, 700, 800, 3, 0, 100, "#fff", "#fff", 1, "HTML"));
-    bubbles.push(new Bubble(canvas, ctx, 0, 0, 0, 0, 0, "#fff"));
 
     // generateBubbles(canvas, ctx);
     generateNewFrame(canvas, ctx);
@@ -113,13 +111,15 @@ export default function BubblesContainer({
   function handleCollisions(canvas) {
     for (let i = 0; i < bubbles.length; i++) {
       const firstBubble = bubbles[i];
-      for (let j = i + 1; j < bubbles.length; j++) {
-        const secondBubble = bubbles[j];
-        if (isThereCollision(firstBubble, secondBubble)) {
-          handleBubbleCollision(firstBubble, secondBubble);
-          handleBorderCollision(canvas, firstBubble);
-        } else {
-          handleBorderCollision(canvas, firstBubble);
+      for (let j = 0; j < bubbles.length; j++) {
+        if (i !== j) {
+          const secondBubble = bubbles[j];
+          if (isThereCollision(firstBubble, secondBubble)) {
+            handleBubbleCollision(firstBubble, secondBubble);
+            handleBorderCollision(canvas, firstBubble);
+          } else {
+            handleBorderCollision(canvas, firstBubble);
+          }
         }
       }
     }
@@ -168,22 +168,6 @@ export default function BubblesContainer({
       firstBubble.dy = u1[1];
       secondBubble.dx = u2[0];
       secondBubble.dy = u2[1];
-
-      // collisionCount++;
-      // console.log(
-      //   `Collision ${collisionCount};
-      //   dx1 ${firstBubble.dx};
-      //   dy1 ${firstBubble.dy};
-      //   r1 ${firstBubble.r};
-      //   dx2 ${secondBubble.dx};
-      //   dy2 ${secondBubble.dy};
-      //   r2 ${secondBubble.r};
-      //   theta ${theta};
-      //   v1 (${v1[0]} ${v1[1]});
-      //   u1 (${u1[0]} ${u1[1]});
-      //   v2 (${v2[0]} ${v2[1]});
-      //   u2 (${u2[0]} ${u2[1]})`
-      // );
     }
   }
 
