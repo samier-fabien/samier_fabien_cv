@@ -17,6 +17,7 @@ export default function BubblesContainer({
   const bubbles = [];
   const fpsInterval = 1000 / framerate; // Limite à 60 FPS
   let lastFrameTime = 0;
+  // let collisionCount = 0;// TODO: pour debug dans handleBubbleCollision: bug agglomération des bulles
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -24,7 +25,6 @@ export default function BubblesContainer({
 
     generateBubbles(canvas, ctx);
     generateNewFrame(canvas, ctx);
-
   }, []);
 
   function generateBubbles(canvas, ctx) {
@@ -101,19 +101,6 @@ export default function BubblesContainer({
     window.requestAnimationFrame(function () {
       generateNewFrame(canvas, ctx);
     });
-
-    // clear ? ctx.clearRect(0, 0, canvas.width, canvas.height) : null;
-    // handleCollisions(canvas);
-    // bubbles.forEach((bubble, index) => {
-    //   // console.log(`Bulle ${index} draw`, bubble);
-    //   bubble.draw();
-    // });
-    // // bubbles.forEach((bubble) => {
-    // //   bubble.draw(canvas, bubbles, bubbles.indexOf(bubble));
-    // // });
-    // window.requestAnimationFrame(function () {
-    //   generateNewFrame(canvas, ctx);
-    // });
   }
 
   function handleCollisions(canvas) {
@@ -121,15 +108,10 @@ export default function BubblesContainer({
       const firstBubble = bubbles[i];
       for (let j = i + 1; j < bubbles.length; j++) {
         const secondBubble = bubbles[j];
-        // console.log(`Cas: ${i} ${j}`);
         if (isThereCollision(firstBubble, secondBubble)) {
-          // console.log("###################");
-          // console.log(`${i} et ${j}: Il y a bien collision`, firstBubble, secondBubble);
           handleBubbleCollision(firstBubble, secondBubble);
           handleBorderCollision(canvas, firstBubble);
         } else {
-          // console.log("###################");
-          // console.log(`${i} et ${j}: Il n'y a pas collision`, firstBubble, secondBubble);
           handleBorderCollision(canvas, firstBubble);
         }
       }
@@ -143,12 +125,6 @@ export default function BubblesContainer({
         secondBubble.r <=
       0
     ) {
-      // console.log(
-      //   "Collision",
-      //   Math.sqrt((firstBubble.x - secondBubble.x) ** 2 + (firstBubble.y - secondBubble.y) ** 2) -
-      //     firstBubble.r -
-      //     secondBubble.r
-      // );
       return true;
     } else {
       return false;
@@ -161,17 +137,23 @@ export default function BubblesContainer({
       res[0] * (secondBubble.x - firstBubble.x) + res[1] * (secondBubble.y - firstBubble.y) >=
       0
     ) {
-      var m1 = firstBubble.m;
-      var m2 = secondBubble.m;
       var theta = -Math.atan2(secondBubble.y - firstBubble.y, secondBubble.x - firstBubble.x);
       var v1 = rotate([firstBubble.dx, firstBubble.dy], theta);
       var v2 = rotate([secondBubble.dx, secondBubble.dy], theta);
       var u1 = rotate(
-        [(v1[0] * (m1 - m2)) / (m1 + m2) + (v2[0] * 2 * m2) / (m1 + m2), v1[1]],
+        [
+          (v1[0] * (firstBubble.m - secondBubble.m)) / (firstBubble.m + secondBubble.m) +
+            (v2[0] * 2 * secondBubble.m) / (firstBubble.m + secondBubble.m),
+          v1[1],
+        ],
         -theta
       );
       var u2 = rotate(
-        [(v2[0] * (m2 - m1)) / (m1 + m2) + (v1[0] * 2 * m1) / (m1 + m2), v2[1]],
+        [
+          (v2[0] * (secondBubble.m - firstBubble.m)) / (firstBubble.m + secondBubble.m) +
+            (v1[0] * 2 * firstBubble.m) / (firstBubble.m + secondBubble.m),
+          v2[1],
+        ],
         -theta
       );
 
@@ -179,6 +161,22 @@ export default function BubblesContainer({
       firstBubble.dy = u1[1];
       secondBubble.dx = u2[0];
       secondBubble.dy = u2[1];
+
+      // collisionCount++;
+      // console.log(
+      //   `Collision ${collisionCount};
+      //   dx1 ${firstBubble.dx};
+      //   dy1 ${firstBubble.dy};
+      //   r1 ${firstBubble.r};
+      //   dx2 ${secondBubble.dx};
+      //   dy2 ${secondBubble.dy};
+      //   r2 ${secondBubble.r};
+      //   theta ${theta};
+      //   v1 (${v1[0]} ${v1[1]});
+      //   u1 (${u1[0]} ${u1[1]});
+      //   v2 (${v2[0]} ${v2[1]});
+      //   u2 (${u2[0]} ${u2[1]})`
+      // );
     }
   }
 
@@ -190,32 +188,54 @@ export default function BubblesContainer({
   }
 
   function handleBorderCollision(canvas, bubble) {
-    if (bubble.x - bubble.r <= 0) {
-      bubble.x = bubble.r;
+    if (bubble.dx < 0) {
+      handleLeftCollision(0, bubble);
     }
-    if (bubble.x + bubble.r >= canvas.width) {
-      bubble.x = canvas.width - bubble.r;
+    if (bubble.dx > 0) {
+      handleRightCollision(canvas.width, bubble);
     }
-    if (
-      (bubble.x - bubble.r <= 0 && bubble.dx < 0) ||
-      (bubble.x + bubble.r >= canvas.width && bubble.dx > 0)
-    ) {
+    if (bubble.dy < 0) {
+      handleTopCollision(0, bubble);
+    }
+    if (bubble.dy > 0) {
+      handleBottomCollision(canvas.height, bubble);
+    }
+  }
+  function handleLeftCollision(leftOrigine, bubble) {
+    let lestmostPoint = bubble.x + bubble.dx - bubble.r;
+    if (lestmostPoint <= leftOrigine) {
+      bubble.x = -lestmostPoint + bubble.r;
       bubble.dx = -bubble.dx;
+    } else {
+      bubble.x = bubble.x + bubble.dx;
     }
-    if (bubble.y - bubble.r <= 0) {
-      bubble.y = bubble.r;
+  }
+  function handleRightCollision(width, bubble) {
+    let rightmostPoint = bubble.x + bubble.dx + bubble.r;
+    if (rightmostPoint >= width) {
+      bubble.x = width - (rightmostPoint - width) - bubble.r;
+      bubble.dx = -bubble.dx;
+    } else {
+      bubble.x = bubble.x + bubble.dx;
     }
-    if (bubble.y + bubble.r >= canvas.height) {
-      bubble.y = canvas.height - bubble.r;
-    }
-    if (
-      (bubble.y - bubble.r <= 0 && bubble.dy < 0) ||
-      (bubble.y + bubble.r >= canvas.height && bubble.dy > 0)
-    ) {
+  }
+  function handleTopCollision(topOrigin, bubble) {
+    let highestPoint = bubble.y + bubble.dy - bubble.r;
+    if (highestPoint <= topOrigin) {
+      bubble.y = -highestPoint + bubble.r;
       bubble.dy = -bubble.dy;
+    } else {
+      bubble.y = bubble.y + bubble.dy;
     }
-    bubble.x += bubble.dx;
-    bubble.y += bubble.dy;
+  }
+  function handleBottomCollision(height, bubble) {
+    let lowestPoint = bubble.y + bubble.dy + bubble.r;
+    if (lowestPoint >= height) {
+      bubble.y = height - (lowestPoint - height) - bubble.r;
+      bubble.dy = -bubble.dy;
+    } else {
+      bubble.y = bubble.y + bubble.dy;
+    }
   }
 
   return <canvas ref={canvasRef} id="bubbles-container" width={w} height={h} />;
