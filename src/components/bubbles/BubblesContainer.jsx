@@ -114,6 +114,7 @@ const BubblesContainer = (
   function handleCollisions(canvas) {
     for (let i = 0; i < bubbles.length; i++) {
       const firstBubble = bubbles[i];
+      handleBubbleOutside(canvas, firstBubble);
       for (let j = 0; j < bubbles.length; j++) {
         if (i !== j) {
           const secondBubble = bubbles[j];
@@ -180,6 +181,21 @@ const BubblesContainer = (
       v[0] * Math.cos(theta) - v[1] * Math.sin(theta),
       v[0] * Math.sin(theta) + v[1] * Math.cos(theta),
     ];
+  }
+
+  function handleBubbleOutside(canvas, bubble) {
+    if (bubble.x < 0 + bubble.r) {
+      bubble.x = bubble.r;
+    }
+    if (bubble.x > canvas.width - bubble.r) {
+      bubble.x = canvas.width - bubble.r;
+    }
+    if (bubble.y < 0 + bubble.r) {
+      bubble.y = bubble.r;
+    }
+    if (bubble.y > canvas.height - bubble.r) {
+      bubble.y = canvas.height - bubble.r;
+    }
   }
 
   function handleBorderCollision(canvas, bubble) {
