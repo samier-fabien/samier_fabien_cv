@@ -27,6 +27,9 @@ class Bubble {
     this.draw();
   }
 
+  /**
+   * Se charge de dessiner les bulles sur la canvas
+   */
   draw() {
     const linearGradient = this.ctx.createLinearGradient(
       0,

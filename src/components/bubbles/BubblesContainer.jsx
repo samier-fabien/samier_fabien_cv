@@ -2,10 +2,24 @@ import React, { useEffect, useRef, useState } from "react";
 import "../../css/bubbles.css";
 import Bubble from "./Bubble";
 
+/**
+ *
+ * @param {useRef} parentRef - Référence de la balise parente, le canvas occupera toute sa largeur.
+ * @param {int} h - Hauteur du canvas. Défaut: 100.
+ * @param {int} number - Nombre de bulles. Défaut: 2.
+ * @param {int} speed - Vitesse des bulles. Défaut: 2.
+ * @param {int} minRadius - Rayon minimal des bulles. Défaut: 10.
+ * @param {int} maxRadius - Rayon maximal des bulles. Défaut: 20.
+ * @param {int} framerate - Nombre d'images par seconde. Défaut: 10.
+ * @param {clear} clear - Si true, efface les images précédentes. Défaut: true.
+ * @param {Array(string)} bubblesText - Liste des noms à afficher dans chaque bulle, si aucun nom: aucun texte.
+ *
+ * @returns
+ */
 export default function BubblesContainer({
   parentRef,
   h = 100,
-  number = 3,
+  number = 2,
   speed = 2,
   minRadius = 10,
   maxRadius = 20,
@@ -15,9 +29,9 @@ export default function BubblesContainer({
 }) {
   const canvasRef = useRef(null);
   const [parentWidth, setParentWidth] = useState(700);
-  const bubbles = [];
+  const bubbles = []; // Liste des objets Bubble
   const fpsInterval = 1000 / framerate; // Limite à 60 FPS
-  let lastFrameTime = 0;
+  let lastFrameTime = 0; // Date du dernier rendu
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -43,12 +57,18 @@ export default function BubblesContainer({
   }, [parentRef]);
 
   useEffect(() => {
-    // Utiliser la largeur de la div parent comme largeur du canvas
+    // Utiliser la largeur de la div parente comme largeur du canvas
     if (canvasRef.current) {
       canvasRef.current.width = parentWidth;
     }
   }, [parentWidth]);
 
+  /**
+   * Se charge de générer les bulles en fonction des données: position dans un endroit vide, vecteur de vitesse, rayon...
+   * @param {*} canvas
+   * @param {*} ctx
+   * @param {Array(string)} bubblesText
+   */
   function generateBubbles(canvas, ctx, bubblesText) {
     for (let i = 0; i < number; i++) {
       let text = bubblesText[i] ? bubblesText[i] : "";
@@ -76,6 +96,16 @@ export default function BubblesContainer({
     }
   }
 
+  /**
+   * Détermine se deux bulles se chevauchent
+   * @param {int} firstEntityX
+   * @param {int} firstEntityY
+   * @param {int} firstEntityR
+   * @param {int} secondEntityX
+   * @param {int} secondEntityY
+   * @param {int} secondEntityR
+   * @returns
+   */
   function isThereConnexion(
     firstEntityX,
     firstEntityY,
@@ -96,6 +126,12 @@ export default function BubblesContainer({
     }
   }
 
+  /**
+   * Génération des images à la fréquence voulue après les tests de collision.
+   * @param {*} canvas
+   * @param {*} ctx
+   * @returns void
+   */
   function generateNewFrame(canvas, ctx) {
     const currentFrameTime = performance.now();
     const elapsedTime = currentFrameTime - lastFrameTime;
@@ -122,6 +158,10 @@ export default function BubblesContainer({
     });
   }
 
+  /**
+   * Effectue toutes les combinaisons possibles pour lancer les calculs de collisions
+   * @param {*} canvas
+   */
   function handleCollisions(canvas) {
     for (let i = 0; i < bubbles.length; i++) {
       const firstBubble = bubbles[i];
@@ -140,6 +180,12 @@ export default function BubblesContainer({
     }
   }
 
+  /**
+   * Détermine s'il y a collision entre deux bulles.
+   * @param {Bubble} firstBubble
+   * @param {Bubble} secondBubble
+   * @returns boolean
+   */
   function isThereCollision(firstBubble, secondBubble) {
     if (
       Math.sqrt((firstBubble.x - secondBubble.x) ** 2 + (firstBubble.y - secondBubble.y) ** 2) -
@@ -153,6 +199,12 @@ export default function BubblesContainer({
     }
   }
 
+  /**
+   * Calculs des nouveaux vecteurs de vitesses en fonction des vecteurs de vitesses courants et des poids des bulles.
+   * Types de collisions: collisions élastiques.
+   * @param {Bubble} firstBubble
+   * @param {Bubble} secondBubble
+   */
   function handleBubbleCollision(firstBubble, secondBubble) {
     let dDiff = [firstBubble.dx - secondBubble.dx, firstBubble.dy - secondBubble.dy];
     // Aucun traitement de collision si les vitesses coïncident ou que les bulles sont cocentriques
@@ -187,6 +239,12 @@ export default function BubblesContainer({
     }
   }
 
+  /**
+   * Effectue des rotations sur les vecteurs.
+   * @param {[int, int]} v Vecteur de vitesse.
+   * @param {float} theta Angle en radians
+   * @returns Nouveau vecteur.
+   */
   function rotate(v, theta) {
     return [
       v[0] * Math.cos(theta) - v[1] * Math.sin(theta),
@@ -194,6 +252,12 @@ export default function BubblesContainer({
     ];
   }
 
+  /**
+   * Détermine si une bulle est en dehors des dimensions du canvas et réajuste sa position si c'est la cas.
+   * Utile quand redimensionnement de la fenêtre par exemple.
+   * @param {*} canvas
+   * @param {Bubble} bubble
+   */
   function handleBubbleOutside(canvas, bubble) {
     if (bubble.x < 0 + bubble.r) {
       bubble.x = bubble.r;
@@ -209,6 +273,12 @@ export default function BubblesContainer({
     }
   }
 
+  /**
+   * Détermine si une collision avec les bords à lieu et corrige les nouveaux vecteurs de vitesses.
+   * Dispatch aux fonctions handleLeftCollision, handleRightCollision, handleTopCollision et handleBottomCollision en fonction du cas.
+   * @param {*} canvas
+   * @param {Buuble} bubble
+   */
   function handleBorderCollision(canvas, bubble) {
     if (bubble.dx < 0) {
       handleLeftCollision(0, bubble);
