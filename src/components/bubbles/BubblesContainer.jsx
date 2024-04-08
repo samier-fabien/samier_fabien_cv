@@ -27,7 +27,6 @@ export default function BubblesContainer({
     const handleResize = () => {
       if (parentRef.current) {
         setParentWidth(parentRef.current.offsetWidth);
-        console.log("parentRef", parentRef.current.offsetWidth);
       }
     };
 
@@ -46,12 +45,7 @@ export default function BubblesContainer({
   useEffect(() => {
     // Utiliser la largeur de la div parent comme largeur du canvas
     if (canvasRef.current) {
-      // if (canvasRef.current.width != 0) {
-      //   console.log("parentWidth != 0");
-      // }
-      console.log(canvasRef.current.width);
       canvasRef.current.width = parentWidth;
-      console.log("parentWidth", parentWidth);
     }
   }, [parentWidth]);
 
