@@ -142,15 +142,16 @@ const BubblesContainer = (
   }
 
   function handleBubbleCollision(firstBubble, secondBubble) {
-    var res = [firstBubble.dx - secondBubble.dx, firstBubble.dy - secondBubble.dy];
+    let dDiff = [firstBubble.dx - secondBubble.dx, firstBubble.dy - secondBubble.dy];
+    // Aucun traitement de collision si les vitesses coïncident ou que les bulles sont cocentriques
     if (
-      res[0] * (secondBubble.x - firstBubble.x) + res[1] * (secondBubble.y - firstBubble.y) >=
+      dDiff[0] * (secondBubble.x - firstBubble.x) + dDiff[1] * (secondBubble.y - firstBubble.y) >=
       0
     ) {
-      var theta = -Math.atan2(secondBubble.y - firstBubble.y, secondBubble.x - firstBubble.x);
-      var v1 = rotate([firstBubble.dx, firstBubble.dy], theta);
-      var v2 = rotate([secondBubble.dx, secondBubble.dy], theta);
-      var u1 = rotate(
+      let theta = -Math.atan2(secondBubble.y - firstBubble.y, secondBubble.x - firstBubble.x);
+      let v1 = rotate([firstBubble.dx, firstBubble.dy], theta);
+      let v2 = rotate([secondBubble.dx, secondBubble.dy], theta);
+      let u1 = rotate(
         [
           (v1[0] * (firstBubble.m - secondBubble.m)) / (firstBubble.m + secondBubble.m) +
             (v2[0] * 2 * secondBubble.m) / (firstBubble.m + secondBubble.m),
@@ -158,7 +159,7 @@ const BubblesContainer = (
         ],
         -theta
       );
-      var u2 = rotate(
+      let u2 = rotate(
         [
           (v2[0] * (secondBubble.m - firstBubble.m)) / (firstBubble.m + secondBubble.m) +
             (v1[0] * 2 * firstBubble.m) / (firstBubble.m + secondBubble.m),
