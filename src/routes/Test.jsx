@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-import BubblesWrapper from "../components/bubbles/BubblesWrapper";
+import BubblesContainer from "../components/bubbles/BubblesContainer";
 
 export default function Test() {
+  const divRef = useRef(null);
+
   return (
     <div className="container-fluid bg-dark full-page instantOutsideAnim">
       <div className="row">
@@ -10,7 +12,18 @@ export default function Test() {
         </div>
       </div>
       <div className="row">
-        <BubblesWrapper />
+        <div className="col p-0" ref={divRef}>
+          <BubblesContainer
+            parentRef={divRef}
+            h={1000}
+            framerate={30}
+            speed={2}
+            minRadius={80}
+            maxRadius={140}
+            number={7}
+            bubblesText={["Vite", "JS", "React", "CSS", "HTML", "PHP", "Sf"]}
+          />
+        </div>
       </div>
     </div>
   );

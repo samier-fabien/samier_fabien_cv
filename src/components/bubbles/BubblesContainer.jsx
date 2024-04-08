@@ -1,23 +1,20 @@
-import React, { useRef, useEffect, useImperativeHandle } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../../css/bubbles.css";
 import Bubble from "./Bubble";
 
-const BubblesContainer = (
-  {
-    w = 100,
-    h = 100,
-    number = 1,
-    speed = 2,
-    minRadius = 10,
-    maxRadius = 20,
-    framerate = 10,
-    clear = true,
-    bubblesText = [],
-    forwardedRef,
-  },
-  ref
-) => {
+export default function BubblesContainer({
+  parentRef,
+  h = 100,
+  number = 3,
+  speed = 2,
+  minRadius = 10,
+  maxRadius = 20,
+  framerate = 10,
+  clear = true,
+  bubblesText = [],
+}) {
   const canvasRef = useRef(null);
+  const [parentWidth, setParentWidth] = useState(700);
   const bubbles = [];
   const fpsInterval = 1000 / framerate; // Limite à 60 FPS
   let lastFrameTime = 0;
@@ -26,17 +23,37 @@ const BubblesContainer = (
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
+    // Mise à jour de la largeur du canvas lorsque la taille de la div parent change
+    const handleResize = () => {
+      if (parentRef.current) {
+        setParentWidth(parentRef.current.offsetWidth);
+        console.log("parentRef", parentRef.current.offsetWidth);
+      }
+    };
+
+    handleResize(); // Appel initial pour définir la largeur initiale du canvas
+
+    window.addEventListener("resize", handleResize);
+
     generateBubbles(canvas, ctx, bubblesText);
     generateNewFrame(canvas, ctx);
-  }, []);
 
-  useImperativeHandle(forwardedRef, () => ({
-    updateCanvasWidth: (newWidth) => {
-      if (canvasRef.current) {
-        canvasRef.current.width = newWidth;
-      }
-    },
-  }));
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [parentRef]);
+
+  useEffect(() => {
+    // Utiliser la largeur de la div parent comme largeur du canvas
+    if (canvasRef.current) {
+      // if (canvasRef.current.width != 0) {
+      //   console.log("parentWidth != 0");
+      // }
+      console.log(canvasRef.current.width);
+      canvasRef.current.width = parentWidth;
+      console.log("parentWidth", parentWidth);
+    }
+  }, [parentWidth]);
 
   function generateBubbles(canvas, ctx, bubblesText) {
     for (let i = 0; i < number; i++) {
@@ -249,7 +266,5 @@ const BubblesContainer = (
     }
   }
 
-  return <canvas ref={canvasRef} id="bubbles-container" width={w} height={h} />;
-};
-
-export default BubblesContainer;
+  return <canvas ref={canvasRef} id="bubbles-container" width="700" height={h} />;
+}
