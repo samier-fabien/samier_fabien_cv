@@ -1,11 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
-import BubblesContainer from "../components/bubbles/BubblesContainer";
+import React, { useRef } from "react";
 import RadialMenu from "../components/RadialMenu";
 
 export default function Test() {
   const divRef = useRef(null);
-
-  // J'essaie de centrer ma photo (<img/>) dans le menu (<ul>)
 
   return (
     <div className="container-fluid bg-white full-page instantOutsideAnim">
@@ -18,11 +15,11 @@ export default function Test() {
         <div className="col text-dark d-block">
           <RadialMenu
             elements={[
-              <span className="text-center align-middle d-inline">t 1</span>,
-              <span className="text-center align-middle d-inline">t 2</span>,
-              <span className="text-center align-middle d-inline">t 3</span>,
-              <span className="text-center align-middle d-inline">t 4</span>,
-              <span className="text-center align-middle d-inline">t 5</span>,
+              <span className="text-center align-middle d-inline">Etudes</span>,
+              <span className="text-center align-middle d-inline">Compétences</span>,
+              <span className="text-center align-middle d-inline">Expériences</span>,
+              <span className="text-center align-middle d-inline">Technologies</span>,
+              <span className="text-center align-middle d-inline">Hobbies</span>,
             ]}
             menuRadius={250}
             menuAngle={90}
@@ -30,16 +27,7 @@ export default function Test() {
             liRadius={40}
             buttonRadius={150}
             buttonClass="d-inline-flex justify-content-center align-items-center"
-            // buttonClass="d-flex justify-content-center align-items-stretch position-relative"
-            // addedStyle={{ position: "relative", top: "0px", left: "0px" }}
-            button={
-              // <img
-              //   src="../../src/assets/bitmaps/head-square.jpg"
-              //   className="rounded-circle shadow anim-translate-bounce"
-              //   alt="Une photo de moi"
-              // />
-              <i className="bi bi-list text-dark" style={{ fontSize: "3rem" }}></i>
-            }
+            button={<i className="bi bi-list text-dark" style={{ fontSize: "3rem" }}></i>}
           />
         </div>
       </div>

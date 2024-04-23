@@ -14,7 +14,6 @@ export default function RadialMenu({
   addedStyle,
 }) {
   const menuRef = useRef(null);
-  const buttonRef = useRef(null);
   const [listElements, setListElements] = useState(null);
 
   function handleClick() {
