@@ -7,11 +7,13 @@ export default function RadialMenu({
   menuRadius = 150,
   menuClasses = "",
   button,
-  buttonClasses,
+  buttonHyperlinkClasses = "",
   buttonRadius = 128,
   elements,
   listElementRadius = 40,
+  listElementClasses = "",
   duration = 500,
+  delay = 200,
 }) {
   const menuRef = useRef(null);
   const [listElements, setListElements] = useState(null);
@@ -21,9 +23,9 @@ export default function RadialMenu({
     const angle = (lastItemAngleInRadians - firstItemAngleInRadians) / (listElements.length - 1);
 
     liS.forEach((li, index) => {
-      if (li.classList.contains("radial-menu-displayed")) {
+      if (li.classList.contains("radial-menu-visible")) {
         li.style.transform = `translateY(0px)`;
-        li.classList.remove("radial-menu-displayed");
+        li.classList.remove("radial-menu-visible");
         li.classList.add("radial-menu-hidden");
       } else if (li.classList.contains("radial-menu-hidden")) {
         let liAngle = firstItemAngleInRadians + angle * index; // angle en radians de l'élément
@@ -33,10 +35,10 @@ export default function RadialMenu({
         let y = menuRadius * Math.sin(liAngle);
 
         li.style.transform = `translateX(${x}px) translateY(${y}px)`;
-        li.style.transitionDelay = `${200 * index}ms`;
+        li.style.transitionDelay = `${delay * index}ms`;
         li.style.transitionDuration = `${duration}ms`;
         li.classList.remove("radial-menu-hidden");
-        li.classList.add("radial-menu-displayed");
+        li.classList.add("radial-menu-visible");
       }
     });
   }
@@ -64,19 +66,11 @@ export default function RadialMenu({
   return (
     <ul
       id="radial-menu"
-      className={
-        menuClasses
-          ? menuClasses + " d-inline-block position-relative"
-          : "d-inline-block position-relative"
-      }
+      className={`d-inline-block position-relative ${menuClasses}`}
       ref={menuRef}
     >
       {button ? (
-        <a
-          href="#"
-          className={buttonClasses ? buttonClasses + " menu-button" : "menu-button"}
-          onClick={handleClick}
-        >
+        <a href="#" className={buttonHyperlinkClasses} onClick={handleClick}>
           {button ? button : ""}
         </a>
       ) : (
@@ -86,10 +80,7 @@ export default function RadialMenu({
       )}
       {listElements
         ? listElements.map((listElement, index) => (
-            <li
-              key={index}
-              className="radial-menu-hidden"// d-inline-flex justify-content-center align-items-center
-            >
+            <li key={index} className={`radial-menu-hidden ${listElementClasses}`}>
               {listElement}
             </li>
           ))
