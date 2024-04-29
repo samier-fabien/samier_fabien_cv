@@ -1,0 +1,36 @@
+:root {
+  --radial-menu-button-radius: initial;
+  --radial-menu-li-radius: initial;
+}
+
+#radial-menu {
+  /* border-radius: 50%; */
+  margin: 0;
+  padding: 0;
+  /* background-color: blueviolet; */
+  list-style-type: none;
+  z-index: 100;
+}
+
+#radial-menu > a {
+  width: calc(var(--radial-menu-button-radius) * 2);
+  height: calc(var(--radial-menu-button-radius) * 2);
+}
+
+#radial-menu > li {
+  width: calc(var(--radial-menu-li-radius) * 2);
+  height: calc(var(--radial-menu-li-radius) * 2);
+  position: absolute;
+  top: calc(var(--radial-menu-button-radius) - var(--radial-menu-li-radius));
+  left: calc(var(--radial-menu-button-radius) - var(--radial-menu-li-radius));
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.radial-menu-visible {
+  opacity: 1;
+}
+
+.radial-menu-hidden {
+  opacity: 0;
+}
