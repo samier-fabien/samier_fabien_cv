@@ -1,0 +1,52 @@
+.tooltip-text {
+  position: relative;
+  opacity: 0;
+  display: none;
+  font-family: monospace;
+}
+
+.tooltip-visible {
+  opacity: 1;
+  display: inline-block;
+  animation: tooltip-fade-in 0.6s ease;
+}
+
+@keyframes tooltip-fade-in {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+
+  99% {
+    opacity: 1;
+    display: inline-block;
+  }
+
+  100% {
+    opacity: 1;
+    display: inline-block;
+  }
+}
+
+.tooltip-hidden {
+  opacity: 0;
+  display: none;
+  animation: tooltip-fade-out 0.6s ease;
+}
+
+@keyframes tooltip-fade-out {
+  0% {
+    opacity: 1;
+    display: inline-block;
+  }
+
+  99% {
+    opacity: 0;
+    display: inline-block;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
