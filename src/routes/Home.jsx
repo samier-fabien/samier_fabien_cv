@@ -16,14 +16,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container-fluid bg-dark p-0 m-0">
+    <div className="container-fluid bg-white p-0 m-0">
       <TransitionWrapper
         path={"/accueil"}
         isInTransit={hasClicked}
         transitionClass="anim-fade-out"
         transitionTime="500"
         // wrapperClass="container-fluid bg-primary full-page transition-opacity"
-        wrapperClass="bg-dark"
+        wrapperClass="bg-white"
       >
         <header className="container-fluid menu-padding bg-light">
           <div className="row text-center bg-dark">
@@ -94,15 +94,34 @@ export default function Home() {
           topRGB="rgb(86, 50, 216)"
           bottomRGB="rgb(32, 36, 40)"
         />
-        <section className="container text-light">
-          <div className="row text-center">
-            <h3 className="h3 anim-fade-in">
-              <i className="bi bi-quote me-3"></i>Logique et curieux, je suis soucieux de la bonne
-              exécution de mon travail ainsi que de sa qualité.
-              <i className="bi bi-quote ms-3 rotate-half"></i>
-            </h3>
+        <section className="container-fluid bg-dark text-light">
+          <div className="container">
+            <div className="row text-center">
+              <h3 className="h3 anim-fade-in">
+                <i className="bi bi-quote me-3"></i>Logique et curieux, je suis soucieux de la bonne
+                exécution de mon travail et de sa qualité.
+                <i className="bi bi-quote ms-3 rotate-half"></i>
+              </h3>
+            </div>
           </div>
-          <h4 className="h4">
+        </section>
+        <div className="bg-dark">
+          <div style={{ height: "100px", overflow: "hidden" }}>
+            <svg
+              viewBox="0 0 500 100"
+              preserveAspectRatio="none"
+              style={{ height: "100%", width: "100%" }}
+            >
+              <path
+                d="M0.00,50.00 C100.00,100.00 349.20,-50.00 500.00,50.00 L500.00,100.00 L0.00,100.00 Z"
+                style={{ stroke: "none", fill: "#ffffff" }}
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <section className="container bg-white text-dark">
+          <h4 className="h4">voluptatum nulla</h4>
+          <p className="m-0">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus nesciunt inventore
             voluptates! Voluptates, perspiciatis eveniet expedita fuga possimus culpa dolorum
             assumenda error fugiat consequuntur nobis eaque voluptas veniam iusto soluta? Lorem
@@ -112,8 +131,20 @@ export default function Home() {
             amet consectetur adipisicing elit. Reprehenderit consectetur tenetur dolores delectus
             dolor, vero laboriosam repellendus porro, cumque beatae eum at laborum eos cum alias
             quos a explicabo maxime?
-          </h4>
+          </p>
         </section>
+        <div style={{ height: "150px", overflow: "hidden" }}>
+          <svg
+            viewBox="0 0 500 150"
+            preserveAspectRatio="none"
+            style={{ height: "100%", width: "100%" }}
+          >
+            <path
+              d="M0.00,50.00 C120.20,151.48 269.75,151.48 500.00,50.00 L500.00,150.00 L0.00,150.00 Z"
+              style={{ stroke: "none", fill: "#202428" }}
+            ></path>
+          </svg>
+        </div>
         <footer className="container-fluid d-flex justify-content-center bg-dark text-light p-5">
           <img
             src="../../src/assets/vectors/html-5-logo-coloured-no-text.svg"
