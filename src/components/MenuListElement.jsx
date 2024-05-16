@@ -6,6 +6,7 @@ export default function MenuListElement({
   iconName = "",
   iconSize = "1rem",
   tooltipText = "default",
+  tooltipTextClasses = "",
   hyperlinkClasses = "",
 }) {
   const hyperlinkRef = useRef(null);
@@ -21,7 +22,7 @@ export default function MenuListElement({
         left="-6%"
         top="-90%"
         tooltipRadius="50"
-        tooltipClasses="text-dark"
+        tooltipClasses={tooltipTextClasses}
       />
     </>
   );

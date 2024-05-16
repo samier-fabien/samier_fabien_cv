@@ -27,6 +27,11 @@
   z-index: -1;
 }
 
+#radial-menu > li:hover {
+  transition: box-shadow 0.3s ease-in-out 0s !important;
+  box-shadow: inset 0rem 1rem white;
+}
+
 .radial-menu-visible {
   opacity: 1;
 }

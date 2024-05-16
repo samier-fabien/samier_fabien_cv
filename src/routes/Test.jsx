@@ -1,6 +1,6 @@
 import React from "react";
 import RadialMenu from "../components/RadialMenu";
-import "../css/menuButton.css";
+import "../css/menu.css";
 import MenuListElement from "../components/MenuListElement";
 
 export default function Test() {

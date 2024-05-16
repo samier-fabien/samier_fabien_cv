@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import TransitionWrapper from "../components/TransitionWrapper";
 import RadialMenu from "../components/RadialMenu";
 import MenuListElement from "../components/MenuListElement";
-import "../css/menuButton.css";
-import "../css/home.css";
+import WavyTransition from "../components/WavyTransition";
+import "../css/menu.css";
 
 export default function Home() {
   const [hasClicked, setHasClicked] = useState(false);
@@ -16,81 +16,90 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container-fluid bg-primary p-0 m-0">
+    <div className="container-fluid bg-dark p-0 m-0">
       <TransitionWrapper
         path={"/accueil"}
         isInTransit={hasClicked}
         transitionClass="anim-fade-out"
         transitionTime="500"
         // wrapperClass="container-fluid bg-primary full-page transition-opacity"
-        wrapperClass="bg-primary"
+        wrapperClass="bg-dark"
       >
-        <header className="container pb-5 mb-5 text-center">
-          <div className="row">
+        <header className="container-fluid menu-padding bg-light">
+          <div className="row text-center bg-dark">
+            <div className="col text-right text-light">
+              <span className="anim-left-inside">Samier Fabien</span>
+            </div>
+            <div className="col text-left text-light">
+              <span className="anim-right-inside">Concepteur, développeur d'applications</span>
+            </div>
+          </div>
+          <div className="row menu-gradient py-4 px-0">
             <div className="col text-dark d-block text-center">
               <RadialMenu
                 elements={[
                   <MenuListElement
                     iconName="bi bi-gear"
-                    iconSize="3rem"
+                    iconSize="2rem"
                     tooltipText="Compétences"
-                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
+                    tooltipTextClasses="text-light"
+                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center button"
                   />,
                   <MenuListElement
                     iconName="bi bi-journals"
-                    iconSize="3rem"
+                    iconSize="2rem"
                     tooltipText="Expériences"
+                    tooltipTextClasses="text-light"
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
                   />,
                   <MenuListElement
                     iconName="bi bi-code-slash"
-                    iconSize="3rem"
+                    iconSize="2rem"
                     tooltipText="Technologies"
+                    tooltipTextClasses="text-light"
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
                   />,
                   <MenuListElement
                     iconName="bi bi-award"
-                    iconSize="3rem"
+                    iconSize="2rem"
                     tooltipText="Etudes"
+                    tooltipTextClasses="text-light"
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
                   />,
                   <MenuListElement
                     iconName="bi bi-dribbble"
-                    iconSize="3rem"
+                    iconSize="2rem"
                     tooltipText="Hobbies"
+                    tooltipTextClasses="text-light"
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
                   />,
                 ]}
                 firstItemAngleInRadians={Math.PI}
                 lastItemAngleInRadians={0}
                 menuRadius={130}
-                menuClasses="menu-button bg-primary"
+                menuClasses="menu-button bg-transparent"
                 listElementRadius={40}
-                listElementClasses="bg-primary text-white"
+                listElementClasses="bg-dark text-white"
                 buttonRadius={60}
-                buttonHyperlinkClasses="d-inline-flex justify-content-center align-items-center"
-                button={
-                  <i className="bi bi-list text-dark text-white" style={{ fontSize: "5rem" }}></i>
-                }
+                buttonHyperlinkClasses="d-inline-flex justify-content-center align-items-center bg-dark rounded-circle"
+                button={<i className="bi bi-list text-white" style={{ fontSize: "3rem" }}></i>}
                 duration={300}
                 delay={100}
               />
             </div>
           </div>
         </header>
-        <section className="container">
+        <WavyTransition
+          backgroundRGBA="rgba(171, 116, 254, 1)"
+          topRGB="rgb(86, 50, 216)"
+          bottomRGB="rgb(32, 36, 40)"
+        />
+        <section className="container text-light">
           <div className="row text-center">
-            <div className="col text-light">
-              <h1 className="h1 mt-3 anim-left-inside">Samier Fabien</h1>
-              <h2 className="h5 mb-5 anim-right-inside">Concepteur, développeur d'applications</h2>
-            </div>
             <h3 className="h3 anim-fade-in">
               <i className="bi bi-quote me-3"></i>Logique et curieux, je suis soucieux de la bonne
-              exécution de mon travail ainsi que de sa{" "}
-              <pre className="d-inline">
-                qualité.
-                <i className="bi bi-quote ms-3 rotate-half"></i>
-              </pre>
+              exécution de mon travail ainsi que de sa qualité.
+              <i className="bi bi-quote ms-3 rotate-half"></i>
             </h3>
           </div>
           <h4 className="h4">
