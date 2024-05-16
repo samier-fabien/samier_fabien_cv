@@ -1,0 +1,4 @@
+.menu-list-element {
+  text-decoration: none;
+  height: calc(var(--radial-menu-li-radius) * 2);
+}

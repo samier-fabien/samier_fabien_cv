@@ -1,28 +1,14 @@
-import React, { useState, useRef, useEffect } from "react";
-import BubblesContainer from "../components/bubbles/BubblesContainer";
+import React from "react";
+import RadialMenu from "../components/RadialMenu";
+import "../css/menu.css";
+import MenuListElement from "../components/MenuListElement";
 
 export default function Test() {
-  const divRef = useRef(null);
-
   return (
-    <div className="container-fluid bg-dark full-page instantOutsideAnim">
+    <div className="container-fluid bg-white full-page instantOutsideAnim m-0 p-0">
       <div className="row">
-        <div className="col text-center text-light">
+        <div className="col bg-primary text-center text-dark">
           <h1 className="h1 mt-3">Test Page</h1>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col p-0" ref={divRef}>
-          <BubblesContainer
-            parentRef={divRef}
-            h={800}
-            framerate={30}
-            speed={2}
-            minRadius={40}
-            maxRadius={100}
-            number={7}
-            bubblesText={["Vite", "JS", "React", "CSS", "HTML", "PHP", "Sf"]}
-          />
         </div>
       </div>
     </div>
