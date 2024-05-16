@@ -77,7 +77,7 @@ export default function Home() {
                 firstItemAngleInRadians={Math.PI}
                 lastItemAngleInRadians={0}
                 menuRadius={130}
-                menuClasses="menu-button bg-transparent"
+                menuClasses="menu-button"
                 listElementRadius={40}
                 listElementClasses="bg-dark text-white"
                 buttonRadius={60}

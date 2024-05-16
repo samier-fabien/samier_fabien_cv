@@ -4,10 +4,9 @@
 }
 
 #radial-menu {
-  /* border-radius: 50%; */
   margin: 0;
   padding: 0;
-  /* background-color: blueviolet; */
+  background-color: transparent !important;
   list-style-type: none;
   z-index: 100;
 }
@@ -15,6 +14,11 @@
 #radial-menu > a {
   width: calc(var(--radial-menu-button-radius) * 2);
   height: calc(var(--radial-menu-button-radius) * 2);
+}
+
+#radial-menu > a:hover {
+  transition: box-shadow 0.3s ease-in-out 0s !important;
+  box-shadow: inset 0rem 1rem white;
 }
 
 #radial-menu > li {
