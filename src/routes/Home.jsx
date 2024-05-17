@@ -94,17 +94,7 @@ export default function Home() {
           topRGB="rgb(86, 50, 216)"
           bottomRGB="rgb(32, 36, 40)"
         />
-        <section className="container-fluid bg-dark text-light">
-          <div className="container">
-            <div className="row text-center">
-              <h3 className="h3 anim-fade-in">
-                <i className="bi bi-quote me-3"></i>Logique et curieux, je suis soucieux de la bonne
-                exécution de mon travail et de sa qualité.
-                <i className="bi bi-quote ms-3 rotate-half"></i>
-              </h3>
-            </div>
-          </div>
-        </section>
+
         <div className="bg-dark">
           <div style={{ height: "100px", overflow: "hidden" }}>
             <svg
@@ -120,18 +110,53 @@ export default function Home() {
           </div>
         </div>
         <section className="container bg-white text-dark">
-          <h4 className="h4">voluptatum nulla</h4>
-          <p className="m-0">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus nesciunt inventore
-            voluptates! Voluptates, perspiciatis eveniet expedita fuga possimus culpa dolorum
-            assumenda error fugiat consequuntur nobis eaque voluptas veniam iusto soluta? Lorem
-            ipsum dolor sit, amet consectetur adipisicing elit. Similique nesciunt ratione impedit
-            enim quis repellendus voluptatum nulla accusantium! Vero, blanditiis distinctio! Commodi
-            dolore doloremque ipsum molestiae aliquid dolor ducimus expedita. Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Reprehenderit consectetur tenetur dolores delectus
-            dolor, vero laboriosam repellendus porro, cumque beatae eum at laborum eos cum alias
-            quos a explicabo maxime?
-          </p>
+          <div className="row justify-content-center">
+            <div className="col-xxl-6 col-xl-8 col-lg-10">
+              <h3 className="display-5">Une petite présentation.</h3>
+              <p className="lead anim-fade-in p-4">
+                <i className="bi bi-quote me-2"></i>Logique et curieux, je suis soucieux de la bonne
+                exécution de mon travail et de sa qualité.
+                <i className="bi bi-quote ms-2"></i>
+              </p>
+              <h4 className="h4">Les débuts.</h4>
+              <p>
+                C'est avec <strong>PHP 5.3</strong> que je me suis mis au développement. J'avais
+                découvert <strong>HTML et CSS</strong> précédemment au fil de ma curiosité et je
+                trouvais tout ça passionnant mais il me manquait de l'interactivité.{" "}
+                <strong>J'ai étudié l'algorithmie et les bases de données</strong> et après quelques
+                essais de forums je me suis mis à l'<strong>orienté objet</strong>, puis aux{" "}
+                <strong>design patterns</strong>.
+              </p>
+              <h4 className="h4">Le développement dans mon métier d'alors.</h4>
+              <p>
+                <strong>C'était une passion</strong> quand j'ai changé d'orientation professionnelle
+                pour devenir usineur. Je me suis aperçu que j'avais de très bonnes bases lorsque
+                j'ai programmé pour les premières fois des machines à commande numérique. Le langage
+                n'avait rien en commun avec PHP, Javascript ou SQL mais l'algorithmie en procédurale
+                avec des boucles, des variables et des conditions, ça je connaissais.
+              </p>
+              <p>
+                <strong>Ma passion est devenu une force</strong> dans ce cadre professionnelle.
+                Quand j'ai évolué pour devenir contrôleur non-destructif, j'ai fais{" "}
+                <strong>quelques incursions en C++ et en Java</strong> pour faire notamment un
+                programme de calcul de balourd.
+              </p>
+              <h4 className="h4">Développeur.</h4>
+              <p>
+                Lorsque{" "}
+                <strong>j'ai eu l'opportunité faire de mon violon d'Ingres mon métier</strong>, je
+                l'ai saisie: remise à niveau puis{" "}
+                <strong>formation de Concepteur/Développeur d'Applications</strong>
+                durant 10 mois. Une fois le titre acquis j'ai pu faire mes armes.
+              </p>
+              <p>
+                Ma <strong>soif de connaissances et ma curiosité naturelles</strong> sont ma grande
+                force. Elles m'ont permis d'en apprendre toujours plus sur diverses technologies et
+                langages. Logique et curieux, je suis soucieux de la bonne exécution de mon travail
+                ainsi que de sa qualité.
+              </p>
+            </div>
+          </div>
         </section>
         <div style={{ height: "150px", overflow: "hidden" }}>
           <svg
