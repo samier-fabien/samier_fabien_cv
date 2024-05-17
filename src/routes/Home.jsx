@@ -118,7 +118,7 @@ export default function Home() {
                 exécution de mon travail et de sa qualité.
                 <i className="bi bi-quote ms-2"></i>
               </p>
-              <h4 className="h4">Les débuts.</h4>
+              <h4 className="h4">La découverte.</h4>
               <p>
                 C'est avec <strong>PHP 5.3</strong> que je me suis mis au développement. J'avais
                 découvert <strong>HTML et CSS</strong> précédemment au fil de ma curiosité et je
@@ -127,7 +127,7 @@ export default function Home() {
                 essais de forums je me suis mis à l'<strong>orienté objet</strong>, puis aux{" "}
                 <strong>design patterns</strong>.
               </p>
-              <h4 className="h4">Le développement dans mon métier d'alors.</h4>
+              <h4 className="h4 pt-4">Le développement dans mon métier d'alors.</h4>
               <p>
                 <strong>C'était une passion</strong> quand j'ai changé d'orientation professionnelle
                 pour devenir usineur. Je me suis aperçu que j'avais de très bonnes bases lorsque
@@ -141,7 +141,7 @@ export default function Home() {
                 <strong>quelques incursions en C++ et en Java</strong> pour faire notamment un
                 programme de calcul de balourd.
               </p>
-              <h4 className="h4">Développeur.</h4>
+              <h4 className="h4 pt-4">Développeur.</h4>
               <p>
                 Lorsque{" "}
                 <strong>j'ai eu l'opportunité faire de mon violon d'Ingres mon métier</strong>, je
