@@ -146,14 +146,14 @@ export default function Home() {
                 Lorsque{" "}
                 <strong>j'ai eu l'opportunité faire de mon violon d'Ingres mon métier</strong>, je
                 l'ai saisie: remise à niveau puis{" "}
-                <strong>formation de Concepteur/Développeur d'Applications</strong>
-                durant 10 mois. Une fois le titre acquis j'ai pu faire mes armes.
+                <strong>formation de Concepteur/Développeur d'Applications</strong> durant 10 mois.
+                Une fois le titre acquis j'ai pu faire mes armes.
               </p>
               <p>
-                Ma <strong>soif de connaissances et ma curiosité naturelles</strong> sont ma grande
-                force. Elles m'ont permis d'en apprendre toujours plus sur diverses technologies et
-                langages. Logique et curieux, je suis soucieux de la bonne exécution de mon travail
-                ainsi que de sa qualité.
+                Ma <strong>soif de connaissances</strong> et ma <strong>curiosité</strong>{" "}
+                naturelles sont ma grande force. Elles m'ont permis d'en apprendre toujours plus sur
+                diverses technologies et langages. <strong>Logique et curieux</strong>, je suis
+                soucieux de la bonne exécution de mon travail ainsi que de sa qualité.
               </p>
             </div>
           </div>
