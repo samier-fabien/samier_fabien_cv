@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Tooltip from "./Tooltip";
 import "../css/menuListElement.css";
+import { Link } from "react-router-dom";
 
 export default function MenuListElement({
   iconName = "",
@@ -14,9 +15,9 @@ export default function MenuListElement({
 
   return (
     <>
-      <a href={hyperlink} ref={hyperlinkRef} className={`menu-list-element ${hyperlinkClasses}`}>
+      <Link to={hyperlink} ref={hyperlinkRef} className={`menu-list-element ${hyperlinkClasses}`}>
         <i className={`${iconName}`} style={{ fontSize: iconSize }}></i>
-      </a>
+      </Link>
       <Tooltip
         targetRef={hyperlinkRef}
         textToDisplay={tooltipText}
