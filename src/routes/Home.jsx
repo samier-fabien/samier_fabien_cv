@@ -59,6 +59,7 @@ export default function Home() {
                     iconSize="2rem"
                     tooltipText="Expériences"
                     tooltipTextClasses="text-light"
+                    hyperlink="/test"
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
                   />,
                   <MenuListElement
@@ -66,6 +67,7 @@ export default function Home() {
                     iconSize="2rem"
                     tooltipText="Technologies"
                     tooltipTextClasses="text-light"
+                    hyperlink="/test"
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
                   />,
                   <MenuListElement
@@ -73,6 +75,7 @@ export default function Home() {
                     iconSize="2rem"
                     tooltipText="Etudes"
                     tooltipTextClasses="text-light"
+                    hyperlink="/test"
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
                   />,
                   <MenuListElement
@@ -80,6 +83,7 @@ export default function Home() {
                     iconSize="2rem"
                     tooltipText="Hobbies"
                     tooltipTextClasses="text-light"
+                    hyperlink="/test"
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
                   />,
                 ]}
