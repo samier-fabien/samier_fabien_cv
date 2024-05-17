@@ -39,6 +39,14 @@ export default function Home() {
               <RadialMenu
                 elements={[
                   <MenuListElement
+                    iconName="bi bi-house"
+                    iconSize="2rem"
+                    tooltipText="Accueil"
+                    tooltipTextClasses="text-light"
+                    hyperlink="/accueil"
+                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center button"
+                  />,
+                  <MenuListElement
                     iconName="bi bi-gear"
                     iconSize="2rem"
                     tooltipText="Compétences"
@@ -74,9 +82,9 @@ export default function Home() {
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
                   />,
                 ]}
-                firstItemAngleInRadians={Math.PI}
-                lastItemAngleInRadians={0}
-                menuRadius={130}
+                firstItemAngleInRadians={Math.PI + 0.1}
+                lastItemAngleInRadians={-0.1}
+                menuRadius={155}
                 menuClasses="menu-button"
                 listElementRadius={40}
                 listElementClasses="bg-dark text-white"
@@ -90,11 +98,11 @@ export default function Home() {
           </div>
         </header>
         <WavyTransition
+          transitionHeight="155"
           backgroundRGBA="rgba(171, 116, 254, 1)"
           topRGB="rgb(86, 50, 216)"
           bottomRGB="rgb(32, 36, 40)"
         />
-
         <div className="bg-dark">
           <div style={{ height: "100px", overflow: "hidden" }}>
             <svg
@@ -112,7 +120,7 @@ export default function Home() {
         <section className="container bg-white text-dark">
           <div className="row justify-content-center">
             <div className="col-xxl-6 col-xl-8 col-lg-10">
-              <h3 className="display-5">Une petite présentation.</h3>
+              <h3 className="display-5 text-center">Une petite présentation.</h3>
               <p className="lead anim-fade-in p-4">
                 <i className="bi bi-quote me-2"></i>Logique et curieux, je suis soucieux de la bonne
                 exécution de mon travail et de sa qualité.

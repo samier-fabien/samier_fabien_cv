@@ -1,7 +1,12 @@
 import React from "react";
 import "../css/wavyTransition.css";
 
-export default function WavyTransition({ backgroundRGBA, topRGB, bottomRGB }) {
+export default function WavyTransition({
+  transitionHeight = 100,
+  backgroundRGBA,
+  topRGB,
+  bottomRGB,
+}) {
   return (
     <div
       className="p-0 mb-0"
@@ -12,7 +17,7 @@ export default function WavyTransition({ backgroundRGBA, topRGB, bottomRGB }) {
       <svg
         className="waves"
         xmlns="http://www.w3.org/2000/svg"
-        height="120"
+        height={transitionHeight}
         viewBox="0 0 150 80"
         preserveAspectRatio="none"
         shapeRendering="auto"

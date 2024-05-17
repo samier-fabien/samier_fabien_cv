@@ -7,13 +7,14 @@ export default function MenuListElement({
   iconSize = "1rem",
   tooltipText = "default",
   tooltipTextClasses = "",
+  hyperlink = "#",
   hyperlinkClasses = "",
 }) {
   const hyperlinkRef = useRef(null);
 
   return (
     <>
-      <a href="#" ref={hyperlinkRef} className={`menu-list-element ${hyperlinkClasses}`}>
+      <a href={hyperlink} ref={hyperlinkRef} className={`menu-list-element ${hyperlinkClasses}`}>
         <i className={`${iconName}`} style={{ fontSize: iconSize }}></i>
       </a>
       <Tooltip
