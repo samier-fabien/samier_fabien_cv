@@ -31,7 +31,8 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  //<React.StrictMode>// TODO: Réactiver après tests sur canvas terminés
-  <RouterProvider router={router} />
-  //</React.StrictMode>
+  <React.StrictMode>
+    {/* TODO: Réactiver après tests sur canvas terminés */}
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
