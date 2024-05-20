@@ -5,12 +5,18 @@ export default function Home() {
     <section className="container bg-white text-dark">
       <div className="row justify-content-center">
         <div className="col-xxl-6 col-xl-8 col-lg-10">
-          <h3 className="display-5 text-center">Une petite présentation.</h3>
+          <h3 className="display-5 text-center">En bref.</h3>
           <p className="lead anim-fade-in p-4">
             <i className="bi bi-quote me-2"></i>Logique et curieux, je suis soucieux de la bonne
             exécution de mon travail et de sa qualité.
             <i className="bi bi-quote ms-2"></i>
           </p>
+          <p className="pb-5">
+            Je conçois et développe principalement des projets web. J'utilise pour cela html, css,
+            react et symfony entre autres. Je travaille sur linux et windows avec git et docker.
+            J'ai un an d'expérience et beaucoup de logique et de motivation.
+          </p>
+          <h3 className="display-5 text-center p-4">Plus exhaustivement.</h3>
           <h4 className="h4">La découverte.</h4>
           <p>
             C'est avec <strong>PHP 5.3</strong> que je me suis mis au développement. J'avais
