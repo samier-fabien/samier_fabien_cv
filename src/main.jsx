@@ -4,13 +4,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./css/index.css";
 import Root from "./routes/Root";
 import Error from "./routes/Error";
-// importe tout le css bootstrap
+import Template from "./components/Template";
+import Home from "./routes/Home";
+import Test from "./routes/Test"; // TODO: à supprimer avant prod
+// css+icônes bootstrap
 import "./scss/main.scss";
-// importe tout le js bootstrap
-import * as bootstrap from "bootstrap";
-import Test from "./routes/Test";
-import Presentation from "./routes/Home";
 import "bootstrap-icons/font/bootstrap-icons.css";
+// js bootstrap
+import * as bootstrap from "bootstrap";
 
 const router = createBrowserRouter([
   {
@@ -19,20 +20,25 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: "/test", // TODO: route à supprimer avant prod
-    element: <Test />,
+    path: "/",
+    element: <Template />,
     errorElement: <Error />,
-  },
-  {
-    path: "/accueil",
-    element: <Presentation />,
-    errorElement: <Error />,
+    children: [
+      {
+        path: "accueil",
+        element: <Home />,
+      },
+      {
+        path: "test", // TODO: route à supprimer avant prod
+        element: <Test />,
+      },
+    ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
+  // TODO: Réactiver après tests sur canvas terminés
   <React.StrictMode>
-    {/* TODO: Réactiver après tests sur canvas terminés */}
     <RouterProvider router={router} />
   </React.StrictMode>
 );
