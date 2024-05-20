@@ -5,9 +5,9 @@ export default function Technologies() {
   const divRef = useRef(null);
 
   return (
-    <div className="container-fluid bg-white">
+    <div className="container bg-white">
       <div className="row">
-        <div className="col text-center text-dark">
+        <div className="col-xxl-6 col-xl-8 col-lg-10 text-center text-dark">
           <h1 className="display-5 pb-5 text-center">
             <span className="px-4 border-start border-5 border-primary">
               Les technologies que je pratique.
@@ -19,7 +19,7 @@ export default function Technologies() {
         <div className="col p-0" ref={divRef}>
           <BubblesContainer
             parentRef={divRef}
-            h={700}
+            h={600}
             framerate={40}
             speed={1.1}
             minRadius={30}
