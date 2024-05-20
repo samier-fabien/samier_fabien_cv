@@ -51,6 +51,14 @@ export default function Root() {
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center button"
                   />,
                   <MenuListElement
+                    iconName="bi bi-code-slash"
+                    iconSize="2rem"
+                    tooltipText="Technologies"
+                    tooltipTextClasses="text-light"
+                    hyperlink="/technologies"
+                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
+                  />,
+                  <MenuListElement
                     iconName="bi bi-gear"
                     iconSize="2rem"
                     tooltipText="Compétences"
@@ -62,14 +70,6 @@ export default function Root() {
                     iconName="bi bi-journals"
                     iconSize="2rem"
                     tooltipText="Expériences"
-                    tooltipTextClasses="text-light"
-                    hyperlink="/test"
-                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
-                  />,
-                  <MenuListElement
-                    iconName="bi bi-code-slash"
-                    iconSize="2rem"
-                    tooltipText="Technologies"
                     tooltipTextClasses="text-light"
                     hyperlink="/test"
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
@@ -91,9 +91,9 @@ export default function Root() {
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
                   />,
                 ]}
-                firstItemAngleInRadians={Math.PI + 0.1}
-                lastItemAngleInRadians={-0.1}
-                menuRadius={155}
+                firstItemAngleInRadians={Math.PI + 0.12}
+                lastItemAngleInRadians={-0.12}
+                menuRadius={170}
                 menuClasses="menu-button"
                 listElementRadius={40}
                 listElementClasses="bg-dark text-white"
