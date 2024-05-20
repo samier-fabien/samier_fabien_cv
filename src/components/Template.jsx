@@ -27,8 +27,7 @@ export default function Root() {
         isInTransit={hasClicked}
         transitionClass="anim-fade-out"
         transitionTime="500"
-        // wrapperClass="container-fluid bg-primary full-page transition-opacity"
-        wrapperClass="container-fluid p-0"
+        wrapperClass="container-fluid p-0 transition-opacity"
       >
         <header className="container-fluid menu-padding bg-light">
           <div className="row text-center bg-dark">
