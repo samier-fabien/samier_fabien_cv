@@ -1,15 +1,17 @@
 .full-page {
-    height: 100vh;
-    overflow: hidden !important;
+  height: 100vh;
+  overflow: hidden !important;
+}
+
+.transition-opacity {
+  animation: fade 0.5s ease-out 0s 1 reverse forwards;
 }
 
 .bubble-container {
-
 }
 
 /* Pour ajouter du contenu à l'intérieur de la .bubble-container */
 .bubble-content {
-
 }
 
 .anim-rotate-translate {
@@ -52,7 +54,7 @@
     transform: translateX(-100vw) rotate(-100deg);
   }
   80% {
-    transform: translateX(2vw) rotate(370deg)
+    transform: translateX(2vw) rotate(370deg);
   }
   100% {
     transform: translateX(0) rotate(360deg);
@@ -60,7 +62,8 @@
 }
 
 @keyframes jig {
-  0%, 7% {
+  0%,
+  7% {
     transform: rotateZ(0);
   }
   15% {
@@ -78,23 +81,25 @@
   35% {
     transform: rotateZ(-4deg);
   }
-  40%, 100% {
+  40%,
+  100% {
     transform: rotateZ(0);
   }
 }
 
 @keyframes translate-bounce {
   0% {
-    transform: translateY(-200px)
+    transform: translateY(-200px);
   }
   35% {
-    transform: translateY(0) scaleX(100%) scaleY(100%)
+    transform: translateY(0) scaleX(100%) scaleY(100%);
   }
   50% {
-    transform: translateY(35px) scaleX(150%) scaleY(50%)
+    transform: translateY(35px) scaleX(150%) scaleY(50%);
   }
-  90%, 100% {
-    transform: translateY(0) scaleX(100%)
+  90%,
+  100% {
+    transform: translateY(0) scaleX(100%);
   }
 }
 
