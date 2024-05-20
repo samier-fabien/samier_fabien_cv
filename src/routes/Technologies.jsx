@@ -8,7 +8,11 @@ export default function Technologies() {
     <div className="container-fluid bg-white">
       <div className="row">
         <div className="col text-center text-dark">
-          <h1 className="display-5 pb-5 text-center">Les technologies que je pratique</h1>
+          <h1 className="display-5 pb-5 text-center">
+            <span className="px-4 border-start border-5 border-primary">
+              Les technologies que je pratique.
+            </span>
+          </h1>
         </div>
       </div>
       <div className="row">
