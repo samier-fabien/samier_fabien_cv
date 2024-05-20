@@ -10,6 +10,10 @@ class Bubble {
     text = "",
     colorOne = "black",
     colorTwo = "white",
+    colorThree = "black",
+    colorOneStop = 0,
+    colorTwoStop = 0.5,
+    colorThreeStop = 1,
     density = 1
   ) {
     this.canvas = canvas;
@@ -21,6 +25,10 @@ class Bubble {
     this.r = r;
     this.c1 = colorOne;
     this.c2 = colorTwo;
+    this.c3 = colorThree;
+    this.c1s = colorOneStop;
+    this.c2s = colorTwoStop;
+    this.c3s = colorThreeStop;
     this.d = density;
     this.m = this.d * Math.PI * this.r ** 2; // masse = densité * surface
     this.text = text;
@@ -52,8 +60,9 @@ class Bubble {
     this.ctx.fillText(this.text, this.x, this.y);
 
     const radialGradient = this.ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.r);
-    radialGradient.addColorStop(0, this.c1);
-    radialGradient.addColorStop(1, this.c2);
+    radialGradient.addColorStop(this.c1s, this.c1);
+    radialGradient.addColorStop(this.c2s, this.c2);
+    radialGradient.addColorStop(this.c3s, this.c3);
 
     this.ctx.beginPath();
     this.ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);

@@ -28,6 +28,10 @@ export default function BubblesContainer({
   bubblesText = [],
   bubblesColorOne = "",
   bubblesColorTwo = "",
+  bubblesColorThree = "",
+  bubblesColorOneStop = 0,
+  bubblesColorTwoStop = 0.5,
+  bubblesColorThreeStop = 1,
 }) {
   const canvasRef = useRef(null);
   const [parentWidth, setParentWidth] = useState(700);
@@ -95,7 +99,22 @@ export default function BubblesContainer({
       }
 
       bubbles.push(
-        new Bubble(canvas, ctx, x, y, dx, dy, r, text, bubblesColorOne, bubblesColorTwo)
+        new Bubble(
+          canvas,
+          ctx,
+          x,
+          y,
+          dx,
+          dy,
+          r,
+          text,
+          bubblesColorOne,
+          bubblesColorTwo,
+          bubblesColorThree,
+          bubblesColorOneStop,
+          bubblesColorTwoStop,
+          bubblesColorThreeStop
+        )
       );
     }
   }
