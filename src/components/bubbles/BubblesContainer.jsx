@@ -26,6 +26,8 @@ export default function BubblesContainer({
   framerate = 10,
   clear = true,
   bubblesText = [],
+  bubblesColorOne = "",
+  bubblesColorTwo = "",
 }) {
   const canvasRef = useRef(null);
   const [parentWidth, setParentWidth] = useState(700);
@@ -92,7 +94,9 @@ export default function BubblesContainer({
         }
       }
 
-      bubbles.push(new Bubble(canvas, ctx, x, y, dx, dy, r, text, "#fff"));
+      bubbles.push(
+        new Bubble(canvas, ctx, x, y, dx, dy, r, text, bubblesColorOne, bubblesColorTwo)
+      );
     }
   }
 

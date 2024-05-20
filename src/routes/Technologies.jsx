@@ -5,7 +5,7 @@ export default function Technologies() {
   const divRef = useRef(null);
 
   return (
-    <div className="container-fluid bg-danger full-page instantOutsideAnim">
+    <div className="container-fluid bg-white full-page instantOutsideAnim">
       <div className="row">
         <div className="col text-center text-light">
           <h1 className="h1 mt-3">Test Page</h1>
@@ -22,6 +22,8 @@ export default function Technologies() {
             maxRadius={100}
             number={7}
             bubblesText={["Vite", "JS", "React", "CSS", "HTML", "PHP", "Sf"]}
+            bubblesColorOne="rgba(240, 240, 255, 0.5)"
+            bubblesColorTwo="rgba(2, 2, 2, 0.2)"
           />
         </div>
       </div>
