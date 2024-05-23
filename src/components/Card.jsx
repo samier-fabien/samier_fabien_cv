@@ -4,7 +4,7 @@ export default function Card({
   headerTitle = "",
   cardTitle,
   cardText = "",
-  columnClasses = "col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3",
+  columnClasses = "col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4",
   theme = "light",
 }) {
   return (
