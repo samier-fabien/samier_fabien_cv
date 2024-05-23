@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderTransition from "../components/HeaderTransition";
 import FooterTransition from "../components/FooterTransition";
+import TitleOne from "../components/TitleOne";
 
 export default function Home() {
   return (
@@ -9,9 +10,7 @@ export default function Home() {
       <section className="container bg-white text-dark">
         <div className="row justify-content-center">
           <div className="col-xxl-6 col-xl-8 col-lg-10">
-            <h3 className="display-5 text-center">
-              <span className="px-4 border-start border-5 border-info">En bref.</span>
-            </h3>
+            <TitleOne title="De manière succinte" titleBorderColor="var(--bs-primary)" />
             <p className="lead anim-fade-in p-4">
               <i className="bi bi-quote me-2"></i>Logique et curieux, je suis soucieux de la bonne
               exécution de mon travail et de sa qualité.
@@ -22,11 +21,7 @@ export default function Home() {
               react et symfony entre autres. Je travaille sur linux et windows avec git et docker.
               J'ai un an d'expérience et beaucoup de logique et de motivation.
             </p>
-            <h3 className="display-5 text-center p-4">
-              <span className="px-4 border-start border-5 border-warning">
-                Plus exhaustivement.
-              </span>
-            </h3>
+            <TitleOne title="Plus exhaustivement" titleBorderColor="var(--bs-primary)" />
             <h4 className="h4">La découverte.</h4>
             <p>
               C'est avec <strong>PHP 5.3</strong> que je me suis mis au développement. J'avais
