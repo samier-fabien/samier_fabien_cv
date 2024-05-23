@@ -25,6 +25,7 @@ export default function BubblesContainer({
   maxRadius = 20,
   framerate = 10,
   clear = true,
+  containerClasses = "",
   bubblesText = [],
   bubblesColorOne = "",
   bubblesColorTwo = "",
@@ -353,5 +354,13 @@ export default function BubblesContainer({
     }
   }
 
-  return <canvas ref={canvasRef} id="bubbles-container" width="700" height={h} />;
+  return (
+    <canvas
+      ref={canvasRef}
+      id="bubbles-container"
+      className={containerClasses}
+      width="700"
+      height={h}
+    />
+  );
 }
