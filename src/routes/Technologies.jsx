@@ -4,6 +4,7 @@ import FooterTransition from "../components/FooterTransition";
 import HeaderTransition from "../components/HeaderTransition";
 import TitleOne from "../components/TitleOne";
 import Card from "../components/Card";
+import "../css/technologies.css";
 
 export default function Technologies() {
   const divRef = useRef(null);
@@ -11,27 +12,26 @@ export default function Technologies() {
   return (
     <>
       <HeaderTransition title="Technologies Employées" />
-      <div className="container bg-white">
-        <div className="row">
-          <div className="col p-0" ref={divRef}>
-            <BubblesContainer
-              parentRef={divRef}
-              h={600}
-              framerate={40}
-              speed={1.1}
-              minRadius={30}
-              maxRadius={80}
-              number={9}
-              bubblesText={["Vite", "JS", "React", "CSS", "HTML", "PHP", "Sf", "Docker", "Git"]}
-              bubblesColorOne="rgba(255, 255, 255, 0.3)"
-              bubblesColorTwo="rgba(240, 240, 255, 0.1)"
-              bubblesColorThree="rgba(100, 100, 180, 0.2)"
-              bubblesColorOneStop="0"
-              bubblesColorTwoStop="0.8"
-              bubblesColorThreeStop="1"
-            />
-          </div>
-        </div>
+      <div className="col p-0 sticky-top z-n1" ref={divRef}>
+        <BubblesContainer
+          parentRef={divRef}
+          h={600}
+          framerate={40}
+          speed={1.1}
+          minRadius={30}
+          maxRadius={80}
+          number={9}
+          containerClasses=""
+          bubblesText={["Vite", "JS", "React", "CSS", "HTML", "PHP", "Sf", "Docker", "Git"]}
+          bubblesColorOne="rgba(255, 255, 255, 0.3)"
+          bubblesColorTwo="rgba(240, 240, 255, 0.1)"
+          bubblesColorThree="rgba(100, 100, 180, 0.2)"
+          bubblesColorOneStop="0"
+          bubblesColorTwoStop="0.8"
+          bubblesColorThreeStop="1"
+        />
+      </div>
+      <div className="container bg-transparent">
         <div className="row justify-content-center">
           <div className="col-xxl-6 col-xl-8 col-lg-10 text-dark">
             <TitleOne title="Par type d'utilisation" titleBorderColor="var(--bs-primary)" />
