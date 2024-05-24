@@ -112,33 +112,7 @@ export default function Root() {
           topRGB="rgb(86, 50, 216)"
           bottomRGB="rgb(32, 36, 40)"
         />
-        <div className="bg-dark">
-          <div style={{ height: "100px", overflow: "hidden" }}>
-            <svg
-              viewBox="0 0 500 100"
-              preserveAspectRatio="none"
-              style={{ height: "100%", width: "100%" }}
-            >
-              <path
-                d="M0.00,50.00 C100.00,100.00 349.20,-50.00 500.00,50.00 L500.00,100.00 L0.00,100.00 Z"
-                style={{ stroke: "none", fill: "#ffffff" }}
-              ></path>
-            </svg>
-          </div>
-        </div>
         <Outlet />
-        <div style={{ height: "150px", overflow: "hidden" }}>
-          <svg
-            viewBox="0 0 500 150"
-            preserveAspectRatio="none"
-            style={{ height: "100%", width: "100%" }}
-          >
-            <path
-              d="M0.00,50.00 C120.20,151.48 269.75,151.48 500.00,50.00 L500.00,150.00 L0.00,150.00 Z"
-              style={{ stroke: "none", fill: "#202428" }}
-            ></path>
-          </svg>
-        </div>
         <footer className="container-fluid d-flex justify-content-center bg-dark text-light p-5">
           <img
             src="../../src/assets/vectors/html-5-logo-coloured-no-text.svg"

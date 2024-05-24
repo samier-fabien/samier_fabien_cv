@@ -25,7 +25,14 @@ export default function BubblesContainer({
   maxRadius = 20,
   framerate = 10,
   clear = true,
+  containerClasses = "",
   bubblesText = [],
+  bubblesColorOne = "",
+  bubblesColorTwo = "",
+  bubblesColorThree = "",
+  bubblesColorOneStop = 0,
+  bubblesColorTwoStop = 0.5,
+  bubblesColorThreeStop = 1,
 }) {
   const canvasRef = useRef(null);
   const [parentWidth, setParentWidth] = useState(700);
@@ -92,7 +99,24 @@ export default function BubblesContainer({
         }
       }
 
-      bubbles.push(new Bubble(canvas, ctx, x, y, dx, dy, r, text, "#fff"));
+      bubbles.push(
+        new Bubble(
+          canvas,
+          ctx,
+          x,
+          y,
+          dx,
+          dy,
+          r,
+          text,
+          bubblesColorOne,
+          bubblesColorTwo,
+          bubblesColorThree,
+          bubblesColorOneStop,
+          bubblesColorTwoStop,
+          bubblesColorThreeStop
+        )
+      );
     }
   }
 
@@ -330,5 +354,13 @@ export default function BubblesContainer({
     }
   }
 
-  return <canvas ref={canvasRef} id="bubbles-container" width="700" height={h} />;
+  return (
+    <canvas
+      ref={canvasRef}
+      id="bubbles-container"
+      className={containerClasses}
+      width="700"
+      height={h}
+    />
+  );
 }
