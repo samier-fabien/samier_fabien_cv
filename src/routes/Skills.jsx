@@ -1,5 +1,13 @@
 import React from "react";
+import FooterTransition from "../components/FooterTransition";
+import HeaderTransition from "../components/HeaderTransition";
 
 export default function Skills() {
-  return <div>Skills</div>;
+  return (
+    <>
+      <HeaderTransition title="Technologies Employées" />
+
+      <FooterTransition />
+    </>
+  );
 }
