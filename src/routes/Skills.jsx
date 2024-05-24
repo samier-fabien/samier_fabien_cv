@@ -5,7 +5,7 @@ import HeaderTransition from "../components/HeaderTransition";
 export default function Skills() {
   return (
     <>
-      <HeaderTransition title="Technologies Employées" />
+      <HeaderTransition title="Compétences" />
 
       <FooterTransition />
     </>
