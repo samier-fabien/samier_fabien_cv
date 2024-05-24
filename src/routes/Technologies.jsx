@@ -44,9 +44,9 @@ export default function Technologies() {
                 <br />
                 Bootstrap
                 <br />
-                React.js
+                Node.js
                 <br />
-                Npm
+                React.js
                 <br />
               </p>
             }
