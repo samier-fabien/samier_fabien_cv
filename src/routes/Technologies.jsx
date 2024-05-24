@@ -119,14 +119,17 @@ export default function Technologies() {
             headerTitle="Au fait, c'est quoi cette animation ?"
             cardText={
               <p>
-                C'est un algorithme que j'ai créé et qui utilise une balise canvas pour dessiner des
-                sortes de "bulles" qui se collisionnent. J'avais juste une idée en tête et après
-                m'être beaucoup documenté j'ai traduit les équations vers le code.
-                <br />
                 On appelle cela des "collisions élastiques", l'energie et la vitesse sont
                 conservées. Les "bulles" ont toutes un diamètre et une vitesse de base aléatoirement
                 attribués (dans une certaine plage). Cela leur confère un poids et une inertie
                 différents en fonction de leur vitesse.
+                <br />
+                A la base, j'avais juste l'image du résultat en tête. Il y a eu une phase de
+                documentation assez lourde avant que je puisse traduire en code des explications et
+                des équations souvent ésotériques.
+                <br />
+                L'algorithme que j'ai créé utilise une balise canvas pour dessiner des sortes de
+                "bulles" qui se collisionnent.
               </p>
             }
             columnClasses="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
