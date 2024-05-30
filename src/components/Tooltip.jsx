@@ -36,7 +36,6 @@ export default function Tooltip({
       });
     });
 
-    console.log(nextCurvedText);
     setCurvedText(nextCurvedText);
 
     tooltipRef.current.style.top = top;
