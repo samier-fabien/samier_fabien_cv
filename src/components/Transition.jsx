@@ -8,6 +8,7 @@ import React, { useState, useEffect } from "react";
  * Dans tous les cas, les données de transitionValues sont employées jusqu'au useEffect. Ensuite, les states seront utilisés. Le temps de transition entre les coordonnées est configurable avec le paramètre transitionDuration
  * Ainsi si on veut une courbe particulière sans effet de transition, on ajuste transitionShape sur "custom" et on donne les transitionValues.
  * @param {number} transitionHeight - Hauteur totale en pixels
+ * @param {boolean} transitionPathOnTop - Si true, le chemin sera en haut du svg
  * @param {string} transitionShape - Type de courbe: random|custom|down|up
  * @param {number[]} transitionValues - Tableau de nombres utilisé pour construire une courbe [premierPointYPosition, premierPointVecteurX, premierPointVecteurY, deuxièmePointVecteurX, deuxièmePointVecteurY, deuxièmePointYPosition]
  * @param {string} transitionContainerClasses - Classes css à ajouter à la div qui contient le composant (pour donner un background-color par exemple)
@@ -16,6 +17,7 @@ import React, { useState, useEffect } from "react";
  */
 export default function Transition({
   transitionHeight = 100,
+  transitionPathOnTop = false,
   transitionShape = "random",
   transitionValues = [0.1, 100, 0.1, 400, 0.1, 0.1],
   transitionContainerClasses = "bg-dark",
@@ -278,11 +280,14 @@ export default function Transition({
           style={{ height: "100%", width: "100%" }}
         >
           <path
-            d={`M0.00,${getYStart()} C${getX1()},${getY1()} ${getX2()},${getY2()} 500.00,${getYEnd()} L500.00,${transitionHeight} L0.00,${transitionHeight} Z`}
+            d={`M0.00,${getYStart()} C${getX1()},${getY1()} ${getX2()},${getY2()} 500.00,${getYEnd()} L500.00,${
+              transitionPathOnTop ? 0 : transitionHeight
+            } L0.00,${transitionPathOnTop ? 0 : transitionHeight} Z`}
             style={{
               stroke: "none",
               fill: transitionFillColor,
               transition: `${transitionDuration}s`,
+              transform: "rotate(180)",
             }}
           ></path>
         </svg>
