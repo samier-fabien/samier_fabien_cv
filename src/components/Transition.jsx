@@ -13,11 +13,11 @@ import React, { useState, useEffect } from "react";
  * @param {number[]} transitionValues - Tableau de nombres utilisé pour construire une courbe [premierPointYPosition, premierPointVecteurX, premierPointVecteurY, deuxièmePointVecteurX, deuxièmePointVecteurY, deuxièmePointYPosition]
  * @param {string} transitionContainerClasses - Classes css à ajouter à la div qui contient le composant (pour donner un background-color par exemple)
  * @param {string} transitionFillColor - Couleur du SVG
- * @param {number} transitionDuration - Durée de la transition entre les coordonnées de par défaut et le useState
+ * @param {number} transitionDuration - Durée de la transition entre les coordonnées par défaut et le useState
  */
 export default function Transition({
   transitionHeight = 100,
-  transitionPathOnTop = false,
+  transitionPathOnTop = 0,
   transitionShape = "random",
   transitionValues = [0.1, 100, 0.1, 400, 0.1, 0.1],
   transitionContainerClasses = "bg-dark",
@@ -70,8 +70,6 @@ export default function Transition({
     setY1(y1Value);
     setX2(x2Value);
     setY2(y2Value);
-
-    console.log(`[${x1Value};${y1Value}] [${x2Value};${y2Value}]`);
   }
 
   function generateCustomCurve() {
@@ -95,8 +93,6 @@ export default function Transition({
     setY1(y1Value);
     setX2(x2Value);
     setY2(y2Value);
-
-    console.log(`[${x1Value};${y1Value}] [${x2Value};${y2Value}]`);
   }
 
   function generateUpCurve() {
@@ -111,149 +107,99 @@ export default function Transition({
     setY1(y1Value);
     setX2(x2Value);
     setY2(y2Value);
-
-    console.log(`[${x1Value};${y1Value}] [${x2Value};${y2Value}]`);
   }
 
   function getYStart() {
-    console.log("### getYStart ###");
     if (yStart) {
-      console.log("yStart existe");
       return yStart;
     } else {
-      console.log("yStart n'existe pas");
       if (transitionValues) {
-        console.log("transitionValues existe");
         if (transitionValues.length >= 1) {
-          console.log("transitionValues.length >= 1");
-          console.log(`transitionValues[0] ${transitionValues[0]}`);
           return transitionValues[0];
         } else {
-          console.log("transitionValues.length < 1");
           return 0.1;
         }
       } else {
-        console.log("transitionValues n'existe pas");
         return 0.1;
       }
     }
   }
 
   function getX1() {
-    console.log("### getX1 ###");
     if (x1) {
-      console.log("x1 existe");
       return x1;
     } else {
-      console.log("x1 n'existe pas");
       if (transitionValues) {
-        console.log("transitionValues existe");
         if (transitionValues.length >= 2) {
-          console.log("transitionValues.length >= 2");
-          console.log(`transitionValues[1] ${transitionValues[1]}`);
           return transitionValues[1];
         } else {
-          console.log("transitionValues.length < 2");
           return 100;
         }
       } else {
-        console.log("transitionValues n'existe pas");
         return 100;
       }
     }
   }
 
   function getY1() {
-    console.log("### getY1 ###");
     if (y1) {
-      console.log("y1 existe");
       return y1;
     } else {
-      console.log("y1 n'existe pas");
       if (transitionValues) {
-        console.log("transitionValues existe");
         if (transitionValues.length >= 3) {
-          console.log("transitionValues.length >= 3");
-          console.log(`transitionValues[2] ${transitionValues[2]}`);
           return transitionValues[2];
         } else {
-          console.log("transitionValues.length < 3");
           return 100;
         }
       } else {
-        console.log("transitionValues n'existe pas");
         return 100;
       }
     }
   }
 
   function getX2() {
-    console.log("### getX2 ###");
     if (x2) {
-      console.log("x2 existe");
       return x2;
     } else {
-      console.log("x2 n'existe pas");
       if (transitionValues) {
-        console.log("transitionValues existe");
         if (transitionValues.length >= 4) {
-          console.log("transitionValues.length >= 4");
-          console.log(`transitionValues[3] ${transitionValues[3]}`);
           return transitionValues[3];
         } else {
-          console.log("transitionValues.length < 4");
           return 100;
         }
       } else {
-        console.log("transitionValues n'existe pas");
         return 100;
       }
     }
   }
 
   function getY2() {
-    console.log("### getY2 ###");
     if (y2) {
-      console.log("y2 existe");
       return y2;
     } else {
-      console.log("y2 n'existe pas");
       if (transitionValues) {
-        console.log("transitionValues existe");
         if (transitionValues.length >= 5) {
-          console.log("transitionValues.length >= 5");
-          console.log(`transitionValues[4] ${transitionValues[4]}`);
           return transitionValues[4];
         } else {
-          console.log("transitionValues.length < 5");
           return 100;
         }
       } else {
-        console.log("transitionValues n'existe pas");
         return 100;
       }
     }
   }
 
   function getYEnd() {
-    console.log("### getYEnd ###");
     if (yEnd) {
-      console.log("yEnd existe");
       return yEnd;
     } else {
-      console.log("yEnd n'existe pas");
       if (transitionValues) {
-        console.log("transitionValues existe");
         if (transitionValues.length >= 6) {
-          console.log("transitionValues.length >= 6");
-          console.log(`transitionValues[5] ${transitionValues[5]}`);
           return transitionValues[5];
         } else {
-          console.log("transitionValues.length < 6");
           return 0.1;
         }
       } else {
-        console.log("transitionValues n'existe pas");
         return 0.1;
       }
     }
