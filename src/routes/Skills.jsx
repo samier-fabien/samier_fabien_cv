@@ -3,6 +3,7 @@ import FooterTransition from "../components/FooterTransition";
 import HeaderTransition from "../components/HeaderTransition";
 import Transition from "../components/Transition";
 import "../css/skills.css";
+import RadialTextDisplay from "../components/RadialTextDisplay";
 
 export default function Skills() {
   return (
@@ -20,15 +21,22 @@ export default function Skills() {
       <div className="sticky-top z-n1 bg-transparent">
         <div className="parallax-container bg-parallax-1 sticky-top">
           <div className="container">
-            <div className="row">
+            <div className="row position-absolute">
               <h1>Lorem ipsum</h1>
             </div>
-            <div className="row">
-              <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique cum obcaecati
-                recusandae tempora optio et, nobis, dolorem cumque tempore illo esse nostrum
-                exercitationem reprehenderit. Iure ullam dolores magnam quae exercitationem.
-              </div>
+            <div className="d-flex justify-content-center align-items-center vh-100">
+              <RadialTextDisplay
+                textElements={[
+                  "lorem",
+                  "ipsum",
+                  "dolor",
+                  "sit",
+                  "amet",
+                  "consectetur",
+                  "adipisicing",
+                  "elit",
+                ]}
+              />
             </div>
           </div>
         </div>
@@ -40,7 +48,25 @@ export default function Skills() {
       />
       <div className="sticky-top z-n1 bg-transparent">
         <div className="parallax-container bg-parallax-2 sticky-top">
-          <h1>Lorem ipsum</h1>
+          <div className="container">
+            <div className="row position-absolute">
+              <h1>Lorem ipsum</h1>
+            </div>
+            <div className="d-flex justify-content-center align-items-center vh-100">
+              <RadialTextDisplay
+                textElements={[
+                  "lorem",
+                  "ipsum",
+                  "dolor",
+                  "sit",
+                  "amet",
+                  "consectetur",
+                  "adipisicing",
+                  "elit",
+                ]}
+              />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -51,7 +77,25 @@ export default function Skills() {
       />
       <div className="sticky-top z-n1 bg-transparent">
         <div className="parallax-container bg-parallax-3 sticky-top">
-          <h1>Lorem ipsum</h1>
+          <div className="container">
+            <div className="row position-absolute">
+              <h1>Lorem ipsum</h1>
+            </div>
+            <div className="d-flex justify-content-center align-items-center vh-100">
+              <RadialTextDisplay
+                textElements={[
+                  "lorem",
+                  "ipsum",
+                  "dolor",
+                  "sit",
+                  "amet",
+                  "consectetur",
+                  "adipisicing",
+                  "elit",
+                ]}
+              />
+            </div>
+          </div>
         </div>
       </div>
 
