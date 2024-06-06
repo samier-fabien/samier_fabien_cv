@@ -4,7 +4,8 @@ export default function RadialTextDisplay({
   textElements = [],
   firstTextAngleInRadians = Math.PI / 2,
   menuRadius = 200,
-  menuClasses = "",
+  menuRadiusVariation = 0,
+  elementClasses = "",
 }) {
   const [elements, setElements] = useState([]);
 
@@ -20,8 +21,9 @@ export default function RadialTextDisplay({
 
       const newElements = textElements.map((element, index) => {
         let elementAngle = firstTextAngleInRadians + index * angleBetweenTextElements;
-        let x = menuRadius * Math.cos(elementAngle);
-        let y = menuRadius * Math.sin(elementAngle);
+        let elementRadius = menuRadius + Math.random() * menuRadiusVariation;
+        let x = elementRadius * Math.cos(elementAngle);
+        let y = elementRadius * Math.sin(elementAngle);
         console.log(`${element} elementAngle: ${elementAngle} [x: ${x} | y: ${y}]`);
         return { element, x, y };
       });
@@ -38,7 +40,7 @@ export default function RadialTextDisplay({
       {elements.map((listElement, index) => (
         <span
           key={index}
-          className={`badge rounded-pill text-bg-light p-3 ${menuClasses}`}
+          className={elementClasses}
           style={{
             position: "absolute",
             left: `calc(50% + ${listElement.x}px)`,

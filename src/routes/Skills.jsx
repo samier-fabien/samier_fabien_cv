@@ -18,7 +18,7 @@ export default function Skills() {
         transitionContainerClasses="transition-background-1"
         transitionFillColor="#202428"
       />
-      <div className="sticky-top z-n1 bg-transparent">
+      <div className="sticky-top z-n1 bg-transparent mb-5">
         <div className="parallax-container bg-parallax-1 sticky-top">
           <div className="container">
             <div className="row position-absolute">
@@ -36,6 +36,8 @@ export default function Skills() {
                   "adipisicing",
                   "elit",
                 ]}
+                menuRadiusVariation={50}
+                elementClasses="badge rounded-pill text-bg-light p-3"
               />
             </div>
           </div>
@@ -46,7 +48,7 @@ export default function Skills() {
         transitionContainerClasses="bg-transparent"
         transitionFillColor="rgb(208, 208, 255)"
       />
-      <div className="sticky-top z-n1 bg-transparent">
+      <div className="sticky-top z-n1 bg-transparent mb-5">
         <div className="parallax-container bg-parallax-2 sticky-top">
           <div className="container">
             <div className="row position-absolute">
@@ -64,6 +66,8 @@ export default function Skills() {
                   "adipisicing",
                   "elit",
                 ]}
+                menuRadiusVariation={50}
+                elementClasses="badge rounded-pill text-bg-light p-3"
               />
             </div>
           </div>
@@ -75,7 +79,7 @@ export default function Skills() {
         transitionContainerClasses="bg-transparent"
         transitionFillColor="rgb(248, 222, 255)"
       />
-      <div className="sticky-top z-n1 bg-transparent">
+      <div className="sticky-top z-n1 bg-transparent mb-5">
         <div className="parallax-container bg-parallax-3 sticky-top">
           <div className="container">
             <div className="row position-absolute">
@@ -93,6 +97,8 @@ export default function Skills() {
                   "adipisicing",
                   "elit",
                 ]}
+                menuRadiusVariation={50}
+                elementClasses="badge rounded-pill text-bg-light p-3"
               />
             </div>
           </div>
