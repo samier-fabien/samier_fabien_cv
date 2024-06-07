@@ -10,17 +10,40 @@ export default function RadialTextDisplay({
   elementClasses = "",
 }) {
   const [elements, setElements] = useState(null);
-  const [mounted, setMounted] = useState(false);
   const containerRef = useRef(null);
 
   useEffect(() => {
     createElements();
-    // displayElements();
   }, [textElements]);
 
   useEffect(() => {
-    displayElements();
-  }, [elements]);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          console.log(entry.intersectionRatio);
+          if (entry.intersectionRatio >= 1) {
+            console.log("Element is at least 50% in the viewport!");
+            displayElements();
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1,
+      }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
 
   function createElements() {
     const elementsNumber = textElements.length;
