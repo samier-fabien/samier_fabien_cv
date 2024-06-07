@@ -3,7 +3,7 @@ import FooterTransition from "../components/FooterTransition";
 import HeaderTransition from "../components/HeaderTransition";
 import Transition from "../components/Transition";
 import "../css/skills.css";
-import RadialTextDisplay from "../components/RadialTextDisplay";
+import RadialTextDisplay from "../components/radialTextDisplay/RadialTextDisplay";
 
 export default function Skills() {
   return (
