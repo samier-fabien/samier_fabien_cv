@@ -35,7 +35,8 @@ export default function Skills() {
               "adipisicing",
               "elit",
             ]}
-            menuRadiusVariation={70}
+            menuRadius={250}
+            menuRadiusVariation={-30}
             elementClasses="badge rounded-pill bg-color-badge-1 p-3"
             containerClasses="bg-light bg-image-parallax-1"
           />
@@ -62,7 +63,8 @@ export default function Skills() {
               "adipisicing",
               "elit",
             ]}
-            menuRadiusVariation={70}
+            menuRadius={250}
+            menuRadiusVariation={-30}
             elementClasses="badge rounded-pill bg-color-badge-2 p-3"
             containerClasses="bg-light bg-image-parallax-2"
           />
@@ -89,7 +91,8 @@ export default function Skills() {
               "adipisicing",
               "elit",
             ]}
-            menuRadiusVariation={70}
+            menuRadius={250}
+            menuRadiusVariation={-30}
             elementClasses="badge rounded-pill bg-color-badge-3 p-3"
             containerClasses="bg-light bg-image-parallax-3"
           />
@@ -99,34 +102,3 @@ export default function Skills() {
     </>
   );
 }
-
-// <div className="sticky-top z-n1 bg-transparent mb-5">
-// <div className="parallax-container bg-color-parallax-1 sticky-top">
-//   <div className="container vh-100 align-items-center">
-//     <div className="row justify-content-center">
-//       <div className="col col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-//         <h1>Lorem ipsum</h1>
-//       </div>
-//     </div>
-//     <div className="row justify-content-center">
-//       <div className="col col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 d-flex justify-content-center align-items-center">
-//         <RadialTextDisplay
-//           textElements={[
-//             "lorem",
-//             "ipsum",
-//             "dolor",
-//             "sit",
-//             "amet",
-//             "consectetur",
-//             "adipisicing",
-//             "elit",
-//           ]}
-//           menuRadiusVariation={70}
-//           elementClasses="badge rounded-pill bg-color-badge-1 p-3"
-//           containerClasses="bg-light bg-image-parallax-1"
-//         />
-//       </div>
-//     </div>
-//   </div>
-// </div>
-// </div>
