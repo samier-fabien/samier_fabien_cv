@@ -8,6 +8,7 @@ export default function RadialTextDisplay({
   menuRadius = 200,
   menuRadiusVariation = 0,
   elementClasses = "",
+  containerClasses = ""
 }) {
   const [elements, setElements] = useState(null);
   const containerRef = useRef(null);
@@ -88,7 +89,8 @@ export default function RadialTextDisplay({
   return (
     <div
       ref={containerRef}
-      style={{ position: "relative", width: `${menuRadius * 2}px`, height: `${menuRadius * 2}px` }}
+      style={{ position: "relative", width: "100%", height: "50vh" }}
+      className={`${containerClasses}`}
     >
       {elements
         ? elements.map((element, index) => (

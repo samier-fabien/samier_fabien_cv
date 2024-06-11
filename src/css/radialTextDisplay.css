@@ -1,3 +1,7 @@
+.radial-text {
+  transition-duration: 800ms;
+}
+
 .radial-text-visible {
   opacity: 1;
 }

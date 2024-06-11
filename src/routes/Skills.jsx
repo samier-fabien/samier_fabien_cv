@@ -4,6 +4,7 @@ import HeaderTransition from "../components/HeaderTransition";
 import Transition from "../components/Transition";
 import "../css/skills.css";
 import RadialTextDisplay from "../components/radialTextDisplay/RadialTextDisplay";
+import ParallaxContainer from "../components/ParallaxContainer";
 
 export default function Skills() {
   return (
@@ -18,94 +19,114 @@ export default function Skills() {
         transitionContainerClasses="transition-background-1"
         transitionFillColor="#202428"
       />
-      <div className="sticky-top z-n1 bg-transparent mb-5">
-        <div className="parallax-container bg-parallax-1 sticky-top">
-          <div className="container">
-            <div className="row position-absolute">
-              <h1>Lorem ipsum</h1>
-            </div>
-            <div className="d-flex justify-content-center align-items-center vh-100">
-              <RadialTextDisplay
-                textElements={[
-                  "lorem",
-                  "ipsum",
-                  "dolor",
-                  "sit",
-                  "amet",
-                  "consectetur",
-                  "adipisicing",
-                  "elit",
-                ]}
-                menuRadiusVariation={50}
-                elementClasses="badge rounded-pill text-bg-light p-3"
-              />
-            </div>
-          </div>
+      <ParallaxContainer containerClasses="bg-color-parallax-1">
+        <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+          <h1>Lorem ipsum</h1>
         </div>
-      </div>
+        <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 d-flex justify-content-center align-items-center">
+          <RadialTextDisplay
+            textElements={[
+              "lorem",
+              "ipsum",
+              "dolor",
+              "sit",
+              "amet",
+              "consectetur",
+              "adipisicing",
+              "elit",
+            ]}
+            menuRadiusVariation={70}
+            elementClasses="badge rounded-pill bg-color-badge-1 p-3"
+            containerClasses="bg-light bg-image-parallax-1"
+          />
+        </div>
+      </ParallaxContainer>
       <Transition
         transitionPathOnTop={0}
         transitionContainerClasses="bg-transparent"
         transitionFillColor="rgb(208, 208, 255)"
       />
-      <div className="sticky-top z-n1 bg-transparent mb-5">
-        <div className="parallax-container bg-parallax-2 sticky-top">
-          <div className="container">
-            <div className="row position-absolute">
-              <h1>Lorem ipsum</h1>
-            </div>
-            <div className="d-flex justify-content-center align-items-center vh-100">
-              <RadialTextDisplay
-                textElements={[
-                  "lorem",
-                  "ipsum",
-                  "dolor",
-                  "sit",
-                  "amet",
-                  "consectetur",
-                  "adipisicing",
-                  "elit",
-                ]}
-                menuRadiusVariation={50}
-                elementClasses="badge rounded-pill text-bg-light p-3"
-              />
-            </div>
-          </div>
+      <ParallaxContainer containerClasses="bg-color-parallax-2">
+        <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+          <h1>Lorem ipsum</h1>
         </div>
-      </div>
-
+        <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 d-flex justify-content-center align-items-center">
+          <RadialTextDisplay
+            textElements={[
+              "lorem",
+              "ipsum",
+              "dolor",
+              "sit",
+              "amet",
+              "consectetur",
+              "adipisicing",
+              "elit",
+            ]}
+            menuRadiusVariation={70}
+            elementClasses="badge rounded-pill bg-color-badge-2 p-3"
+            containerClasses="bg-light bg-image-parallax-2"
+          />
+        </div>
+      </ParallaxContainer>
       <Transition
         transitionPathOnTop={0}
         transitionContainerClasses="bg-transparent"
-        transitionFillColor="rgb(248, 222, 255)"
+        transitionFillColor="rgb(253, 207, 255)"
       />
-      <div className="sticky-top z-n1 bg-transparent mb-5">
-        <div className="parallax-container bg-parallax-3 sticky-top">
-          <div className="container">
-            <div className="row position-absolute">
-              <h1>Lorem ipsum</h1>
-            </div>
-            <div className="d-flex justify-content-center align-items-center vh-100">
-              <RadialTextDisplay
-                textElements={[
-                  "lorem",
-                  "ipsum",
-                  "dolor",
-                  "sit",
-                  "amet",
-                  "consectetur",
-                  "adipisicing",
-                  "elit",
-                ]}
-                menuRadiusVariation={50}
-                elementClasses="badge rounded-pill text-bg-light p-3"
-              />
-            </div>
-          </div>
+      <ParallaxContainer containerClasses="bg-color-parallax-3">
+        <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+          <h1>Lorem ipsum</h1>
         </div>
-      </div>
-
+        <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 d-flex justify-content-center align-items-center">
+          <RadialTextDisplay
+            textElements={[
+              "lorem",
+              "ipsum",
+              "dolor",
+              "sit",
+              "amet",
+              "consectetur",
+              "adipisicing",
+              "elit",
+            ]}
+            menuRadiusVariation={70}
+            elementClasses="badge rounded-pill bg-color-badge-3 p-3"
+            containerClasses="bg-light bg-image-parallax-3"
+          />
+        </div>
+      </ParallaxContainer>
       <FooterTransition />
     </>
   );
 }
+
+// <div className="sticky-top z-n1 bg-transparent mb-5">
+// <div className="parallax-container bg-color-parallax-1 sticky-top">
+//   <div className="container vh-100 align-items-center">
+//     <div className="row justify-content-center">
+//       <div className="col col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+//         <h1>Lorem ipsum</h1>
+//       </div>
+//     </div>
+//     <div className="row justify-content-center">
+//       <div className="col col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 d-flex justify-content-center align-items-center">
+//         <RadialTextDisplay
+//           textElements={[
+//             "lorem",
+//             "ipsum",
+//             "dolor",
+//             "sit",
+//             "amet",
+//             "consectetur",
+//             "adipisicing",
+//             "elit",
+//           ]}
+//           menuRadiusVariation={70}
+//           elementClasses="badge rounded-pill bg-color-badge-1 p-3"
+//           containerClasses="bg-light bg-image-parallax-1"
+//         />
+//       </div>
+//     </div>
+//   </div>
+// </div>
+// </div>

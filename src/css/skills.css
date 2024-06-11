@@ -1,27 +1,57 @@
 .parallax-container {
   height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 300px;
 }
 
-.bg-parallax-1 {
-  background-image: url("../assets/vectors/etapes-projet_entretien.svg");
-  background-color: rgb(255, 244, 202);
+.bg-color-parallax-1 {
+  background-color: rgb(255, 221, 202);
 }
 
-.bg-parallax-2 {
-  background-image: url("../assets/vectors/etapes-projet_conception.svg");
+.bg-color-parallax-2 {
   background-color: rgb(208, 208, 255);
 }
 
-.bg-parallax-3 {
+.bg-color-parallax-3 {
+  background-color: rgb(253, 207, 255);
+}
+
+.bg-image-parallax-1 {
+  background-image: url("../assets/vectors/etapes-projet_entretien.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 300px;
+  border-radius: 3rem;
+}
+
+.bg-image-parallax-2 {
+  background-image: url("../assets/vectors/etapes-projet_conception.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 300px;
+  border-radius: 3rem;
+}
+
+.bg-image-parallax-3 {
   background-image: url("../assets/vectors/etapes-projet_dev.svg");
-  background-color: rgb(248, 222, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 300px;
+  border-radius: 3rem;
+}
+
+.bg-color-badge-1 {
+  background-color: rgb(255, 151, 91);
+}
+
+.bg-color-badge-2 {
+  background-color: rgb(104, 104, 255);
+}
+
+.bg-color-badge-3 {
+  background-color: rgb(249, 82, 255);
 }
 
 .transition-background-1 {
-  background-color: rgb(255, 244, 202);
+  background-color: rgb(255, 221, 202);
 }
 
 .transition-background-2 {
@@ -29,5 +59,5 @@
 }
 
 .transition-background-3 {
-  background-color: rgb(248, 222, 255);
+  background-color: rgb(253, 207, 255);
 }

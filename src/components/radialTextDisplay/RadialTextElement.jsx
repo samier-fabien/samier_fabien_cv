@@ -4,7 +4,7 @@ export default function RadialTextElement({ index, text, cssClasses, xPosition, 
   return (
     <span
       //   key={index}
-      className={`${cssClasses}`}
+      className={`radial-text ${cssClasses}`}
       style={{
         position: "absolute",
         left: `calc(50% + ${xPosition}px)`,
