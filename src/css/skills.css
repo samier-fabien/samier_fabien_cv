@@ -61,3 +61,10 @@
 .transition-background-3 {
   background-color: rgb(253, 207, 255);
 }
+
+.parallax-title {
+  position: relative;
+  top: -50%;
+  border-left: solid 0.3rem;
+  padding-left: 1rem;
+}
