@@ -87,22 +87,20 @@ export default function RadialTextDisplay({
   }
 
   return (
-    <div
-      ref={containerRef}
-      style={{ position: "relative", width: "100%", height: "60vh" }}
-      className={`${containerClasses}`}
-    >
-      {elements
-        ? elements.map((element, index) => (
-            <RadialTextElement
-              key={index}
-              text={element.element}
-              cssClasses={element.cssClasses}
-              xPosition={element.x}
-              yPosition={element.y}
-            />
-          ))
-        : ""}
+    <div ref={containerRef} className="radial-text-first-container">
+      <div className={`radial-text-true-container ${containerClasses}`}>
+        {elements
+          ? elements.map((element, index) => (
+              <RadialTextElement
+                key={index}
+                text={element.element}
+                cssClasses={element.cssClasses}
+                xPosition={element.x}
+                yPosition={element.y}
+              />
+            ))
+          : ""}
+      </div>
     </div>
   );
 }

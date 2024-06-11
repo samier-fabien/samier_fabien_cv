@@ -38,7 +38,7 @@ export default function Skills() {
             menuRadius={250}
             menuRadiusVariation={-30}
             elementClasses="badge rounded-pill bg-color-badge-1 p-3"
-            containerClasses="bg-light bg-image-parallax-1"
+            containerClasses="bg-light bg-image-parallax-1 parallax-container-border"
           />
         </div>
       </ParallaxContainer>
