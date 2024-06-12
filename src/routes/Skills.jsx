@@ -21,19 +21,16 @@ export default function Skills() {
       />
       <ParallaxContainer containerClasses="bg-color-parallax-1">
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-          <h2 className="h1 parallax-title">Lorem ipsum</h2>
+          <h2 className="h1 parallax-title">Des besoins au concept</h2>
         </div>
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 d-flex justify-content-center align-items-center">
           <RadialTextDisplay
             textElements={[
-              "lorem",
-              "ipsum",
-              "dolor",
-              "sit",
-              "amet",
-              "consectetur",
-              "adipisicing",
-              "elit",
+              "Etre à l'écoute",
+              "Evaluer la faisablité",
+              "Conceptualiser",
+              "Synthétiser",
+              "Analyser les besoins",
             ]}
             menuRadius={250}
             menuRadiusVariation={-30}
@@ -49,19 +46,18 @@ export default function Skills() {
       />
       <ParallaxContainer containerClasses="bg-color-parallax-2">
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-          <h2 className="h1 parallax-title">Lorem ipsum</h2>
+          <h2 className="h1 parallax-title">Conception</h2>
         </div>
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 d-flex justify-content-center align-items-center">
           <RadialTextDisplay
             textElements={[
-              "lorem",
-              "ipsum",
-              "dolor",
-              "sit",
-              "amet",
-              "consectetur",
-              "adipisicing",
-              "elit",
+              "Choisir les technologies",
+              "Planifier les étapes",
+              "Présenter les projet",
+              "Maquetter",
+              "Concevoir le design",
+              "Modéliser une BDD",
+              "S'aider de l'UML",
             ]}
             menuRadius={250}
             menuRadiusVariation={-30}
@@ -77,19 +73,19 @@ export default function Skills() {
       />
       <ParallaxContainer containerClasses="bg-color-parallax-3">
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-          <h2 className="h1 parallax-title">Lorem ipsum</h2>
+          <h2 className="h1 parallax-title">Développement</h2>
         </div>
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 d-flex justify-content-center align-items-center">
           <RadialTextDisplay
             textElements={[
-              "lorem",
-              "ipsum",
-              "dolor",
-              "sit",
-              "amet",
-              "consectetur",
-              "adipisicing",
-              "elit",
+              "Travailler en équipe",
+              "Réaliser des test unitaires",
+              "S'adapter au impondérables",
+              "Documenter son code",
+              "Ecrire un code propre et facile",
+              "Conteneuriser ses applications",
+              "Versionner son code",
+              "Appliquer les méthodes agile/scrum",
             ]}
             menuRadius={250}
             menuRadiusVariation={-30}
