@@ -12,7 +12,6 @@ export default function RadialTextDisplay({
   parentRef,
 }) {
   const [elements, setElements] = useState(null);
-  const [radius, setRadius] = useState(menuRadius);
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -61,7 +60,7 @@ export default function RadialTextDisplay({
   function handleResize() {
     if (parentRef && parentRef.current) {
       const remValue = convertRemToPx(9);
-      const width = remValue + radius * 2;
+      const width = remValue + menuRadius * 2;
       if (width > parentRef.current.offsetWidth) {
         createElements((parentRef.current.offsetWidth - remValue) / 2);
       } else {
