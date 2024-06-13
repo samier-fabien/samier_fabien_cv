@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import FooterTransition from "../components/FooterTransition";
 import HeaderTransition from "../components/HeaderTransition";
 import Transition from "../components/Transition";
@@ -7,6 +7,10 @@ import RadialTextDisplay from "../components/radialTextDisplay/RadialTextDisplay
 import ParallaxContainer from "../components/ParallaxContainer";
 
 export default function Skills() {
+  const firstParallaxColRef = useRef(null);
+  const secondParallaxColRef = useRef(null);
+  const thirdParallaxColRef = useRef(null);
+
   return (
     <>
       <div className="container-fluid py-4 text-center bg-dark text-light">
@@ -23,19 +27,23 @@ export default function Skills() {
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
           <h2 className="h1 parallax-title">Des besoins au concept</h2>
         </div>
-        <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 d-flex justify-content-center align-items-center">
+        <div
+          ref={firstParallaxColRef}
+          className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 d-flex justify-content-center align-items-center"
+        >
           <RadialTextDisplay
             textElements={[
               "Etre à l'écoute",
+              "Analyser les besoins",
+              "Synthétiser",
               "Evaluer la faisablité",
               "Conceptualiser",
-              "Synthétiser",
-              "Analyser les besoins",
             ]}
             menuRadius={250}
             menuRadiusVariation={-30}
-            elementClasses="badge rounded-pill bg-color-badge-1 p-3"
+            elementClasses="badge rounded-4 bg-color-badge-1 p-3"
             containerClasses="bg-light bg-image-parallax-1 parallax-container-border"
+            parentRef={firstParallaxColRef}
           />
         </div>
       </ParallaxContainer>
@@ -48,21 +56,25 @@ export default function Skills() {
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
           <h2 className="h1 parallax-title">Conception</h2>
         </div>
-        <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 d-flex justify-content-center align-items-center">
+        <div
+          ref={secondParallaxColRef}
+          className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 d-flex justify-content-center align-items-center"
+        >
           <RadialTextDisplay
             textElements={[
               "Choisir les technologies",
+              "S'aider de l'UML",
+              "Modéliser une BDD",
+              "Concevoir le design",
+              "Maquetter",
               "Planifier les étapes",
               "Présenter les projet",
-              "Maquetter",
-              "Concevoir le design",
-              "Modéliser une BDD",
-              "S'aider de l'UML",
             ]}
             menuRadius={250}
             menuRadiusVariation={-30}
-            elementClasses="badge rounded-pill bg-color-badge-2 p-3"
+            elementClasses="badge rounded-4 bg-color-badge-2 p-2"
             containerClasses="bg-light bg-image-parallax-2"
+            parentRef={secondParallaxColRef}
           />
         </div>
       </ParallaxContainer>
@@ -75,22 +87,26 @@ export default function Skills() {
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
           <h2 className="h1 parallax-title">Développement</h2>
         </div>
-        <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 d-flex justify-content-center align-items-center">
+        <div
+          ref={thirdParallaxColRef}
+          className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 d-flex justify-content-center align-items-center"
+        >
           <RadialTextDisplay
             textElements={[
               "Travailler en équipe",
+              "Appliquer les méthodes agile/scrum",
+              "Conteneuriser ses applications",
               "Réaliser des test unitaires",
+              "Versionner son code",
+              "Ecrire un code propre et facile",
               "S'adapter au impondérables",
               "Documenter son code",
-              "Ecrire un code propre et facile",
-              "Conteneuriser ses applications",
-              "Versionner son code",
-              "Appliquer les méthodes agile/scrum",
             ]}
             menuRadius={250}
             menuRadiusVariation={-30}
-            elementClasses="badge rounded-pill bg-color-badge-3 p-3"
+            elementClasses="badge rounded-4 bg-color-badge-3 p-2"
             containerClasses="bg-light bg-image-parallax-3"
+            parentRef={thirdParallaxColRef}
           />
         </div>
       </ParallaxContainer>

@@ -9,21 +9,25 @@ export default function RadialTextDisplay({
   menuRadiusVariation = 0,
   elementClasses = "",
   containerClasses = "",
+  parentRef,
 }) {
   const [elements, setElements] = useState(null);
+  const [radius, setRadius] = useState(menuRadius);
   const containerRef = useRef(null);
 
   useEffect(() => {
-    createElements();
+    if (parentRef && parentRef.current) {
+      handleResize();
+    } else {
+      createElements(menuRadius);
+    }
   }, [textElements]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log(entry.intersectionRatio);
           if (entry.intersectionRatio >= 1) {
-            console.log("Element is at least 50% in the viewport!");
             displayElements();
           }
         });
@@ -44,46 +48,65 @@ export default function RadialTextDisplay({
         observer.unobserve(containerRef.current);
       }
     };
-  }, []);
+  }, [containerRef]);
 
-  function createElements() {
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [parentRef]);
+
+  function handleResize() {
+    console.log("reized");
+    if (parentRef && parentRef.current) {
+      const remValue = convertRemToPx(9);
+      const width = remValue + radius * 2;
+      console.log(width);
+      if (width > parentRef.current.offsetWidth) {
+        console.log("plus grand");
+        createElements((parentRef.current.offsetWidth - remValue) / 2);
+      } else {
+        createElements(menuRadius);
+      }
+    }
+  }
+
+  function createElements(newRadius) {
     const elementsNumber = textElements.length;
     if (elementsNumber > 0) {
       const angleBetweenTextElements = (2 * Math.PI) / elementsNumber;
-      console.log(`angleBetweenTextElements: ${angleBetweenTextElements}`);
 
       const newElements = textElements.map((element, index) => {
-        let elementAngle = firstTextAngleInRadians + index * angleBetweenTextElements;
-        let elementRadius = menuRadius + Math.random() * menuRadiusVariation;
+        let elementAngle = firstTextAngleInRadians - index * angleBetweenTextElements;
+        let elementRadius = newRadius + Math.random() * menuRadiusVariation;
         let x = elementRadius * Math.cos(elementAngle);
         let y = elementRadius * Math.sin(elementAngle);
         let cssClasses = `${elementClasses} radial-text-hidden`;
-        console.log(`${element} elementAngle: ${elementAngle} [x: ${x} | y: ${y}]`);
 
         return { element, x, y, cssClasses };
       });
 
       setElements(newElements);
     }
-    console.log(elements);
   }
 
   function displayElements() {
     const biloute = containerRef.current.querySelectorAll("span");
-    console.log(containerRef.current.querySelectorAll("span"));
 
     biloute.forEach((element, index) => {
       setTimeout(() => {
-        console.log("un element" + index);
         if (element.classList.contains("radial-text-hidden")) {
-          console.log("Contient radial-text-hidden");
           element.classList.remove("radial-text-hidden");
           element.classList.add("radial-text-visible");
-        } else {
-          console.log("Ne contient pas radial-text-hidden");
         }
       }, 200 * index);
     });
+  }
+
+  function convertRemToPx(remNumber) {
+    return parseFloat(getComputedStyle(document.documentElement).fontSize) * remNumber;
   }
 
   return (
