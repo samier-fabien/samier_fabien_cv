@@ -59,13 +59,10 @@ export default function RadialTextDisplay({
   }, [parentRef]);
 
   function handleResize() {
-    console.log("reized");
     if (parentRef && parentRef.current) {
       const remValue = convertRemToPx(9);
       const width = remValue + radius * 2;
-      console.log(width);
       if (width > parentRef.current.offsetWidth) {
-        console.log("plus grand");
         createElements((parentRef.current.offsetWidth - remValue) / 2);
       } else {
         createElements(menuRadius);
