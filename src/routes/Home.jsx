@@ -33,11 +33,11 @@ export default function Home() {
             </p>
             <h4 className="h4 pt-4">Le développement dans mon métier d'alors.</h4>
             <p>
-              <strong>C'était une passion</strong> quand j'ai changé d'orientation professionnelle
-              pour devenir usineur. Je me suis aperçu que j'avais de très bonnes bases lorsque j'ai
-              programmé pour les premières fois des machines à commande numérique. Le langage
-              n'avait rien en commun avec PHP, Javascript ou SQL mais l'algorithmie en procédurale
-              avec des boucles, des variables et des conditions, ça je connaissais.
+              <strong>C'était une passion</strong> quand je suis devenu usineur. Je me suis aperçu
+              que j'avais de très bonnes bases lorsque j'ai programmé pour les premières fois des
+              machines à commande numérique. Le langage n'avait rien en commun avec PHP, Javascript
+              ou SQL mais l'algorithmie en procédurale avec des boucles, des variables et des
+              conditions, ça je connaissais.
             </p>
             <p>
               <strong>Ma passion est devenu une force</strong> dans ce cadre professionnelle. Quand
@@ -47,8 +47,9 @@ export default function Home() {
             </p>
             <h4 className="h4 pt-4">Développeur.</h4>
             <p>
-              Lorsque <strong>j'ai eu l'opportunité faire de mon violon d'Ingres mon métier</strong>
-              , je l'ai saisie: remise à niveau puis{" "}
+              Lorsque{" "}
+              <strong>j'ai eu l'opportunité de faire de mon violon d'Ingres mon métier</strong>, je
+              l'ai saisie: remise à niveau puis{" "}
               <strong>formation de Concepteur/Développeur d'Applications</strong> durant 10 mois.
               Une fois le titre acquis j'ai pu faire mes armes.
             </p>
