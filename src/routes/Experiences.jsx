@@ -1,6 +1,7 @@
 import React from "react";
 import Transition from "../components/Transition";
 import FooterTransition from "../components/FooterTransition";
+import DoubleSidedCard from "../components/DoubleSidedCard";
 
 export default function Experiences() {
   return (
@@ -15,6 +16,34 @@ export default function Experiences() {
         transitionContainerClasses="bg-white"
         transitionFillColor="#202428"
       />
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <DoubleSidedCard
+              otherFace={<p className="card-text">L'autre face, the dark side of the card...</p>}
+            >
+              <h5 className="card-title">lorem</h5>
+              <p className="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores architecto
+                aliquam, esse similique excepturi saepe velit nam, eveniet laborum porro, veniam hic
+                magnam tempora? Eos recusandae deleniti odio explicabo enim!
+              </p>
+            </DoubleSidedCard>
+          </div>
+          <div className="col">
+            <DoubleSidedCard
+              otherFace={<p className="card-text">L'autre face, the dark side of the card...</p>}
+            >
+              <h5 className="card-title">lorem</h5>
+              <p className="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores architecto
+                aliquam, esse similique excepturi saepe velit nam, eveniet laborum porro, veniam hic
+                magnam tempora? Eos recusandae deleniti odio explicabo enim!
+              </p>
+            </DoubleSidedCard>
+          </div>
+        </div>
+      </div>
       <FooterTransition />
     </>
   );
