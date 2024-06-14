@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "../css/doubleSidedCard.css";
 
-export default function DoubleSidedCard({ children, otherFace }) {
+export default function DoubleSidedCard({ children, otherFace, cardClasses = "" }) {
   const [content, setContent] = useState(children);
   const cardRef = useRef(null);
 
@@ -28,7 +28,11 @@ export default function DoubleSidedCard({ children, otherFace }) {
   }
 
   return (
-    <div ref={cardRef} className="card h-100 double-sided-card" onClick={handleMouseClick}>
+    <div
+      ref={cardRef}
+      className={`card h-100 double-sided-card ${cardClasses}`}
+      onClick={handleMouseClick}
+    >
       <div className="card-body">{content ? content : ""}</div>
     </div>
   );
