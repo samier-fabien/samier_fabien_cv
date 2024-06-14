@@ -28,7 +28,7 @@ export default function DoubleSidedCard({ children, otherFace }) {
   }
 
   return (
-    <div ref={cardRef} className="card h-100 doubleSidedCard" onClick={handleMouseClick}>
+    <div ref={cardRef} className="card h-100 double-sided-card" onClick={handleMouseClick}>
       <div className="card-body">{content ? content : ""}</div>
     </div>
   );

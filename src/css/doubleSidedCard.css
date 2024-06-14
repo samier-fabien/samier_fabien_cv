@@ -1,6 +1,7 @@
-.doubleSidedCard {
+.double-sided-card {
   transform-origin: center; /* définir l'origine de la rotation au centre */
   transition: transform 0.5s; /* animation de 0.5 secondes pour la rotation */
+  cursor: pointer;
 }
 
 .card-flip {
