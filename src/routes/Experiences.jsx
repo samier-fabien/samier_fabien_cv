@@ -7,7 +7,7 @@ export default function Experiences() {
   return (
     <>
       <div className="container-fluid py-4 text-center bg-dark text-light">
-        <h1 className="display-4 m-0 p-0">Compétences</h1>
+        <h1 className="display-4 m-0 p-0">Expériences</h1>
       </div>
       <Transition
         transitionPathOnTop="true"
@@ -17,29 +17,59 @@ export default function Experiences() {
         transitionFillColor="#202428"
       />
       <div className="container">
-        <div className="row">
+        <div className="row" style={{ height: "35rem" }}>
           <div className="col">
             <DoubleSidedCard
-              otherFace={<p className="card-text">L'autre face, the dark side of the card...</p>}
+              otherFace={
+                <div class="d-flex align-items-center h-100">
+                  <ul className="card-text">
+                    <li>Développement d'une application web pour la commune</li>
+                    <li>Choix des technologies: Symfony 5, Bootstrap, JQuery, Docker</li>
+                    <li>Conception de la base de données relationnelle (méthode merise)</li>
+                    <li>Maquettage avec Figma</li>
+                    <li>Modélisation UML</li>
+                    <li>Tests unitaires</li>
+                  </ul>
+                </div>
+              }
             >
-              <h5 className="card-title">lorem</h5>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores architecto
-                aliquam, esse similique excepturi saepe velit nam, eveniet laborum porro, veniam hic
-                magnam tempora? Eos recusandae deleniti odio explicabo enim!
-              </p>
+              <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                <h5 className="card-title">Collectivité territoriale d'Auchonvillers</h5>
+                <p className="card-text">Stage de développement web</p>
+              </div>
             </DoubleSidedCard>
           </div>
           <div className="col">
             <DoubleSidedCard
-              otherFace={<p className="card-text">L'autre face, the dark side of the card...</p>}
+              otherFace={
+                <div class="d-flex align-items-center h-100">
+                  <ul className="card-text">
+                    <li>Modifications d'APIs existantes</li>
+                    <li>Conception de bases de données</li>
+                    <li>
+                      Dialogue avec le personnel en vue de la réalisation d'algorithmes pour
+                      l'élaboration d'applications en lien avec leur travail
+                    </li>
+                    <li>
+                      Conception et développement d'APIs REST et GraphQL avec Symfony et Api
+                      Platform
+                    </li>
+                    <li>Développement front avec React, Jquery et Htmx</li>
+                    <li>Modification et développement de modules pour Prestashop</li>
+                    <li>Écriture de scripts en Bash et Python</li>
+                    <li>Documentation des applications créées</li>
+                    <li>
+                      Rédaction d'articles sur les diverses technologies rencontrées et employées
+                      avec Onenote en guise de base de connaissances
+                    </li>
+                  </ul>
+                </div>
+              }
             >
-              <h5 className="card-title">lorem</h5>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores architecto
-                aliquam, esse similique excepturi saepe velit nam, eveniet laborum porro, veniam hic
-                magnam tempora? Eos recusandae deleniti odio explicabo enim!
-              </p>
+              <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                <h5 className="card-title">Extérieurstock</h5>
+                <p className="card-text">Développement web</p>
+              </div>
             </DoubleSidedCard>
           </div>
         </div>
