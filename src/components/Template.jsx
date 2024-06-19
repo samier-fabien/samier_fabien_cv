@@ -71,7 +71,7 @@ export default function Root() {
                     iconSize="2rem"
                     tooltipText="Expériences"
                     tooltipTextClasses="text-light"
-                    hyperlink="/test"
+                    hyperlink="/experiences"
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
                   />,
                   <MenuListElement
