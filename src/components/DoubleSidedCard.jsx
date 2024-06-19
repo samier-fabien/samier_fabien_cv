@@ -30,10 +30,10 @@ export default function DoubleSidedCard({ children, otherFace, cardClasses = "" 
   return (
     <div
       ref={cardRef}
-      className={`card h-100 double-sided-card ${cardClasses}`}
+      className={`card h-100 double-sided-card rounded-5 ${cardClasses}`}
       onClick={handleMouseClick}
     >
-      <div className="card-body">{content ? content : ""}</div>
+      {content ? content : ""}
     </div>
   );
 }

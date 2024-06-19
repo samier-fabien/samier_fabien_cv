@@ -23,7 +23,7 @@ export default function Experiences() {
             otherFace={
               <div className="d-flex align-items-center justify-content-center h-100">
                 <ul className="card-text list-group list-group-flush border-color-white">
-                  <li className="bg-orange-300 list-group-item  border-orange-100">
+                  <li className="bg-orange-300 list-group-item  border-orange-100 text-gray-800">
                     Développement d'une application web pour la commune
                   </li>
                   <li className="bg-orange-300 list-group-item border-orange-100 text-gray-800">
@@ -46,9 +46,16 @@ export default function Experiences() {
             }
             cardClasses="bg-orange-300 border-5 border-orange-100"
           >
-            <div className="d-flex flex-column align-items-center justify-content-center h-100">
-              <h2 className="card-title text-white">Collectivité territoriale d'Auchonvillers</h2>
-              <p className="card-text text-gray-800">Stage de développement web</p>
+            <div className="card-body">
+              <div className="d-flex flex-column align-items-center justify-content-center h-100">
+                <h2 className="card-title text-white">Collectivité territoriale d'Auchonvillers</h2>
+                <p className=" text-gray-700 mb-5">
+                  <em>
+                    <small>Novembre 2021 ꭫ Janvier 2022</small>
+                  </em>
+                </p>
+                <p className="card-text text-gray-800 lead fw-bold">Stage de développement web</p>
+              </div>
             </div>
           </DoubleSidedCard>
         </div>
@@ -95,7 +102,12 @@ export default function Experiences() {
           >
             <div className="d-flex flex-column align-items-center justify-content-center h-100">
               <h2 className="card-title text-white">Extérieurstock</h2>
-              <p className="card-text text-gray-800">Développement web</p>
+              <p className=" text-gray-700 mb-5">
+                <em>
+                  <small>Septembre 2022 ꭫ Septembre 2023</small>
+                </em>
+              </p>
+              <p className="card-text text-gray-800 lead fw-bold">Développement web</p>
             </div>
           </DoubleSidedCard>
         </div>
