@@ -11,7 +11,7 @@ export default function CarouselCard({
     <div className={`row justify-content-center my-5`} style={{ height: "22rem" }}>
       <div className={columnClasses}>
         <div className={`card shadow h-100 ${cardClasses}`}>
-          <div className="card-header h4">{headerTitle}</div>
+          <div className="card-header h2 text-white">{headerTitle}</div>
           <div className="card-body">
             {cardTitle ? <h5 className="card-title">{cardTitle}</h5> : ""}
             <p className="card-text">{cardText}</p>

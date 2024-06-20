@@ -46,6 +46,7 @@ export default function Technologies() {
                     <li className="list-group-item">Npm</li>
                   </p>
                 }
+                cardClasses="bg-orange-300 text-gray-700"
               />,
               <CarouselCard
                 headerTitle="Back-end"
@@ -57,6 +58,7 @@ export default function Technologies() {
                     <li className="list-group-item">Api Platform</li>
                   </p>
                 }
+                cardClasses="bg-indigo-300 text-gray-700"
               />,
               <CarouselCard
                 headerTitle="Appli traditionnelle"
@@ -67,6 +69,7 @@ export default function Technologies() {
                     <li className="list-group-item">htmx</li>
                   </p>
                 }
+                cardClasses="bg-blue-300 text-gray-700"
               />,
               <CarouselCard
                 headerTitle="Outils de conception"
@@ -78,6 +81,7 @@ export default function Technologies() {
                     <li className="list-group-item">Looping-MCD (Merise)</li>
                   </p>
                 }
+                cardClasses="bg-pink-300 text-gray-700"
               />,
               <CarouselCard
                 headerTitle="Développement"
@@ -92,6 +96,7 @@ export default function Technologies() {
                     <li className="list-group-item">Obsidian / Onenote</li>
                   </p>
                 }
+                cardClasses="bg-teal-300 text-gray-700"
               />,
               <CarouselCard
                 headerTitle="Design"
@@ -102,6 +107,7 @@ export default function Technologies() {
                     <li className="list-group-item">Générateurs en ligne</li>
                   </p>
                 }
+                cardClasses="bg-cyan-300 text-gray-700"
               />,
             ]}
           />
