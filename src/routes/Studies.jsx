@@ -1,5 +1,6 @@
 import React from "react";
 import Transition from "../components/Transition";
+import FooterTransition from "../components/FooterTransition";
 
 export default function Studies() {
   return (
@@ -14,6 +15,7 @@ export default function Studies() {
         transitionContainerClasses="bg-white"
         transitionFillColor="#202428"
       />
+      <FooterTransition />
     </>
   );
 }
