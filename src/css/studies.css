@@ -1,0 +1,11 @@
+.card {
+  transition-duration: 800ms;
+}
+
+.card-visible {
+  opacity: 1;
+}
+
+.card-hidden {
+  opacity: 0;
+}
