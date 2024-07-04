@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import Transition from "../components/Transition";
 import FooterTransition from "../components/FooterTransition";
 import IntersectionObserverComponent from "../components/IntersectionObserverComponent";
-import "../css/studies.css";
 import SingleColContainer from "../components/SingleColContainer";
 import StudiesCard from "../components/StudiesCard";
 

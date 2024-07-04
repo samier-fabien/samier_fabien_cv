@@ -1,4 +1,5 @@
 import React, { forwardRef, useEffect } from "react";
+import "../css/studiesCard.css";
 
 const StudiesCard = forwardRef(function StudiesCard(props, ref) {
   useEffect(() => {
