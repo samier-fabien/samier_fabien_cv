@@ -1,17 +1,14 @@
 import React, { useEffect, useRef } from "react";
 
-export default function IntersectionObserverComponent({
-  children,
-  elementToObserve,
-  classToAdd,
-  classToRemove,
-}) {
+export default function IntersectionObserverComponent({ children, classToAdd, classToRemove }) {
+  const childRef = useRef(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.intersectionRatio >= 1) {
-            displayElement();
+            displayElement(childRef);
           }
         });
       },
@@ -22,18 +19,19 @@ export default function IntersectionObserverComponent({
       }
     );
 
-    if (elementToObserve.current) {
-      observer.observe(elementToObserve.current);
+    if (childRef.current) {
+      console.log(childRef.current);
+      observer.observe(childRef.current);
     }
 
     return () => {
-      if (elementToObserve.current) {
-        observer.unobserve(elementToObserve.current);
+      if (childRef.current) {
+        observer.unobserve(childRef.current);
       }
     };
-  }, [elementToObserve]);
+  }, [childRef]);
 
-  function displayElement() {
+  function displayElement(elementToObserve) {
     const element = elementToObserve.current;
     if (element.classList.contains(classToRemove)) {
       element.classList.remove(classToRemove);
@@ -41,5 +39,13 @@ export default function IntersectionObserverComponent({
     }
   }
 
-  return <>{children}</>;
+  return (
+    <>
+      {React.Children.map(children, (child) => {
+        return React.cloneElement(child, {
+          ref: childRef,
+        });
+      })}
+    </>
+  );
 }

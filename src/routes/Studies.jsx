@@ -4,9 +4,10 @@ import FooterTransition from "../components/FooterTransition";
 import IntersectionObserverComponent from "../components/IntersectionObserverComponent";
 import "../css/studies.css";
 import SingleColContainer from "../components/SingleColContainer";
+import StudiesCard from "../components/StudiesCard";
 
 export default function Studies() {
-  const firstRef = useRef(null);
+  // const firstRef = useRef(null);
   const secondRef = useRef(null);
   const thirdRef = useRef(null);
 
@@ -24,57 +25,34 @@ export default function Studies() {
       />
 
       <SingleColContainer>
-        <IntersectionObserverComponent
-          elementToObserve={firstRef}
-          classToAdd="opacity-100"
-          classToRemove="opacity-0"
-        >
-          <div ref={firstRef} className="transition-duration-800 my-5 opacity-0">
-            <h2>Baccalauréat</h2>
-            <p className="d-inline float-end pt-4 ps-3">Juin 2005</p>
-            <p className="pt-4 pb-1">Économique et social.</p>
-            <p>
-              <em>Lycée Baudimont, Arras</em>
-            </p>
-          </div>
+        <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
+          <StudiesCard title="Baccalauréat" period="Juin 2005" place="Lycée Baudimont, Arras">
+            Économique et social.
+          </StudiesCard>
         </IntersectionObserverComponent>
 
-        <IntersectionObserverComponent
-          elementToObserve={secondRef}
-          classToAdd="opacity-100"
-          classToRemove="opacity-0"
-        >
-          <div ref={secondRef} className="transition-duration-800 my-5 opacity-0">
-            <h2>Techniques de Base du Développement d'Applications</h2>
-            <p className="d-inline float-end pt-4 ps-3">Avril 2021 ➜ Mai 2021</p>
-            <p className="pt-4 pb-1">
-              Mise à niveau sur HTML, CSS, Bootstrap, algorithmie, pseudo-code, javascript, bases de
-              données relationnelles, php.
-            </p>
-            <p>
-              <em>AFPA, Amiens</em>
-            </p>
-          </div>
+        <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
+          <StudiesCard
+            title="Techniques de Base du Développement d'Applications"
+            period="Avril 2021 ➜ Mai 2021"
+            place="AFPA, Amiens"
+          >
+            Mise à niveau sur HTML, CSS, Bootstrap, algorithmie, pseudo-code, javascript, bases de
+            données relationnelles, php.
+          </StudiesCard>
         </IntersectionObserverComponent>
 
-        <IntersectionObserverComponent
-          elementToObserve={thirdRef}
-          classToAdd="opacity-100"
-          classToRemove="opacity-0"
-        >
-          <div ref={thirdRef} className="transition-duration-800 my-5 opacity-0">
-            <h2>Concepteur, Développeur d’Applications</h2>
-            <p className="d-inline float-end pt-4 ps-3">Juin 2021 ➜ Février 2022</p>
-            <p className="pt-4 pb-1">
-              Formation diplômante de niveau licence. Utilisation avancée de bases de données,
-              conception de BDD, méthode merise, UML, maquettage, méthodes agile et scrum,
-              programmation orientée objet, framework PHP: Symfony, applications desktop avec Java,
-              Swing et JavaFX.
-            </p>
-            <p>
-              <em>AFPA, Amiens</em>
-            </p>
-          </div>
+        <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
+          <StudiesCard
+            title="Concepteur, Développeur d’Applications"
+            period="Juin 2021 ➜ Février 2022"
+            place="AFPA, Amiens"
+          >
+            Formation diplômante de niveau licence. Utilisation avancée de bases de données,
+            conception de BDD, méthode merise, UML, maquettage, méthodes agile et scrum,
+            programmation orientée objet, framework PHP: Symfony, applications desktop avec Java,
+            Swing et JavaFX.
+          </StudiesCard>
         </IntersectionObserverComponent>
       </SingleColContainer>
 
