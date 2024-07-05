@@ -26,7 +26,7 @@ export default function Studies() {
       <SingleColContainer>
         <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
           <StudiesCard title="Baccalauréat" period="Juin 2005" place="Lycée Baudimont, Arras">
-            Économique et social.
+            Économique et social. Option mathématiques.
           </StudiesCard>
         </IntersectionObserverComponent>
 
