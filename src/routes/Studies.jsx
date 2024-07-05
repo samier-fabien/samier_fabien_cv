@@ -25,7 +25,12 @@ export default function Studies() {
 
       <SingleColContainer>
         <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
-          <StudiesCard title="Baccalauréat" period="Juin 2005" place="Lycée Baudimont, Arras">
+          <StudiesCard
+            title="Baccalauréat"
+            period="Juin 2005"
+            place="Lycée Baudimont, Arras"
+            cssClasses="bg-orange-300"
+          >
             Économique et social. Option mathématiques.
           </StudiesCard>
         </IntersectionObserverComponent>
@@ -35,6 +40,7 @@ export default function Studies() {
             title="Techniques de Base du Développement d'Applications"
             period="Avril 2021 ➜ Mai 2021"
             place="AFPA, Amiens"
+            cssClasses="bg-indigo-300"
           >
             Mise à niveau sur HTML, CSS, Bootstrap, algorithmie, pseudo-code, javascript, bases de
             données relationnelles, php.
@@ -46,6 +52,7 @@ export default function Studies() {
             title="Concepteur, Développeur d’Applications"
             period="Juin 2021 ➜ Février 2022"
             place="AFPA, Amiens"
+            cssClasses="bg-pink-300"
           >
             Formation diplômante de niveau licence. Utilisation avancée de bases de données,
             conception de BDD, méthode merise, UML, maquettage, méthodes agile et scrum,
