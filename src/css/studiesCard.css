@@ -1,0 +1,10 @@
+.transition-duration-800 {
+  transition-duration: 800ms;
+}
+
+.studies-card {
+  border: 0.4rem solid rgba(255, 255, 255, 0.5);
+  border-radius: 2rem;
+  padding: 3rem;
+  margin-bottom: 7rem;
+}
