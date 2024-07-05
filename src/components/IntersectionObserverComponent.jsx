@@ -20,7 +20,6 @@ export default function IntersectionObserverComponent({ children, classToAdd, cl
     );
 
     if (childRef.current) {
-      console.log(childRef.current);
       observer.observe(childRef.current);
     }
 
