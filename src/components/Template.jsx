@@ -43,11 +43,11 @@ export default function Root() {
               <RadialMenu
                 elements={[
                   <MenuListElement
-                    iconName="bi bi-house"
+                    iconName="bi bi-person"
                     iconSize="2rem"
-                    tooltipText="Accueil"
+                    tooltipText="À-propos"
                     tooltipTextClasses="text-light"
-                    hyperlink="/accueil"
+                    hyperlink="/a-propos"
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center button"
                   />,
                   <MenuListElement
