@@ -2,7 +2,6 @@ import React from "react";
 import HeaderTransition from "../components/HeaderTransition";
 import FooterTransition from "../components/FooterTransition";
 import SingleColContainer from "../components/SingleColContainer";
-import IntersectionObserverComponent from "../components/IntersectionObserverComponent";
 import TitleOneObserved from "../components/TitleOneObserved";
 import ParagraphObserved from "../components/ParagraphObserved";
 import TitleTwoObserved from "../components/TitleTwoObserved";
