@@ -5,7 +5,7 @@ import "./css/index.css";
 import Root from "./routes/Root";
 import Error from "./routes/Error";
 import Template from "./components/Template";
-import Home from "./routes/Home";
+import About from "./routes/About";
 import Technologies from "./routes/Technologies";
 import Skills from "./routes/Skills";
 import Experiences from "./routes/Experiences";
@@ -31,8 +31,8 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "accueil",
-        element: <Home />,
+        path: "a-propos",
+        element: <About />,
       },
       {
         path: "technologies",
