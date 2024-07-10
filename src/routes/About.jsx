@@ -3,7 +3,7 @@ import HeaderTransition from "../components/HeaderTransition";
 import FooterTransition from "../components/FooterTransition";
 import TitleOne from "../components/TitleOne";
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <HeaderTransition title="Présentation" />
