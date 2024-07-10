@@ -1,0 +1,12 @@
+.translate-from-left {
+  opacity: 0%;
+  transform: translateX(-50px) !important;
+}
+.translate-from-right {
+  opacity: 0%;
+  transform: translateX(50px) !important;
+}
+.translate-none {
+  opacity: 100%;
+  transform: translateX(0) !important;
+}
