@@ -3,13 +3,23 @@ import HeaderTransition from "../components/HeaderTransition";
 import FooterTransition from "../components/FooterTransition";
 import TitleOne from "../components/TitleOne";
 import SingleColContainer from "../components/SingleColContainer";
+import IntersectionObserverComponent from "../components/IntersectionObserverComponent";
+import TitleOneObserved from "../components/TitleOneObserved";
 
 export default function About() {
   return (
     <>
       <HeaderTransition title="Présentation" />
       <SingleColContainer>
-        <TitleOne title="De manière succinte" titleBorderColor="var(--bs-primary)" />
+        <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
+          <TitleOneObserved
+            title="De manière succinte"
+            cssClasses=""
+            borderColor="var(--bs-secondary)"
+          >
+            De manière succinte
+          </TitleOneObserved>
+        </IntersectionObserverComponent>
         <p className="lead anim-fade-in p-4">
           <i className="bi bi-quote me-2"></i>Logique et curieux, je suis soucieux de la bonne
           exécution de mon travail et de sa qualité.
@@ -20,7 +30,15 @@ export default function About() {
           react et symfony entre autres. Je travaille sur linux et windows avec git et docker. J'ai
           un an d'expérience et beaucoup de logique et de motivation.
         </p>
-        <TitleOne title="Plus exhaustivement" titleBorderColor="var(--bs-primary)" />
+        <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
+          <TitleOneObserved
+            title="De manière succinte"
+            cssClasses=""
+            borderColor="var(--bs-secondary)"
+          >
+            Plus exhaustivement
+          </TitleOneObserved>
+        </IntersectionObserverComponent>
         <h4 className="h4">La découverte.</h4>
         <p>
           C'est avec <strong>PHP 5.3</strong> que je me suis mis au développement. J'avais découvert{" "}
