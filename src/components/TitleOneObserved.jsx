@@ -5,6 +5,7 @@ export default function TitleOneObserved({
   classToAdd,
   classToRemove,
   borderColor = "black",
+  cssClasses = "",
 }) {
   const ref = useRef(null);
 
@@ -48,7 +49,9 @@ export default function TitleOneObserved({
       <h2
         ref={ref}
         style={{ borderLeft: `0.3rem solid ${borderColor}` }}
-        className={`display-6 ps-3 transition-duration-800 opacity-0`}
+        className={`display-6 ps-3 transition-duration-800 ${cssClasses} ${
+          classToRemove ? classToRemove : ""
+        }`}
       >
         {children}
       </h2>

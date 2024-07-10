@@ -39,7 +39,10 @@ export default function ParagraphObserved({ children, classToAdd, classToRemove,
   }
 
   return (
-    <p ref={ref} className={`transition-duration-800 ${cssClasses ? cssClasses : ""}`}>
+    <p
+      ref={ref}
+      className={`transition-duration-800 ${cssClasses} ${classToRemove ? classToRemove : ""}`}
+    >
       {children}
     </p>
   );
