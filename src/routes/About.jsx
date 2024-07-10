@@ -5,6 +5,7 @@ import SingleColContainer from "../components/SingleColContainer";
 import IntersectionObserverComponent from "../components/IntersectionObserverComponent";
 import TitleOneObserved from "../components/TitleOneObserved";
 import ParagraphObserved from "../components/ParagraphObserved";
+import TitleTwoObserved from "../components/TitleTwoObserved";
 
 export default function About() {
   return (
@@ -54,7 +55,9 @@ export default function About() {
             <strong>design patterns</strong>.
           </ParagraphObserved>
         </IntersectionObserverComponent>
-        <h4 className="h4 pt-4">Le développement dans mon métier d'alors.</h4>
+        <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
+          <TitleTwoObserved>Le développement dans mon métier d'alors.</TitleTwoObserved>
+        </IntersectionObserverComponent>
         <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
           <ParagraphObserved cssClasses="opacity-0">
             <strong>C'était une passion</strong> quand je suis devenu usineur. Je me suis aperçu que
@@ -72,7 +75,9 @@ export default function About() {
             de calcul de balourd.
           </ParagraphObserved>
         </IntersectionObserverComponent>
-        <h4 className="h4 pt-4">Développeur.</h4>
+        <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
+          <TitleTwoObserved>Développeur.</TitleTwoObserved>
+        </IntersectionObserverComponent>
         <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
           <ParagraphObserved cssClasses="opacity-0">
             Lorsque{" "}
