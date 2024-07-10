@@ -14,3 +14,5 @@ const TitleOneObserved = forwardRef(function TitleOneObserved({ props, ref }) {
     </h2>
   );
 });
+
+export default TitleOneObserved;
