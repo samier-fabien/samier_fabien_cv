@@ -1,17 +1,57 @@
-import React, { forwardRef } from "react";
+import React, { useEffect, useRef } from "react";
 
-const TitleOneObserved = forwardRef(function TitleOneObserved(props, ref) {
+export default function TitleOneObserved({
+  children,
+  classToAdd,
+  classToRemove,
+  borderColor = "black",
+}) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.intersectionRatio >= 1) {
+            displayElement(ref);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1,
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [ref]);
+
+  function displayElement(elementToObserve) {
+    const element = elementToObserve.current;
+    if (element.classList.contains(classToRemove)) {
+      element.classList.remove(classToRemove);
+      element.classList.add(classToAdd);
+    }
+  }
+
   return (
-    <h2
-      ref={ref}
-      style={{ borderLeft: `0.3rem solid ${props.borderColor}` }}
-      className={`display-6 ps-3 transition-duration-800 opacity-0 ${
-        props.cssClasses ? props.cssClasses : ""
-      }`}
-    >
-      {props.children}
-    </h2>
+    <>
+      <h2
+        ref={ref}
+        style={{ borderLeft: `0.3rem solid ${borderColor}` }}
+        className={`display-6 ps-3 transition-duration-800 opacity-0`}
+      >
+        {children}
+      </h2>
+    </>
   );
-});
-
-export default TitleOneObserved;
+}

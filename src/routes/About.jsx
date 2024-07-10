@@ -12,14 +12,13 @@ export default function About() {
     <>
       <HeaderTransition title="Présentation" />
       <SingleColContainer>
-        <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
-          <TitleOneObserved
-            cssClasses=""
-            borderColor="var(--bs-secondary)"
-          >
-            De manière succinte
-          </TitleOneObserved>
-        </IntersectionObserverComponent>
+        <TitleOneObserved
+          classToAdd="opacity-100"
+          classToRemove="opacity-0"
+          borderColor="var(--bs-primary)"
+        >
+          De manière succinte
+        </TitleOneObserved>
         <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
           <ParagraphObserved cssClasses="lead opacity-0 p-4">
             <i className="bi bi-quote me-2"></i>Logique et curieux, je suis soucieux de la bonne
@@ -34,15 +33,13 @@ export default function About() {
             J'ai un an d'expérience et beaucoup de logique et de motivation.
           </ParagraphObserved>
         </IntersectionObserverComponent>
-        <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
-          <TitleOneObserved
-            title="De manière succinte"
-            cssClasses=""
-            borderColor="var(--bs-secondary)"
-          >
-            Plus exhaustivement
-          </TitleOneObserved>
-        </IntersectionObserverComponent>
+        <TitleOneObserved
+          classToAdd="opacity-100"
+          classToRemove="opacity-0"
+          borderColor="var(--bs-primary)"
+        >
+          Plus exhaustivement
+        </TitleOneObserved>
         <h4 className="h4">La découverte.</h4>
         <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
           <ParagraphObserved cssClasses="opacity-0">
