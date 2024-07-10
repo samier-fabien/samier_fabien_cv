@@ -19,7 +19,7 @@ export default function Root() {
   return (
     <div className="bg-primary">
       <TransitionWrapper
-        path={"/accueil"}
+        path={"/a-propos"}
         isInTransit={hasClicked}
         transitionClass="anim-fade-out"
         transitionTime="500"
