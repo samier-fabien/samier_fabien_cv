@@ -42,7 +42,7 @@ export default function TitleTwoObserved({ children, classToAdd, classToRemove, 
     <>
       <h3
         ref={ref}
-        className={`h4 pt-4 transition-duration-800 ${cssClasses} ${
+        className={`h3 pt-4 transition-duration-800 ${cssClasses} ${
           classToRemove ? classToRemove : ""
         }`}
       >
