@@ -14,7 +14,6 @@ export default function About() {
       <SingleColContainer>
         <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
           <TitleOneObserved
-            title="De manière succinte"
             cssClasses=""
             borderColor="var(--bs-secondary)"
           >
