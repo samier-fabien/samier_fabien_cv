@@ -40,7 +40,9 @@ export default function About() {
         >
           Plus exhaustivement
         </TitleOneObserved>
-        <h4 className="h4">La découverte.</h4>
+        <TitleTwoObserved classToAdd="opacity-100" classToRemove="opacity-0">
+          La découverte.
+        </TitleTwoObserved>
         <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
           <ParagraphObserved cssClasses="opacity-0">
             C'est avec <strong>PHP 5.3</strong> que je me suis mis au développement. J'avais
@@ -51,9 +53,9 @@ export default function About() {
             <strong>design patterns</strong>.
           </ParagraphObserved>
         </IntersectionObserverComponent>
-        <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
-          <TitleTwoObserved>Le développement dans mon métier d'alors.</TitleTwoObserved>
-        </IntersectionObserverComponent>
+        <TitleTwoObserved classToAdd="opacity-100" classToRemove="opacity-0">
+          Le développement dans mon métier d'alors.
+        </TitleTwoObserved>
         <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
           <ParagraphObserved cssClasses="opacity-0">
             <strong>C'était une passion</strong> quand je suis devenu usineur. Je me suis aperçu que
@@ -71,9 +73,9 @@ export default function About() {
             de calcul de balourd.
           </ParagraphObserved>
         </IntersectionObserverComponent>
-        <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
-          <TitleTwoObserved>Développeur.</TitleTwoObserved>
-        </IntersectionObserverComponent>
+        <TitleTwoObserved classToAdd="opacity-100" classToRemove="opacity-0">
+          Développeur.
+        </TitleTwoObserved>
         <IntersectionObserverComponent classToAdd="opacity-100" classToRemove="opacity-0">
           <ParagraphObserved cssClasses="opacity-0">
             Lorsque{" "}
