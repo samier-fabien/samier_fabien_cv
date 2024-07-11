@@ -5,6 +5,7 @@ import HeaderTransition from "../components/HeaderTransition";
 import CarouselCard from "../components/CarouselCard";
 import Carousel from "../components/Carousel";
 import ListGroupFlush from "../components/ListGroupFlush";
+import ListGroupFlushItem from "../components/ListGroupFlushItem";
 
 export default function Technologies() {
   const divRef = useRef(null);
@@ -37,24 +38,24 @@ export default function Technologies() {
             slides={[
               <CarouselCard headerTitle="Front-end" cardClasses="bg-orange-300 text-gray-700">
                 <ListGroupFlush>
-                  <li className="list-group-item">HTML</li>
-                  <li className="list-group-item">CSS</li>
-                  <li className="list-group-item">Bootstrap</li>
-                  <li className="list-group-item">JavaScript</li>
-                  <li className="list-group-item">Node.js / npm</li>
-                  <li className="list-group-item">React.js</li>
-                  <li className="list-group-item">Vite.js</li>
-                  <li className="list-group-item">htmx</li>
-                  <li className="list-group-item">JQuery</li>
+                  <ListGroupFlushItem>HTML</ListGroupFlushItem>
+                  <ListGroupFlushItem>CSS</ListGroupFlushItem>
+                  <ListGroupFlushItem>Bootstrap</ListGroupFlushItem>
+                  <ListGroupFlushItem>JavaScript</ListGroupFlushItem>
+                  <ListGroupFlushItem>Node.js / npm</ListGroupFlushItem>
+                  <ListGroupFlushItem>React.js</ListGroupFlushItem>
+                  <ListGroupFlushItem>Vite.js</ListGroupFlushItem>
+                  <ListGroupFlushItem>htmx</ListGroupFlushItem>
+                  <ListGroupFlushItem>JQuery</ListGroupFlushItem>
                 </ListGroupFlush>
               </CarouselCard>,
               <CarouselCard headerTitle="Back-end" cardClasses="bg-indigo-300 text-gray-700">
                 <ListGroupFlush>
-                  <li className="list-group-item">PHP</li>
-                  <li className="list-group-item">Composer</li>
-                  <li className="list-group-item">Symfony</li>
-                  <li className="list-group-item">Twig</li>
-                  <li className="list-group-item">Api Platform</li>
+                  <ListGroupFlushItem>PHP</ListGroupFlushItem>
+                  <ListGroupFlushItem>Composer</ListGroupFlushItem>
+                  <ListGroupFlushItem>Symfony</ListGroupFlushItem>
+                  <ListGroupFlushItem>Twig</ListGroupFlushItem>
+                  <ListGroupFlushItem>Api Platform</ListGroupFlushItem>
                 </ListGroupFlush>
               </CarouselCard>,
               <CarouselCard
@@ -62,32 +63,32 @@ export default function Technologies() {
                 cardClasses="bg-pink-300 text-gray-700"
               >
                 <ListGroupFlush>
-                  <li className="list-group-item">Trello</li>
-                  <li className="list-group-item">Figma</li>
-                  <li className="list-group-item">Draw.io (UML)</li>
-                  <li className="list-group-item">Looping-MCD (Merise)</li>
+                  <ListGroupFlushItem>Trello</ListGroupFlushItem>
+                  <ListGroupFlushItem>Figma</ListGroupFlushItem>
+                  <ListGroupFlushItem>Draw.io (UML)</ListGroupFlushItem>
+                  <ListGroupFlushItem>Looping-MCD (Merise)</ListGroupFlushItem>
                 </ListGroupFlush>
               </CarouselCard>,
               <CarouselCard headerTitle="Développement" cardClasses="bg-teal-300 text-gray-700">
                 <ListGroupFlush>
-                  <li className="list-group-item">VSCode</li>
-                  <li className="list-group-item">Docker</li>
-                  <li className="list-group-item">Docker compose</li>
-                  <li className="list-group-item">Git</li>
-                  <li className="list-group-item">Laragon / serveur PHP (selon l'OS)</li>
-                  <li className="list-group-item">Insomnia</li>
-                  <li className="list-group-item">Postman</li>
-                  <li className="list-group-item">Obsidian</li>
-                  <li className="list-group-item">Onenote</li>
+                  <ListGroupFlushItem>VSCode</ListGroupFlushItem>
+                  <ListGroupFlushItem>Docker</ListGroupFlushItem>
+                  <ListGroupFlushItem>Docker compose</ListGroupFlushItem>
+                  <ListGroupFlushItem>Git</ListGroupFlushItem>
+                  <ListGroupFlushItem>Laragon / serveur PHP (selon l'OS)</ListGroupFlushItem>
+                  <ListGroupFlushItem>Insomnia</ListGroupFlushItem>
+                  <ListGroupFlushItem>Postman</ListGroupFlushItem>
+                  <ListGroupFlushItem>Obsidian</ListGroupFlushItem>
+                  <ListGroupFlushItem>Onenote</ListGroupFlushItem>
                 </ListGroupFlush>
               </CarouselCard>,
               <CarouselCard headerTitle="Design" cardClasses="bg-cyan-300 text-gray-700">
                 <ListGroupFlush>
-                  <li className="list-group-item">Illustrator</li>
-                  <li className="list-group-item">Inkscape</li>
-                  <li className="list-group-item">Gimp</li>
-                  <li className="list-group-item">Photoshop</li>
-                  <li className="list-group-item">Générateurs en ligne</li>
+                  <ListGroupFlushItem>Illustrator</ListGroupFlushItem>
+                  <ListGroupFlushItem>Inkscape</ListGroupFlushItem>
+                  <ListGroupFlushItem>Gimp</ListGroupFlushItem>
+                  <ListGroupFlushItem>Photoshop</ListGroupFlushItem>
+                  <ListGroupFlushItem>Générateurs en ligne</ListGroupFlushItem>
                 </ListGroupFlush>
               </CarouselCard>,
             ]}
