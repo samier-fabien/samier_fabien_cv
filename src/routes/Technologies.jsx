@@ -43,64 +43,70 @@ export default function Technologies() {
                     <ImageFromAssets
                       src="/vectors/html-5-logo-coloured-no-text.svg"
                       height="1.5rem"
-                    />
+                    />{" "}
                     HTML
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets
+                      src="/vectors/css-3-logo-coloured-no-text.svg"
+                      height="1.5rem"
+                    />{" "}
                     CSS
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets
+                      src="/vectors/bootstrap-fill-svgrepo-com.svg"
+                      height="1.5rem"
+                    />{" "}
                     Bootstrap
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets src="/vectors/js-logo-coloured.svg" height="1.5rem" />{" "}
                     JavaScript
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets
+                      src="/vectors/node-logo-coloured-no-text.svg"
+                      height="1.5rem"
+                    />{" "}
                     Node.js / npm
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets
+                      src="/vectors/react-logo-coloured-no-text.svg"
+                      height="1.5rem"
+                    />{" "}
                     React.js
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    Vite.js
+                    <ImageFromAssets src="/vectors/vite-svgrepo-com.svg" height="1.5rem" /> Vite.js
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    htmx
+                    <ImageFromAssets src="/vectors/code-svgrepo-com.svg" height="1.5rem" /> Htmx
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    JQuery
+                    <ImageFromAssets src="/vectors/jquery-svgrepo-com.svg" height="1.5rem" /> JQuery
                   </ListGroupFlushItem>
                 </ListGroupFlush>
               </CarouselCard>,
               <CarouselCard headerTitle="Back-end" cardClasses="bg-indigo-300 text-gray-700">
                 <ListGroupFlush>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    PHP
+                    <ImageFromAssets src="/vectors/php-svgrepo-com.svg" height="1.5rem" /> PHP
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets src="/vectors/composer-svgrepo-com.svg" height="1.5rem" />{" "}
                     Composer
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    Symfony
+                    <ImageFromAssets src="/vectors/symfony-logo.svg" height="1.5rem" /> Symfony
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    Twig
+                    <ImageFromAssets src="/vectors/twig-svgrepo-com.svg" height="1.5rem" /> Twig
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    Api Platform
+                    <ImageFromAssets src="/bitmaps/Logo_Api_Patform.png" height="1.5rem" /> Api
+                    Platform
                   </ListGroupFlushItem>
                 </ListGroupFlush>
               </CarouselCard>,
@@ -110,59 +116,52 @@ export default function Technologies() {
               >
                 <ListGroupFlush>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    Trello
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    Figma
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets src="/vectors/drawio-svgrepo-com.svg" height="1.5rem" />{" "}
                     Draw.io (UML)
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    Looping-MCD (Merise)
+                    <ImageFromAssets src="/bitmaps/looping_mcd.webp" height="1.5rem" /> Looping-MCD
+                    (Merise)
+                  </ListGroupFlushItem>
+                  <ListGroupFlushItem>
+                    <ImageFromAssets src="/vectors/trello-color-svgrepo-com.svg" height="1.5rem" />{" "}
+                    Trello
+                  </ListGroupFlushItem>
+                  <ListGroupFlushItem>
+                    <ImageFromAssets src="/vectors/figma-svgrepo-com.svg" height="1.5rem" /> Figma
                   </ListGroupFlushItem>
                 </ListGroupFlush>
               </CarouselCard>,
               <CarouselCard headerTitle="Développement" cardClasses="bg-teal-300 text-gray-700">
                 <ListGroupFlush>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    VSCode
+                    <ImageFromAssets src="/vectors/vscode-svgrepo-com.svg" height="1.5rem" /> VSCode
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    Docker
+                    <ImageFromAssets src="/vectors/docker-svgrepo-com.svg" height="1.5rem" /> Docker
+                    / Docker compose
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    Docker compose
+                    <ImageFromAssets src="/vectors/git-svgrepo-com.svg" height="1.5rem" /> Git
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    Git
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets src="/vectors/laragon-svgrepo-com.svg" height="1.5rem" />{" "}
                     Laragon / serveur PHP (selon l'OS)
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets src="/vectors/insomnia-svgrepo-com.svg" height="1.5rem" />{" "}
                     Insomnia
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets src="/vectors/postman-icon-svgrepo-com.svg" height="1.5rem" />{" "}
                     Postman
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets src="/vectors/obsidian-svgrepo-com.svg" height="1.5rem" />{" "}
                     Obsidian
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets src="/vectors/ms-onenote-svgrepo-com.svg" height="1.5rem" />{" "}
                     Onenote
                   </ListGroupFlushItem>
                 </ListGroupFlush>
@@ -170,24 +169,25 @@ export default function Technologies() {
               <CarouselCard headerTitle="Design" cardClasses="bg-cyan-300 text-gray-700">
                 <ListGroupFlush>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets src="/vectors/illustrator-svgrepo-com.svg" height="1.5rem" />{" "}
                     Illustrator
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets src="/vectors/inkscape-svgrepo-com.svg" height="1.5rem" />{" "}
                     Inkscape
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    Gimp
+                    <ImageFromAssets src="/vectors/gimp-svgrepo-com.svg" height="1.5rem" /> Gimp
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
+                    <ImageFromAssets
+                      src="/vectors/photoshop-color-svgrepo-com.svg"
+                      height="1.5rem"
+                    />{" "}
                     Photoshop
                   </ListGroupFlushItem>
                   <ListGroupFlushItem>
-                    <ImageFromAssets src="/vectors/" height="1.5rem" />
-                    Générateurs en ligne
+                    <ImageFromAssets src="/vectors/" height="1.5rem" /> Générateurs en ligne
                   </ListGroupFlushItem>
                 </ListGroupFlush>
               </CarouselCard>,
