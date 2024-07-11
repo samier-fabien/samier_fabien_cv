@@ -1,3 +1,7 @@
 body.page-root {
   overflow: hidden;
 }
+
+.background-gradient {
+  background: linear-gradient(180deg, rgb(223, 130, 192) 0%, rgb(171, 116, 254) 30%);
+}
