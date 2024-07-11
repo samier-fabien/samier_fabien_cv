@@ -14,7 +14,7 @@ export default function Technologies() {
       <div className="col p-0 sticky-top z-n1 mb-5" ref={divRef}>
         <BubblesContainer
           parentRef={divRef}
-          h={800}
+          h={window.innerHeight}
           framerate={40}
           speed={1.1}
           minRadius={30}
@@ -37,56 +37,57 @@ export default function Technologies() {
               <CarouselCard
                 headerTitle="Front-end"
                 cardText={
-                  <p>
+                  <ul>
                     <li className="list-group-item">HTML</li>
                     <li className="list-group-item">CSS</li>
-                    <li className="list-group-item">JavaScript</li>
                     <li className="list-group-item">Bootstrap</li>
+                    <li className="list-group-item">JavaScript</li>
+                    <li className="list-group-item">Node.js / npm</li>
                     <li className="list-group-item">React.js</li>
-                    <li className="list-group-item">Npm</li>
-                  </p>
+                    <li className="list-group-item">Vite.js</li>
+                  </ul>
                 }
                 cardClasses="bg-orange-300 text-gray-700"
               />,
               <CarouselCard
                 headerTitle="Back-end"
                 cardText={
-                  <p>
+                  <ul>
                     <li className="list-group-item">PHP</li>
                     <li className="list-group-item">Composer</li>
                     <li className="list-group-item">Symfony</li>
                     <li className="list-group-item">Api Platform</li>
-                  </p>
+                  </ul>
                 }
                 cardClasses="bg-indigo-300 text-gray-700"
               />,
               <CarouselCard
                 headerTitle="Appli traditionnelle"
                 cardText={
-                  <p>
+                  <ul>
                     <li className="list-group-item">Twig</li>
                     <li className="list-group-item">JQuery</li>
                     <li className="list-group-item">htmx</li>
-                  </p>
+                  </ul>
                 }
                 cardClasses="bg-blue-300 text-gray-700"
               />,
               <CarouselCard
                 headerTitle="Outils de conception"
                 cardText={
-                  <p>
+                  <ul>
                     <li className="list-group-item">Trello</li>
                     <li className="list-group-item">Figma</li>
                     <li className="list-group-item">Draw.io (UML)</li>
                     <li className="list-group-item">Looping-MCD (Merise)</li>
-                  </p>
+                  </ul>
                 }
                 cardClasses="bg-pink-300 text-gray-700"
               />,
               <CarouselCard
                 headerTitle="Développement"
                 cardText={
-                  <p>
+                  <ul>
                     <li className="list-group-item">VSCode</li>
                     <li className="list-group-item">Docker</li>
                     <li className="list-group-item">Docker compose</li>
@@ -94,18 +95,18 @@ export default function Technologies() {
                     <li className="list-group-item">Laragon / serveur PHP (selon l'OS)</li>
                     <li className="list-group-item">Insomnia / Postman</li>
                     <li className="list-group-item">Obsidian / Onenote</li>
-                  </p>
+                  </ul>
                 }
                 cardClasses="bg-teal-300 text-gray-700"
               />,
               <CarouselCard
                 headerTitle="Design"
                 cardText={
-                  <p>
+                  <ul>
                     <li className="list-group-item">Inkscape /Illustrator</li>
                     <li className="list-group-item">Gimp / Photoshop</li>
                     <li className="list-group-item">Générateurs en ligne</li>
-                  </p>
+                  </ul>
                 }
                 cardClasses="bg-cyan-300 text-gray-700"
               />,
