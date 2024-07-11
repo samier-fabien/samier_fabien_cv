@@ -49,7 +49,7 @@ export default function TitleOneObserved({
       <h2
         ref={ref}
         style={{ borderLeft: `0.3rem solid ${borderColor}` }}
-        className={`display-6 ps-3 transition-duration-800 ${cssClasses} ${
+        className={`display-6 mt-5 mb-3 ps-3 transition-duration-800 ${cssClasses} ${
           classToRemove ? classToRemove : ""
         }`}
       >

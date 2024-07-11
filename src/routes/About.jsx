@@ -28,21 +28,18 @@ export default function About() {
           exécution de mon travail et de sa qualité.
           <i className="bi bi-quote ms-2"></i>
         </ParagraphObserved>
-        <ParagraphObserved
-          classToAdd="translate-from-left"
-          classToRemove="translate-init"
-          cssClasses="pb-5"
-        >
-          Je conçois et développe principalement des projets web. J'utilise pour cela html, css,
-          react et symfony entre autres. Je travaille sur linux et windows avec git et docker. J'ai
-          un an d'expérience et beaucoup de logique et de motivation.
+        <ParagraphObserved classToAdd="translate-from-left" classToRemove="translate-init">
+          Je conçois et développe des projets web. J'utilise pour cela html, css, react et symfony
+          entre autres. Je travaille sur linux et windows avec git et docker. J'ai un an
+          d'expérience, beaucoup de logique et de motivation.
         </ParagraphObserved>
+
         <TitleOneObserved
           classToAdd="translate-from-right"
           classToRemove="translate-init"
           borderColor="var(--bs-primary)"
         >
-          Plus exhaustivement
+          Le développement
         </TitleOneObserved>
         <TitleTwoObserved classToAdd="translate-from-left" classToRemove="translate-init">
           La découverte.
@@ -56,7 +53,7 @@ export default function About() {
           <strong>design patterns</strong>.
         </ParagraphObserved>
         <TitleTwoObserved classToAdd="translate-from-left" classToRemove="translate-init">
-          Le développement dans mon métier d'alors.
+          Dans mon métier d'alors.
         </TitleTwoObserved>
         <ParagraphObserved classToAdd="translate-from-right" classToRemove="translate-init">
           <strong>C'était une passion</strong> quand je suis devenu usineur. Je me suis aperçu que
@@ -71,9 +68,14 @@ export default function About() {
           <strong>quelques incursions en C++ et en Java</strong> pour faire notamment un programme
           de calcul de balourd.
         </ParagraphObserved>
-        <TitleTwoObserved classToAdd="translate-from-right" classToRemove="translate-init">
-          Développeur.
-        </TitleTwoObserved>
+
+        <TitleOneObserved
+          classToAdd="translate-from-right"
+          classToRemove="translate-init"
+          borderColor="var(--bs-primary)"
+        >
+          Reconversion
+        </TitleOneObserved>
         <ParagraphObserved classToAdd="translate-from-left" classToRemove="translate-init">
           Lorsque <strong>j'ai eu l'opportunité de faire de mon violon d'Ingres mon métier</strong>,
           je l'ai saisie: remise à niveau puis{" "}
@@ -81,7 +83,7 @@ export default function About() {
           fois le titre acquis j'ai pu faire mes armes.
         </ParagraphObserved>
         <ParagraphObserved classToAdd="translate-from-right" classToRemove="translate-init">
-          Ma <strong>soif de connaissances</strong> et ma <strong>curiosité</strong> naturelles sont
+          Ma <strong>soif de connaissances</strong> et ma <strong>curiosité</strong> naturelle sont
           ma grande force. Elles m'ont permis d'en apprendre toujours plus sur diverses technologies
           et langages. <strong>Logique et curieux</strong>, je suis soucieux de la bonne exécution
           de mon travail ainsi que de sa qualité.
