@@ -1,26 +1,67 @@
-import React, { forwardRef, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "../css/studiesCard.css";
 
-const StudiesCard = forwardRef(function StudiesCard(props, ref) {
+export default function StudiesCard({
+  children,
+  title,
+  period,
+  place,
+  classToAdd,
+  classToRemove,
+  cssClasses,
+}) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.intersectionRatio >= 1) {
+            displayElement(ref);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1,
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [ref]);
+
+  function displayElement(elementToObserve) {
+    const element = elementToObserve.current;
+    if (element.classList.contains(classToRemove)) {
+      element.classList.remove(classToRemove);
+      element.classList.add(classToAdd);
+    }
+  }
+
   return (
     <div
       ref={ref}
-      className={`studies-card transition-duration-800 opacity-0 ${
-        props.cssClasses ? props.cssClasses : ""
-      }`}
+      className={`studies-card transition-duration-800 opacity-0 ${cssClasses ? cssClasses : ""}`}
     >
-      {props.title ? <h2 className="pb-4 text-white">{props.title}</h2> : ""}
-      {props.period ? (
+      {title ? <h2 className="pb-4 text-white">{title}</h2> : ""}
+      {period ? (
         <p className="text-end pb-4">
-          <em>{props.period}</em>
+          <em>{period}</em>
         </p>
       ) : (
         ""
       )}
-      <p className="pb-1">{props.children}</p>
-      {props.place ? <p className="fw-semibold">{props.place}</p> : ""}
+      <p className="pb-1">{children}</p>
+      {place ? <p className="fw-semibold">{place}</p> : ""}
     </div>
   );
-});
-
-export default StudiesCard;
+}
