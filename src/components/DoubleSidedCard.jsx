@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "../css/doubleSidedCard.css";
 
-export default function DoubleSidedCard({ children, otherFace, cardClasses = "" }) {
+export default function DoubleSidedCard({ children, otherSide, cardClasses = "" }) {
   const [content, setContent] = useState(children);
   const cardRef = useRef(null);
 
@@ -19,9 +19,9 @@ export default function DoubleSidedCard({ children, otherFace, cardClasses = "" 
       }, 250);
     } else {
       cardRef.current.classList.add("card-flip");
-      if (otherFace) {
+      if (otherSide) {
         setTimeout(() => {
-          setContent(otherFace);
+          setContent(otherSide);
         }, 250);
       }
     }
@@ -30,7 +30,7 @@ export default function DoubleSidedCard({ children, otherFace, cardClasses = "" 
   return (
     <div
       ref={cardRef}
-      className={`card h-100 double-sided-card rounded-5 ${cardClasses}`}
+      className={`card h-100 double-sided-card pb-4 rounded-5 ${cardClasses}`}
       onClick={handleMouseClick}
     >
       {content ? content : ""}
