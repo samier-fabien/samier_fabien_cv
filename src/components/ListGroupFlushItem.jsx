@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function ListGroupFlushItem({ children }) {
-  return <li className="list-group-item bg-transparent border-gray-300 text-white">{children}</li>;
+export default function ListGroupFlushItem({ children, cssClasses }) {
+  return <li className={`list-group-item bg-transparent ${cssClasses}`}>{children}</li>;
 }
