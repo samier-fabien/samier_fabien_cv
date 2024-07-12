@@ -2,7 +2,7 @@ import React from "react";
 
 export default function FooterTransition() {
   return (
-    <div style={{ height: "150px", overflow: "hidden" }}>
+    <div style={{ height: "152px", overflow: "hidden" }}>
       <svg
         viewBox="0 0 500 150"
         preserveAspectRatio="none"
