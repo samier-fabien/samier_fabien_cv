@@ -48,20 +48,22 @@ export default function StudiesCard({
   }
 
   return (
-    <div
-      ref={ref}
-      className={`studies-card transition-duration-800 opacity-0 ${cssClasses ? cssClasses : ""}`}
-    >
-      {title ? <h2 className="pb-4 text-white">{title}</h2> : ""}
-      {period ? (
-        <p className="text-end pb-4">
-          <em>{period}</em>
-        </p>
-      ) : (
-        ""
-      )}
-      <p className="pb-1">{children}</p>
-      {place ? <p className="fw-semibold">{place}</p> : ""}
-    </div>
+    <>
+      <div
+        ref={ref}
+        className={`studies-card transition-duration-800 opacity-0 ${cssClasses ? cssClasses : ""}`}
+      >
+        {title ? <h2 className="pb-4 text-white">{title}</h2> : ""}
+        {period ? (
+          <p className="text-end pb-4">
+            <em>{period}</em>
+          </p>
+        ) : (
+          ""
+        )}
+        <p className="pb-1">{children}</p>
+        {place ? <p className="fw-semibold">{place}</p> : ""}
+      </div>
+    </>
   );
 }
