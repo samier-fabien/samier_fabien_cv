@@ -4,6 +4,7 @@ import TransitionWrapper from "../components/TransitionWrapper";
 import RadialMenu from "../components/RadialMenu";
 import MenuListElement from "../components/MenuListElement";
 import WavyTransition from "../components/WavyTransition";
+import ImageFromAssets from "./ImageFromAssets";
 import "../css/home.css";
 
 export default function Root() {
@@ -114,37 +115,41 @@ export default function Root() {
         />
         <Outlet />
         <footer className="container-fluid d-flex justify-content-center bg-dark text-light p-5">
-          <img
-            src="../../src/assets/vectors/html-5-logo-coloured-no-text.svg"
-            alt="logo d'html 5"
-            style={{ height: "3rem" }}
+          <ImageFromAssets
+            src="/vectors/html-5-logo-coloured-no-text.svg"
+            alt="logo d'HTML 5"
+            height="3rem"
           />
-          <img
-            src="../../src/assets/vectors/css-3-logo-coloured-no-text.svg"
-            alt="logo de css 3"
-            style={{ height: "3rem" }}
+          <ImageFromAssets
+            src="/vectors/css-3-logo-coloured-no-text.svg"
+            alt="logo de CSS 3"
+            height="3rem"
           />
-          <img
-            src="../../src/assets/vectors/sass-logo-coloured-text.svg"
+          <ImageFromAssets
+            src="/vectors/sass-logo-coloured-text.svg"
             alt="logo de sass"
-            style={{ height: "3rem" }}
+            height="3rem"
           />
-          <img
-            src="../../src/assets/vectors/js-logo-coloured.svg"
-            alt="logo de css 3"
-            style={{ height: "2.6rem", padding: "0.1rem" }}
+          <ImageFromAssets
+            src="/vectors/js-logo-coloured.svg"
+            alt="logo de JavaScript"
+            height="2.8rem"
           />
-          <img
-            src="../../src/assets/vectors/node-logo-coloured-no-text.svg"
-            alt="logo de css 3"
-            style={{ height: "3rem", padding: "0.1rem" }}
+          <ImageFromAssets
+            src="/vectors/node-logo-coloured-no-text.svg"
+            alt="logo de Node.js"
+            height="3rem"
           />
-          <img
-            src="../../src/assets/vectors/react-logo-coloured-no-text.svg"
-            alt="logo de css 3"
-            style={{ height: "3rem" }}
+          <ImageFromAssets
+            src="/vectors/react-logo-coloured-no-text.svg"
+            alt="logo de React"
+            height="3rem"
           />
-          <img src="../../src/assets/vectors/" alt="" style={{ height: "3rem" }} />
+          <ImageFromAssets
+            src="/vectors/vite-svgrepo-com.svg"
+            alt="logo de Vite.js"
+            height="3rem"
+          />
         </footer>
       </TransitionWrapper>
     </div>
