@@ -4,7 +4,7 @@ import FooterTransition from "../components/FooterTransition";
 import DoubleSidedCard from "../components/DoubleSidedCard";
 import SingleColContainer from "../components/SingleColContainer";
 import ListGroupFlush from "../components/ListGroupFlush";
-import ListGroupFlushItem from "../components/ListGroupFlushItem";
+import ListGroupItem from "../components/ListGroupItem";
 
 export default function Experiences() {
   return (
@@ -27,24 +27,24 @@ export default function Experiences() {
                 Collectivité territoriale d'Auchonvillers
               </h2>
               <ListGroupFlush>
-                <ListGroupFlushItem cssClasses="border-orange-100 text-gray-800">
+                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                   Développement d'une application web pour la commune
-                </ListGroupFlushItem>
-                <ListGroupFlushItem cssClasses="border-orange-100 text-gray-800">
+                </ListGroupItem>
+                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                   Choix des technologies: Symfony 5, Bootstrap, JQuery, Docker
-                </ListGroupFlushItem>
-                <ListGroupFlushItem cssClasses="border-orange-100 text-gray-800">
+                </ListGroupItem>
+                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                   Conception de la base de données relationnelle (méthode merise)
-                </ListGroupFlushItem>
-                <ListGroupFlushItem cssClasses="border-orange-100 text-gray-800">
+                </ListGroupItem>
+                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                   Maquettage avec Figma
-                </ListGroupFlushItem>
-                <ListGroupFlushItem cssClasses="border-orange-100 text-gray-800">
+                </ListGroupItem>
+                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                   Modélisation UML
-                </ListGroupFlushItem>
-                <ListGroupFlushItem cssClasses="border-orange-100 text-gray-800">
+                </ListGroupItem>
+                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                   Tests unitaires
-                </ListGroupFlushItem>
+                </ListGroupItem>
               </ListGroupFlush>
             </div>
           }
@@ -69,35 +69,35 @@ export default function Experiences() {
             <div className="d-flex flex-column align-items-center justify-content-center h-100">
               <h2 className="card-title p-3 text-white">Extérieurstock</h2>
               <ListGroupFlush>
-                <ListGroupFlushItem cssClasses="border-indigo-100 text-gray-800">
+                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                   Modifications d'APIs existantes
-                </ListGroupFlushItem>
-                <ListGroupFlushItem cssClasses="border-indigo-100 text-gray-800">
+                </ListGroupItem>
+                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                   Conception de bases de données
-                </ListGroupFlushItem>
-                <ListGroupFlushItem cssClasses="border-indigo-100 text-gray-800">
+                </ListGroupItem>
+                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                   Dialogue avec le personnel en vue de la réalisation d'algorithmes pour
                   l'élaboration d'applications en lien avec leur travail
-                </ListGroupFlushItem>
-                <ListGroupFlushItem cssClasses="border-indigo-100 text-gray-800">
+                </ListGroupItem>
+                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                   Conception et développement d'APIs REST et GraphQL avec Symfony et Api Platform
-                </ListGroupFlushItem>
-                <ListGroupFlushItem cssClasses="border-indigo-100 text-gray-800">
+                </ListGroupItem>
+                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                   Développement front avec React, Jquery et Htmx
-                </ListGroupFlushItem>
-                <ListGroupFlushItem cssClasses="border-indigo-100 text-gray-800">
+                </ListGroupItem>
+                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                   Modification et développement de modules pour Prestashop
-                </ListGroupFlushItem>
-                <ListGroupFlushItem cssClasses="border-indigo-100 text-gray-800">
+                </ListGroupItem>
+                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                   Écriture de scripts en Bash et Python
-                </ListGroupFlushItem>
-                <ListGroupFlushItem cssClasses="border-indigo-100 text-gray-800">
+                </ListGroupItem>
+                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                   Documentation des applications créées
-                </ListGroupFlushItem>
-                <ListGroupFlushItem cssClasses="border-indigo-100 text-gray-800">
+                </ListGroupItem>
+                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                   Rédaction d'articles sur les diverses technologies rencontrées et employées avec
                   Onenote en guise de base de connaissances
-                </ListGroupFlushItem>
+                </ListGroupItem>
               </ListGroupFlush>
             </div>
           }
