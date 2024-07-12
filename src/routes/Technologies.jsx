@@ -5,7 +5,7 @@ import HeaderTransition from "../components/HeaderTransition";
 import CarouselCard from "../components/CarouselCard";
 import Carousel from "../components/Carousel";
 import ListGroupFlush from "../components/ListGroupFlush";
-import ListGroupFlushItem from "../components/ListGroupFlushItem";
+import ListGroupItem from "../components/ListGroupItem";
 import ImageFromAssets from "../components/ImageFromAssets";
 
 export default function Technologies() {
@@ -39,75 +39,75 @@ export default function Technologies() {
             slides={[
               <CarouselCard headerTitle="Front-end" cardClasses="bg-orange-300 text-gray-700">
                 <ListGroupFlush>
-                  <ListGroupFlushItem>
+                  <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                     <ImageFromAssets
                       src="/vectors/html-5-logo-coloured-no-text.svg"
                       height="1.5rem"
                     />{" "}
                     HTML
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                     <ImageFromAssets
                       src="/vectors/css-3-logo-coloured-no-text.svg"
                       height="1.5rem"
                     />{" "}
                     CSS
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                     <ImageFromAssets
                       src="/vectors/bootstrap-fill-svgrepo-com.svg"
                       height="1.5rem"
                     />{" "}
                     Bootstrap
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                     <ImageFromAssets src="/vectors/js-logo-coloured.svg" height="1.5rem" />{" "}
                     JavaScript
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                     <ImageFromAssets
                       src="/vectors/node-logo-coloured-no-text.svg"
                       height="1.5rem"
                     />{" "}
                     Node.js / npm
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                     <ImageFromAssets
                       src="/vectors/react-logo-coloured-no-text.svg"
                       height="1.5rem"
                     />{" "}
                     React.js
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                     <ImageFromAssets src="/vectors/vite-svgrepo-com.svg" height="1.5rem" /> Vite.js
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                     <ImageFromAssets src="/vectors/code-svgrepo-com.svg" height="1.5rem" /> Htmx
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-orange-100 text-gray-800">
                     <ImageFromAssets src="/vectors/jquery-svgrepo-com.svg" height="1.5rem" /> JQuery
-                  </ListGroupFlushItem>
+                  </ListGroupItem>
                 </ListGroupFlush>
               </CarouselCard>,
               <CarouselCard headerTitle="Back-end" cardClasses="bg-indigo-300 text-gray-700">
                 <ListGroupFlush>
-                  <ListGroupFlushItem>
+                  <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                     <ImageFromAssets src="/vectors/php-svgrepo-com.svg" height="1.5rem" /> PHP
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                     <ImageFromAssets src="/vectors/composer-svgrepo-com.svg" height="1.5rem" />{" "}
                     Composer
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                     <ImageFromAssets src="/vectors/symfony-logo.svg" height="1.5rem" /> Symfony
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                     <ImageFromAssets src="/vectors/twig-svgrepo-com.svg" height="1.5rem" /> Twig
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                     <ImageFromAssets src="/bitmaps/Logo_Api_Patform.png" height="1.5rem" /> Api
                     Platform
-                  </ListGroupFlushItem>
+                  </ListGroupItem>
                 </ListGroupFlush>
               </CarouselCard>,
               <CarouselCard
@@ -115,80 +115,80 @@ export default function Technologies() {
                 cardClasses="bg-pink-300 text-gray-700"
               >
                 <ListGroupFlush>
-                  <ListGroupFlushItem>
+                  <ListGroupItem cssClasses="border-pink-100 text-gray-800">
                     <ImageFromAssets src="/vectors/drawio-svgrepo-com.svg" height="1.5rem" />{" "}
                     Draw.io (UML)
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-pink-100 text-gray-800">
                     <ImageFromAssets src="/bitmaps/looping_mcd.webp" height="1.5rem" /> Looping-MCD
                     (Merise)
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-pink-100 text-gray-800">
                     <ImageFromAssets src="/vectors/trello-color-svgrepo-com.svg" height="1.5rem" />{" "}
                     Trello
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-pink-100 text-gray-800">
                     <ImageFromAssets src="/vectors/figma-svgrepo-com.svg" height="1.5rem" /> Figma
-                  </ListGroupFlushItem>
+                  </ListGroupItem>
                 </ListGroupFlush>
               </CarouselCard>,
               <CarouselCard headerTitle="Développement" cardClasses="bg-teal-300 text-gray-700">
                 <ListGroupFlush>
-                  <ListGroupFlushItem>
+                  <ListGroupItem cssClasses="border-teal-100 text-gray-800">
                     <ImageFromAssets src="/vectors/vscode-svgrepo-com.svg" height="1.5rem" /> VSCode
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-teal-100 text-gray-800">
                     <ImageFromAssets src="/vectors/docker-svgrepo-com.svg" height="1.5rem" /> Docker
                     / Docker compose
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-teal-100 text-gray-800">
                     <ImageFromAssets src="/vectors/git-svgrepo-com.svg" height="1.5rem" /> Git
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-teal-100 text-gray-800">
                     <ImageFromAssets src="/vectors/laragon-svgrepo-com.svg" height="1.5rem" />{" "}
                     Laragon / serveur PHP (selon l'OS)
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-teal-100 text-gray-800">
                     <ImageFromAssets src="/vectors/insomnia-svgrepo-com.svg" height="1.5rem" />{" "}
                     Insomnia
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-teal-100 text-gray-800">
                     <ImageFromAssets src="/vectors/postman-icon-svgrepo-com.svg" height="1.5rem" />{" "}
                     Postman
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-teal-100 text-gray-800">
                     <ImageFromAssets src="/vectors/obsidian-svgrepo-com.svg" height="1.5rem" />{" "}
                     Obsidian
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-teal-100 text-gray-800">
                     <ImageFromAssets src="/vectors/ms-onenote-svgrepo-com.svg" height="1.5rem" />{" "}
                     Onenote
-                  </ListGroupFlushItem>
+                  </ListGroupItem>
                 </ListGroupFlush>
               </CarouselCard>,
               <CarouselCard headerTitle="Design" cardClasses="bg-cyan-300 text-gray-700">
                 <ListGroupFlush>
-                  <ListGroupFlushItem>
+                  <ListGroupItem cssClasses="border-cyan-100 text-gray-800">
                     <ImageFromAssets src="/vectors/illustrator-svgrepo-com.svg" height="1.5rem" />{" "}
                     Illustrator
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-cyan-100 text-gray-800">
                     <ImageFromAssets src="/vectors/inkscape-svgrepo-com.svg" height="1.5rem" />{" "}
                     Inkscape
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-cyan-100 text-gray-800">
                     <ImageFromAssets src="/vectors/gimp-svgrepo-com.svg" height="1.5rem" /> Gimp
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-cyan-100 text-gray-800">
                     <ImageFromAssets
                       src="/vectors/photoshop-color-svgrepo-com.svg"
                       height="1.5rem"
                     />{" "}
                     Photoshop
-                  </ListGroupFlushItem>
-                  <ListGroupFlushItem>
+                  </ListGroupItem>
+                  <ListGroupItem cssClasses="border-cyan-100 text-gray-800">
                     <ImageFromAssets src="/vectors/" height="1.5rem" /> Générateurs en ligne
-                  </ListGroupFlushItem>
+                  </ListGroupItem>
                 </ListGroupFlush>
               </CarouselCard>,
             ]}
