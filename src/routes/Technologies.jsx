@@ -89,7 +89,7 @@ export default function Technologies() {
                   </ListGroupItem>
                 </ListGroupFlush>
               </CarouselCard>,
-              <CarouselCard headerTitle="Back-end" cardClasses="bg-indigo-300 text-gray-700">
+              <CarouselCard headerTitle="Back-end" cardClasses="bg-indigo-200 text-gray-700">
                 <ListGroupFlush>
                   <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
                     <ImageFromAssets src="/vectors/php-svgrepo-com.svg" height="1.5rem" /> PHP
