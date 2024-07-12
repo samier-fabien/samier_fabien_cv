@@ -83,14 +83,6 @@ export default function Root() {
                     hyperlink="/etudes"
                     hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
                   />,
-                  <MenuListElement
-                    iconName="bi bi-dribbble"
-                    iconSize="2rem"
-                    tooltipText="Hobbies"
-                    tooltipTextClasses="text-light"
-                    hyperlink="/test"
-                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
-                  />,
                 ]}
                 firstItemAngleInRadians={Math.PI + 0.12}
                 lastItemAngleInRadians={-0.12}

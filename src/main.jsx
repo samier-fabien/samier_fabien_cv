@@ -51,10 +51,6 @@ const router = createBrowserRouter([
         element: <Studies />,
       },
       {
-        path: "hobbies",
-        element: <Hobbies />,
-      },
-      {
         path: "test", // TODO: route à supprimer avant prod
         element: <Test />,
       },
