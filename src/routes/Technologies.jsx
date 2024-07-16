@@ -22,9 +22,23 @@ export default function Technologies() {
           speed={1.1}
           minRadius={30}
           maxRadius={80}
-          number={9}
+          number={13}
           containerClasses=""
-          bubblesText={["Vite", "JS", "React", "CSS", "HTML", "PHP", "Sf", "Docker", "Git"]}
+          bubblesText={[
+            "Vite",
+            "JS",
+            "React",
+            "CSS",
+            "HTML",
+            "PHP",
+            "Sf",
+            "Docker",
+            "Git",
+            "Node",
+            "htmx",
+            "Twig",
+            "VSCode",
+          ]}
           bubblesColorOne="rgba(255, 255, 255, 0.3)"
           bubblesColorTwo="rgba(240, 240, 255, 0.1)"
           bubblesColorThree="rgba(100, 100, 180, 0.2)"
