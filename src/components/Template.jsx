@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import TransitionWrapper from "../components/TransitionWrapper";
 import RadialMenu from "../components/RadialMenu";
 import MenuListElement from "../components/MenuListElement";
@@ -36,7 +36,9 @@ export default function Root() {
               <span className="handwriting fs-4">Samier Fabien</span>
             </div>
             <div className="col text-center text-white">
-              <i className="bi bi-linkedin fs-2 text-blue-300"></i>
+              <Link to="https://www.linkedin.com/in/fabien-samier-0140a021b/">
+                <i className="bi bi-linkedin fs-2 text-blue-300"></i>
+              </Link>
             </div>
             <div className="col text-light d-flex align-items-center justify-content-end">
               <div className="text-end">
