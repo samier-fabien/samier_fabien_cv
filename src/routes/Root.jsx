@@ -34,7 +34,7 @@ export default function Root() {
               className="rounded-circle shadow anim-rotate-translate"
               alt="Une photo de moi"
             />
-            <h1 className="h1 mt-3 anim-fade-in">Samier Fabien</h1>
+            <h1 className="h1 mt-3 anim-fade-in text-gray-800">Samier Fabien</h1>
             <h2 className="h5 mb-5 anim-fade-in">Concepteur, développeur d'applications</h2>
             <button
               onClick={(e) => setHasClicked(true)}
