@@ -31,12 +31,23 @@ export default function Root() {
         wrapperClass="container-fluid p-0 transition-opacity"
       >
         <header className="container-fluid menu-padding bg-light">
-          <div className="row text-center bg-dark">
-            <div className="col text-right text-light">
-              <span className="anim-left-inside">Samier Fabien</span>
+          <div className="row d-flex d-flex align-items-center bg-dark shadow">
+            <div className="col text-start text-light">
+              <span className="handwriting fs-4">Samier Fabien</span>
             </div>
-            <div className="col text-left text-light">
-              <span className="anim-right-inside">Concepteur, développeur d'applications</span>
+            <div className="col text-center text-white">
+              <i className="bi bi-linkedin fs-2 text-blue-300"></i>
+            </div>
+            <div className="col text-light d-flex align-items-center justify-content-end">
+              <div className="text-end">
+                <span className="text-indigo-300">C</span>onception
+                <br />
+                <span className="text-pink-300">D</span>éveloppement
+              </div>
+              <div className="fs-3 pb-1 px-2 text-blue-300">{"}"}</div>
+              <div className="">
+                <span className="text-orange-300">A</span>pplication
+              </div>
             </div>
           </div>
           <div className="row menu-gradient py-4 px-0">
