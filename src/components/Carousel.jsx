@@ -27,15 +27,15 @@ export default function Carousel({ slides }) {
             )
           : ""}
       </div>
-      <div className="carousel-inner">
+      <div className="carousel-inner" style={{ height: "33rem" }}>
         {slides
           ? slides.map((slide, index) =>
               index === 0 ? (
-                <div key={index} className="carousel-item active w-100">
+                <div key={index} className="carousel-item active w-100 h-100">
                   {slide}
                 </div>
               ) : (
-                <div key={index} className="carousel-item w-100">
+                <div key={index} className="carousel-item w-100 h-100">
                   {slide}
                 </div>
               )

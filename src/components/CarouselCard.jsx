@@ -8,7 +8,7 @@ export default function CarouselCard({
   cardClasses = "",
 }) {
   return (
-    <div className={`row justify-content-center my-5`} style={{ height: "50vh" }}>
+    <div className={`row justify-content-center my-0 h-100`}>
       <div className={columnClasses}>
         <div className={`card shadow h-100 ${cardClasses}`}>
           <div className="card-header h2 text-white">{headerTitle}</div>
