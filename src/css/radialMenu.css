@@ -1,36 +1,29 @@
-:root {
-  --radial-menu-button-radius: initial;
-  --radial-menu-li-radius: initial;
-}
-
 #radial-menu {
   margin: 0;
   padding: 0;
   background-color: transparent !important;
-  list-style-type: none;
   z-index: 100;
+  border-radius: 50%;
 }
 
 #radial-menu > a {
-  width: calc(var(--radial-menu-button-radius) * 2);
-  height: calc(var(--radial-menu-button-radius) * 2);
   transition: box-shadow 0.3s ease-in-out 0s !important;
 }
 #radial-menu > a:hover {
   box-shadow: inset 0rem 1rem white;
 }
 
-#radial-menu > li {
-  width: calc(var(--radial-menu-li-radius) * 2);
-  height: calc(var(--radial-menu-li-radius) * 2);
+#radial-menu > ul {
+  list-style-type: none;
+}
+
+#radial-menu > ul > li {
   position: absolute;
-  top: calc(var(--radial-menu-button-radius) - var(--radial-menu-li-radius));
-  left: calc(var(--radial-menu-button-radius) - var(--radial-menu-li-radius));
   border-radius: 50%;
   z-index: -1;
   animation: radial-menu-element-fade-out 0.3s ease forwards;
 }
-#radial-menu > li:hover {
+#radial-menu > ul > li:hover {
   animation: radial-menu-element-fade-in 0.3s ease forwards;
 }
 @keyframes radial-menu-element-fade-in {

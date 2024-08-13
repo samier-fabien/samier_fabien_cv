@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import TransitionWrapper from "../components/TransitionWrapper";
-import RadialMenu from "../components/RadialMenu";
-import MenuListElement from "../components/MenuListElement";
 import WavyTransition from "../components/WavyTransition";
 import ImageFromAssets from "./ImageFromAssets";
 import "../css/home.css";
+import Menu from "./Menu";
 
 export default function Root() {
   const [pageLoaded, setPageLoaded] = useState(false);
@@ -54,61 +53,7 @@ export default function Root() {
           </div>
           <div className="row menu-gradient py-4 px-0">
             <div className="col text-dark d-block text-center">
-              <RadialMenu
-                elements={[
-                  <MenuListElement
-                    iconName="bi bi-person"
-                    iconSize="2rem"
-                    tooltipText="À-propos"
-                    tooltipTextClasses="text-light"
-                    hyperlink="/a-propos"
-                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center button"
-                  />,
-                  <MenuListElement
-                    iconName="bi bi-code-slash"
-                    iconSize="2rem"
-                    tooltipText="Technologies"
-                    tooltipTextClasses="text-light"
-                    hyperlink="/technologies"
-                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
-                  />,
-                  <MenuListElement
-                    iconName="bi bi-gear"
-                    iconSize="2rem"
-                    tooltipText="Compétences"
-                    tooltipTextClasses="text-light"
-                    hyperlink="/competences"
-                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center button"
-                  />,
-                  <MenuListElement
-                    iconName="bi bi-journals"
-                    iconSize="2rem"
-                    tooltipText="Expériences"
-                    tooltipTextClasses="text-light"
-                    hyperlink="/experiences"
-                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
-                  />,
-                  <MenuListElement
-                    iconName="bi bi-award"
-                    iconSize="2rem"
-                    tooltipText="Etudes"
-                    tooltipTextClasses="text-light"
-                    hyperlink="/etudes"
-                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
-                  />,
-                ]}
-                firstItemAngleInRadians={Math.PI + 0.12}
-                lastItemAngleInRadians={-0.12}
-                menuRadius={170}
-                menuClasses="menu-button"
-                listElementRadius={40}
-                listElementClasses="bg-dark text-white"
-                buttonRadius={60}
-                buttonHyperlinkClasses="d-inline-flex justify-content-center align-items-center bg-dark rounded-circle"
-                button={<i className="bi bi-list text-white" style={{ fontSize: "3rem" }}></i>}
-                duration={300}
-                delay={100}
-              />
+              <Menu />
             </div>
           </div>
         </header>

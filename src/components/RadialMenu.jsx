@@ -1,6 +1,21 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../css/radialMenu.css";
 
+/**
+ * Displays a menu with links around a central button.
+ * @param {Number} firstItemAngleInRadians - Starting angle in radians.
+ * @param {Number} lastItemAngleInRadians - Ending angle in radians.
+ * @param {Number} menuRadius - Radius between elements and button.
+ * @param {string} menuClasses - CSS classes added to the nav.
+ * @param {string} button - The html button tag contained inside the `<a>...</a>` link that triggers the `OffcanvasMenu`.
+ * @param {string} buttonHyperlinkClasses - CSS classes added to the `<a>...</a>` link.
+ * @param {Number} buttonRadius - The radius of the button.
+ * @param {string} elements - For each React component inside this components's children, a ref to `RadialMenu` is added to automatically hide `Offcanvas` after click.
+ * @param {Number} listElementRadius - Radius of every ListElement displayed.
+ * @param {string} listElementClasses - Classes added to each `<li>...</li>` of the RadialMenu.
+ * @param {Number} duration - CSS transitionDuration of the animation in ms.
+ * @param {Number} delay - CSS transitionDelay of the animation in ms.
+ */
 export default function RadialMenu({
   firstItemAngleInRadians = Math.PI,
   lastItemAngleInRadians = 0,
@@ -15,11 +30,16 @@ export default function RadialMenu({
   duration = 500,
   delay = 200,
 }) {
-  const menuRef = useRef(null);
+  const listRef = useRef(null);
   const [listElements, setListElements] = useState(null);
 
+  /**
+   * After each click on the central button, manages if the links are shown or not and to calculate each element's position.
+   */
   function handleClick() {
-    const liS = menuRef.current.querySelectorAll("li");
+    const liS = listRef.current.querySelectorAll("li");
+    console.log(liS);
+
     const angle = (lastItemAngleInRadians - firstItemAngleInRadians) / (listElements.length - 1);
 
     liS.forEach((li, index) => {
@@ -30,7 +50,7 @@ export default function RadialMenu({
       } else if (li.classList.contains("radial-menu-hidden")) {
         let liAngle = firstItemAngleInRadians + angle * index; // angle en radians de l'élément
 
-        // calcul x y en fonction de l'angle
+        // x y calculation based on angle
         let x = menuRadius * Math.cos(liAngle);
         let y = menuRadius * Math.sin(liAngle);
 
@@ -44,47 +64,45 @@ export default function RadialMenu({
   }
 
   useEffect(() => {
-    // Ajout des éléments du menu
+    // Adding menu items
     setListElements(elements);
-    const liS = menuRef.current.querySelectorAll("li");
-    // Ajout de variables css qui "pilotent" les dimensions et position de menu et des radial-menu-element via des calc()
-    const root = document.documentElement;
-    root.style.setProperty("--radial-menu-button-radius", `${buttonRadius}px`);
-    root.style.setProperty("--radial-menu-li-radius", `${listElementRadius}px`);
   }, []);
 
-  useEffect(() => {
-    const root = document.documentElement;
-    root.style.setProperty("--radial-menu-button-radius", `${buttonRadius}px`);
-  }, [buttonRadius]);
-
-  useEffect(() => {
-    const root = document.documentElement;
-    root.style.setProperty("--radial-menu-li-radius", `${listElementRadius}px`);
-  }, [listElementRadius]);
-
   return (
-    <ul
-      id="radial-menu"
-      className={`d-inline-block position-relative ${menuClasses}`}
-      ref={menuRef}
-    >
+    <nav id="radial-menu" className={`d-inline-block position-relative ${menuClasses}`}>
       {button ? (
-        <a href="#" className={buttonHyperlinkClasses} onClick={handleClick}>
-          {button ? button : ""}
+        <a
+          href="#"
+          className={buttonHyperlinkClasses}
+          onClick={handleClick}
+          style={{ width: `${buttonRadius * 2}px`, height: `${buttonRadius * 2}px` }}
+        >
+          {button}
         </a>
       ) : (
         <a href="#" onClick={handleClick}>
           Menu
         </a>
       )}
-      {listElements
-        ? listElements.map((listElement, index) => (
-            <li key={index} className={`radial-menu-hidden ${listElementClasses}`}>
-              {listElement}
-            </li>
-          ))
-        : ""}
-    </ul>
+      <ul ref={listRef}>
+        {listElements
+          ? listElements.map((listElement, index) => (
+              <li
+                key={index}
+                className={`radial-menu-hidden ${listElementClasses}`}
+                style={{
+                  top: buttonRadius - listElementRadius,
+                  left: buttonRadius - listElementRadius,
+                  width: listElementRadius * 2,
+                  height: listElementRadius * 2,
+                }}
+              >
+                {/* Radius transmission to menu items */}
+                {React.cloneElement(listElement, { radius: listElementRadius })}
+              </li>
+            ))
+          : ""}
+      </ul>
+    </nav>
   );
 }

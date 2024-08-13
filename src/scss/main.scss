@@ -2,12 +2,6 @@
 // Import all of Bootstrap's CSS
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-@media (max-width: 450px) {
-  /* styles for screens 450px wide or wider */
-  html, body {
-      font-size: 15px;
-  }
-}
 
 // Background colors
 .bg-indigo-100 {background-color: $indigo-100;}
