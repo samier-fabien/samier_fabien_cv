@@ -10,6 +10,7 @@ export default function Skills() {
   const firstParallaxColRef = useRef(null);
   const secondParallaxColRef = useRef(null);
   const thirdParallaxColRef = useRef(null);
+  const menuRadiusVariation = [320, 600, 30, -50];
 
   return (
     <>
@@ -17,13 +18,13 @@ export default function Skills() {
         <h1 className="display-4 m-0 p-0">Compétences</h1>
       </div>
       <Transition
-        transitionPathOnTop="true"
+        transitionPathOnTop={1}
         transitionShape="custom"
         transitionValues={[50, 100, 100, 349, -50, 50]}
-        transitionContainerClasses="transition-background-1"
+        transitionContainerClasses="parallax-bg-color-orange"
         transitionFillColor="#202428"
       />
-      <ParallaxContainer containerClasses="bg-color-parallax-1">
+      <ParallaxContainer containerClasses="parallax-bg-color-orange">
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
           <h2 className="h1 parallax-title">Des besoins au concept</h2>
         </div>
@@ -40,9 +41,9 @@ export default function Skills() {
               "Conceptualiser",
             ]}
             menuRadius={250}
-            menuRadiusVariation={-30}
-            elementClasses="badge rounded-4 bg-color-badge-1 p-3"
-            containerClasses="bg-light bg-image-parallax-1 parallax-container-border"
+            menuRadiusVariation={menuRadiusVariation}
+            elementClasses="badge rounded-4 bg-orange-400"
+            containerClasses="bg-light parallax-image-resize parallax-bg-image bg-image-needs"
             parentRef={firstParallaxColRef}
           />
         </div>
@@ -52,7 +53,7 @@ export default function Skills() {
         transitionContainerClasses="bg-transparent"
         transitionFillColor="rgb(208, 208, 255)"
       />
-      <ParallaxContainer containerClasses="bg-color-parallax-2">
+      <ParallaxContainer containerClasses="parallax-bg-color-purple">
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
           <h2 className="h1 parallax-title">Conception</h2>
         </div>
@@ -71,9 +72,9 @@ export default function Skills() {
               "Présenter les projet",
             ]}
             menuRadius={250}
-            menuRadiusVariation={-30}
-            elementClasses="badge rounded-4 bg-color-badge-2 p-2"
-            containerClasses="bg-light bg-image-parallax-2"
+            menuRadiusVariation={menuRadiusVariation}
+            elementClasses="badge rounded-4 bg-indigo-300"
+            containerClasses="bg-light parallax-image-resize parallax-bg-image bg-image-concept"
             parentRef={secondParallaxColRef}
           />
         </div>
@@ -83,7 +84,7 @@ export default function Skills() {
         transitionContainerClasses="bg-transparent"
         transitionFillColor="rgb(253, 207, 255)"
       />
-      <ParallaxContainer containerClasses="bg-color-parallax-3">
+      <ParallaxContainer containerClasses="parallax-bg-color-pink">
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
           <h2 className="h1 parallax-title">Développement</h2>
         </div>
@@ -94,18 +95,18 @@ export default function Skills() {
           <RadialTextDisplay
             textElements={[
               "Travailler en équipe",
-              "Appliquer les méthodes agile/scrum",
-              "Conteneuriser ses applications",
-              "Réaliser des test unitaires",
+              "Contexte agile",
+              "Conteneurisation",
+              "Tests unitaires",
               "Versionner son code",
-              "Ecrire un code propre et facile",
-              "S'adapter au impondérables",
+              "Ecrire un code propre",
+              "Savoir d'adapter",
               "Documenter son code",
             ]}
             menuRadius={250}
-            menuRadiusVariation={-30}
-            elementClasses="badge rounded-4 bg-color-badge-3 p-2"
-            containerClasses="bg-light bg-image-parallax-3"
+            menuRadiusVariation={menuRadiusVariation}
+            elementClasses="badge rounded-4 bg-pink-300"
+            containerClasses="bg-light parallax-image-resize parallax-bg-image bg-image-dev"
             parentRef={thirdParallaxColRef}
           />
         </div>
