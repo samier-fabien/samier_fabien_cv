@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import TransitionWrapper from "../components/TransitionWrapper";
 import WavyTransition from "../components/WavyTransition";
 import ImageFromAssets from "./ImageFromAssets";
-import "../css/home.css";
+import "../css/template.css";
 import Menu from "./Menu";
 
 export default function Root() {
@@ -68,37 +68,37 @@ export default function Root() {
           <ImageFromAssets
             src="/vectors/html-5-logo-coloured-no-text.svg"
             alt="logo d'HTML 5"
-            height="3rem"
+            imgClasses="footer-icon"
           />
           <ImageFromAssets
             src="/vectors/css-3-logo-coloured-no-text.svg"
             alt="logo de CSS 3"
-            height="3rem"
+            imgClasses="footer-icon"
           />
           <ImageFromAssets
             src="/vectors/sass-logo-coloured-text.svg"
             alt="logo de sass"
-            height="3rem"
+            imgClasses="footer-icon"
           />
           <ImageFromAssets
             src="/vectors/js-logo-coloured.svg"
             alt="logo de JavaScript"
-            height="2.8rem"
+            imgClasses="footer-icon"
           />
           <ImageFromAssets
             src="/vectors/node-logo-coloured-no-text.svg"
             alt="logo de Node.js"
-            height="3rem"
+            imgClasses="footer-icon"
           />
           <ImageFromAssets
             src="/vectors/react-logo-coloured-no-text.svg"
             alt="logo de React"
-            height="3rem"
+            imgClasses="footer-icon"
           />
           <ImageFromAssets
             src="/vectors/vite-svgrepo-com.svg"
             alt="logo de Vite.js"
-            height="3rem"
+            imgClasses="footer-icon"
           />
         </footer>
       </TransitionWrapper>

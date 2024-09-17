@@ -1,0 +1,9 @@
+body.page-home {
+  overflow-x: hidden;
+}
+
+@media (max-width: 576px) {
+  .footer-icon {
+    height: 2.5rem !important;
+  }
+}
