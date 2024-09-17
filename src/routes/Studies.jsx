@@ -11,7 +11,7 @@ export default function Studies() {
         <h1 className="display-4 m-0 p-0">Études et formations</h1>
       </div>
       <Transition
-        transitionPathOnTop="true"
+        transitionPathOnTop={1}
         transitionShape="custom"
         transitionValues={[50, 100, 100, 349, -50, 50]}
         transitionContainerClasses="bg-white"
