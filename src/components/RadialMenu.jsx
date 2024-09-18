@@ -38,7 +38,6 @@ export default function RadialMenu({
    */
   function handleClick() {
     const liS = listRef.current.querySelectorAll("li");
-    console.log(liS);
 
     const angle = (lastItemAngleInRadians - firstItemAngleInRadians) / (listElements.length - 1);
 

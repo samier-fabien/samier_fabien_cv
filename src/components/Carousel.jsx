@@ -10,6 +10,7 @@ export default function Carousel({ slides }) {
               index === 0 ? (
                 <button
                   type="button"
+                  key={index}
                   data-bs-target="#carouselTechnologies"
                   data-bs-slide-to="0"
                   className="active"
@@ -19,6 +20,7 @@ export default function Carousel({ slides }) {
               ) : (
                 <button
                   type="button"
+                  key={index}
                   data-bs-target="#carouselTechnologies"
                   data-bs-slide-to={index}
                   aria-label={`Slide ${index + 1}`}
