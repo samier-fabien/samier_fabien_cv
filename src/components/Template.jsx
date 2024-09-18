@@ -9,8 +9,17 @@ import Menu from "./Menu";
 export default function Root() {
   const [pageLoaded, setPageLoaded] = useState(false);
   const [hasClicked, setHasClicked] = useState(false);
+  const [cda, setCda] = useState("");
 
   useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [window.innerWidth]);
+
+  useEffect(() => {
+    handleResize();
     setTimeout(() => {
       setPageLoaded(true);
     }, 1000);
@@ -19,6 +28,24 @@ export default function Root() {
       document.body.classList.remove("page-home");
     };
   }, []);
+
+  function handleResize() {
+    window.innerWidth >= 600
+      ? setCda(
+          <div className="col text-light d-flex align-items-center justify-content-end">
+            <div className="text-center">
+              <span className="text-indigo-300">C</span>onception
+              <br />
+              <span className="text-pink-300">D</span>éveloppement
+            </div>
+            <div className="fs-3 pb-1 px-2 text-blue-300">{"}"}</div>
+            <div className="">
+              <span className="text-orange-300">A</span>pplication
+            </div>
+          </div>
+        )
+      : setCda(null);
+  }
 
   return (
     <div className="container-fluid bg-white p-0 m-0">
@@ -32,23 +59,15 @@ export default function Root() {
         <header className="container-fluid menu-padding bg-light">
           <div className="row d-flex d-flex align-items-center bg-dark shadow">
             <div className="col text-start text-light">
-              <span className="handwriting fs-4">Samier Fabien</span>
+              <Link className={"handwriting fs-4 text-white text-decoration-none"} to={"/"}>
+                Samier Fabien
+              </Link>
             </div>
-            <div className="col text-center text-white">
+            {cda ? cda : ""}
+            <div className="col text-end text-white">
               <Link to="https://www.linkedin.com/in/fabien-samier-0140a021b/">
                 <i className="bi bi-linkedin fs-2 text-blue-300"></i>
               </Link>
-            </div>
-            <div className="col text-light d-flex align-items-center justify-content-end">
-              <div className="text-end">
-                <span className="text-indigo-300">C</span>onception
-                <br />
-                <span className="text-pink-300">D</span>éveloppement
-              </div>
-              <div className="fs-3 pb-1 px-2 text-blue-300">{"}"}</div>
-              <div className="">
-                <span className="text-orange-300">A</span>pplication
-              </div>
             </div>
           </div>
           <div className="row menu-gradient py-4 px-0">
