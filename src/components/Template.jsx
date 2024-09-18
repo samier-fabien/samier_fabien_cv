@@ -12,19 +12,16 @@ export default function Root() {
   const [cda, setCda] = useState("");
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [window.innerWidth]);
-
-  useEffect(() => {
     handleResize();
+    window.addEventListener("resize", handleResize);
+
     setTimeout(() => {
       setPageLoaded(true);
     }, 1000);
     document.body.classList.add("page-home");
+
     return () => {
+      window.removeEventListener("resize", handleResize);
       document.body.classList.remove("page-home");
     };
   }, []);
