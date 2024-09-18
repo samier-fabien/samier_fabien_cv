@@ -16,14 +16,14 @@ export default function StudiesCard({
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.intersectionRatio >= 1) {
+          if (entry.intersectionRatio >= 0.7) {
             displayElement(ref);
           }
         });
       },
       {
         root: null,
-        rootMargin: "0px",
+        rootMargin: "50px 50px 50px 50px",
         threshold: 1,
       }
     );
