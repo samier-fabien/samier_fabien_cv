@@ -43,6 +43,9 @@ export default function WavyTransition({
         viewBox="0 0 150 80"
         preserveAspectRatio="none"
         shapeRendering="auto"
+        style={{
+          marginBottom: "-1px", // marginBottom fix artifact on mobile
+        }}
       >
         <defs>
           <path

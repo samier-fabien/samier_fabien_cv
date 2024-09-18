@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 /**
- *  Créé et affiche une transition SVG en forme de vague
+ * Créé et affiche une transition SVG en forme de vague
  * @summary Sans paramètre ou si transitionShape === "random", créé une courbe aléatoire.
  * Si transitionShape === "down", créé un dos d'âne aléatoire.
  * Si transitionShape === "up", créé une bosse aléatoire.
@@ -218,8 +218,17 @@ export default function Transition({
   }
 
   return (
-    <div className={`${transitionContainerClasses}`}>
-      <div style={{ height: `${transitionHeight}px`, overflow: "hidden" }}>
+    <div
+      className={`${transitionContainerClasses}`}
+      style={{ overflow: "hidden", marginBottom: "-3px" }} // marginBottom fix artifact on mobile
+    >
+      <div
+        style={{
+          height: `${transitionHeight}px`,
+          overflow: "hidden",
+          marginBottom: "-3px", // marginBottom fix artifact on mobile
+        }}
+      >
         <svg
           viewBox={`0 0 500 ${transitionHeight}`}
           preserveAspectRatio="none"
