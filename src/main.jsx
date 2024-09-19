@@ -21,12 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <Error />,
   },
   {
     path: "/",
-    element: <Template />,
-    errorElement: <Error />,
+    element: <Template />, // Template utilisé comme Layout global
     children: [
       {
         path: "a-propos",
@@ -47,6 +45,14 @@ const router = createBrowserRouter([
       {
         path: "etudes",
         element: <Studies />,
+      },
+      {
+        path: "*", // Route 404 pour gérer les erreurs
+        element: <Error />, // Affiche le composant Error en tant qu'enfant de Template
+        errorElement: <Error />, // Affiche l'erreur à ce niveau si une route ne correspond pas
+        loader: () => {
+          throw new Response("Not Found", { status: 404 });
+        },
       },
     ],
   },
