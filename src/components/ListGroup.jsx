@@ -12,7 +12,6 @@ export default function ListGroup({
   listCssClasses = "",
 }) {
   useEffect(() => {
-    console.log(listElements);
   }, [listElements]);
 
   return (

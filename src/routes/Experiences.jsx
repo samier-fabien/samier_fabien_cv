@@ -21,10 +21,8 @@ export default function Experiences() {
   function handleResize() {
     if (window.innerWidth <= 576) {
       setSingleColContainerHeight("28rem");
-      console.log("resize 30rem");
     } else {
       setSingleColContainerHeight("38rem");
-      console.log("resize 38rem");
     }
   }
 
