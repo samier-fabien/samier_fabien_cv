@@ -10,9 +10,7 @@ import Technologies from "./routes/Technologies";
 import Skills from "./routes/Skills";
 import Experiences from "./routes/Experiences";
 import Studies from "./routes/Studies";
-import Hobbies from "./routes/Hobbies";
 
-import Test from "./routes/Test"; // TODO: à supprimer avant prod
 // css+icônes bootstrap
 import "./scss/main.scss";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -50,10 +48,6 @@ const router = createBrowserRouter([
         path: "etudes",
         element: <Studies />,
       },
-      {
-        path: "test", // TODO: route à supprimer avant prod
-        element: <Test />,
-      },
     ],
   },
 ]);
@@ -62,5 +56,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   // TODO: Réactiver après tests sur canvas terminés
   // <React.StrictMode>
   <RouterProvider router={router} />
-  //</React.StrictMode>
+  // </React.StrictMode>
 );

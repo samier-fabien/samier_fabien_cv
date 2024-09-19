@@ -3,8 +3,8 @@ import { Link, Outlet } from "react-router-dom";
 import TransitionWrapper from "../components/TransitionWrapper";
 import WavyTransition from "../components/WavyTransition";
 import ImageFromAssets from "./ImageFromAssets";
-import "../css/template.css";
 import Menu from "./Menu";
+import "../css/template.css";
 
 export default function Root() {
   const [pageLoaded, setPageLoaded] = useState(false);
