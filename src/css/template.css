@@ -7,3 +7,8 @@ body.page-home {
     height: 2.5rem !important;
   }
 }
+@media (min-width: 576px) {
+  .footer-icon {
+    height: 3em !important;
+  }
+}
