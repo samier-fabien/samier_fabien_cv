@@ -21,7 +21,11 @@ export default function Studies() {
       <SingleColContainer>
         <StudiesCard
           title="Concepteur, Développeur d’Applications"
-          period="Juin 2021 ➜ Février 2022"
+          period={
+            <>
+              Juin 2021 <i className="bi bi-arrow-right-short"></i> Février 2022
+            </>
+          }
           place="AFPA, Amiens"
           cssClasses="bg-orange-300"
           classToAdd="opacity-100"
@@ -34,7 +38,11 @@ export default function Studies() {
 
         <StudiesCard
           title="Techniques de Base du Développement d'Applications"
-          period="Avril 2021 ➜ Mai 2021"
+          period={
+            <>
+              Avril 2021 <i className="bi bi-arrow-right-short"></i> Mai 2021
+            </>
+          }
           place="AFPA, Amiens"
           cssClasses="bg-indigo-200"
           classToAdd="opacity-100"

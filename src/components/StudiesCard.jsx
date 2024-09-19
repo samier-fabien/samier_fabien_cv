@@ -55,14 +55,14 @@ export default function StudiesCard({
       >
         {title ? <h2 className="pb-4 text-white">{title}</h2> : ""}
         {period ? (
-          <p className="text-end pb-4">
+          <p className="text-end pb-4 studies-card-text-resize">
             <em>{period}</em>
           </p>
         ) : (
           ""
         )}
-        <p className="pb-1">{children}</p>
-        {place ? <p className="fw-semibold">{place}</p> : ""}
+        <p className="pb-1 studies-card-text-resize">{children}</p>
+        {place ? <p className="fw-semibold studies-card-text-resize">{place}</p> : ""}
       </div>
     </>
   );
