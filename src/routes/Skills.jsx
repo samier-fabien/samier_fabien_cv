@@ -26,7 +26,7 @@ export default function Skills() {
       />
       <ParallaxContainer containerClasses="parallax-bg-color-orange">
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-          <h2 className="h1 parallax-title">Des besoins au concept</h2>
+          <h2 className="h1 parallax-title border-orange-400">Des besoins au concept</h2>
         </div>
         <div
           ref={firstParallaxColRef}
@@ -55,7 +55,7 @@ export default function Skills() {
       />
       <ParallaxContainer containerClasses="parallax-bg-color-purple">
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-          <h2 className="h1 parallax-title">Conception</h2>
+          <h2 className="h1 parallax-title border-indigo-300">Conception</h2>
         </div>
         <div
           ref={secondParallaxColRef}
@@ -86,7 +86,7 @@ export default function Skills() {
       />
       <ParallaxContainer containerClasses="parallax-bg-color-pink">
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-          <h2 className="h1 parallax-title">Développement</h2>
+          <h2 className="h1 parallax-title border-pink-400">Développement</h2>
         </div>
         <div
           ref={thirdParallaxColRef}
