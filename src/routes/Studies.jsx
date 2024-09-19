@@ -20,14 +20,16 @@ export default function Studies() {
 
       <SingleColContainer>
         <StudiesCard
-          title="Baccalauréat"
-          period="Juin 2005"
-          place="Lycée Baudimont, Arras"
+          title="Concepteur, Développeur d’Applications"
+          period="Juin 2021 ➜ Février 2022"
+          place="AFPA, Amiens"
           cssClasses="bg-orange-300"
           classToAdd="opacity-100"
           classToRemove="opacity-0"
         >
-          Économique et social. Option mathématiques.
+          Formation diplômante de niveau licence. Utilisation avancée de bases de données,
+          conception de BDD, méthode merise, UML, maquettage, méthodes agile et scrum, programmation
+          orientée objet, framework PHP: Symfony, applications desktop avec Java, Swing et JavaFX.
         </StudiesCard>
 
         <StudiesCard
@@ -43,16 +45,14 @@ export default function Studies() {
         </StudiesCard>
 
         <StudiesCard
-          title="Concepteur, Développeur d’Applications"
-          period="Juin 2021 ➜ Février 2022"
-          place="AFPA, Amiens"
+          title="Baccalauréat"
+          period="Juin 2005"
+          place="Lycée Baudimont, Arras"
           cssClasses="bg-pink-300"
           classToAdd="opacity-100"
           classToRemove="opacity-0"
         >
-          Formation diplômante de niveau licence. Utilisation avancée de bases de données,
-          conception de BDD, méthode merise, UML, maquettage, méthodes agile et scrum, programmation
-          orientée objet, framework PHP: Symfony, applications desktop avec Java, Swing et JavaFX.
+          Économique et social. Option mathématiques.
         </StudiesCard>
       </SingleColContainer>
 
