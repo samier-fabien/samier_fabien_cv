@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Transition from "../components/Transition";
 import FooterTransition from "../components/FooterTransition";
 import DoubleSidedCard from "../components/DoubleSidedCard";
 import SingleColContainer from "../components/SingleColContainer";
 import ListGroup from "../components/ListGroup";
+import "../css/experiences.css";
 
 export default function Experiences() {
+  const [singleColContainerHeight, setSingleColContainerHeight] = useState("initial");
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  function handleResize() {
+    if (window.innerWidth <= 576) {
+      setSingleColContainerHeight("28rem");
+      console.log("resize 30rem");
+    } else {
+      setSingleColContainerHeight("38rem");
+      console.log("resize 38rem");
+    }
+  }
+
   return (
     <>
       <div className="container-fluid py-4 text-center bg-dark text-light">
@@ -18,7 +40,7 @@ export default function Experiences() {
         transitionContainerClasses="bg-white"
         transitionFillColor="#202428"
       />
-      <SingleColContainer minHeight="38rem">
+      <SingleColContainer minHeight={singleColContainerHeight}>
         <DoubleSidedCard
           otherSide={
             <div className="d-flex flex-column align-items-center justify-content-center h-100">
@@ -37,7 +59,7 @@ export default function Experiences() {
                   "Rédaction d'articles sur les diverses technologies rencontrées et employées avec",
                   "Onenote en guise de base de connaissances",
                 ]}
-                listElementsCssClasses="border-indigo-100 text-gray-800"
+                listElementsCssClasses="border-indigo-100 text-gray-800 list-elements-resize"
                 listCssClasses="list-group-flush"
               />
             </div>
@@ -54,10 +76,13 @@ export default function Experiences() {
               </em>
             </p>
             <p className="card-text text-gray-800 lead fw-bold">Développement web</p>
+            <i className="bi bi-hand-index thumb-icon text-gray-800">
+              <span className="ripple"></span>
+            </i>
           </div>
         </DoubleSidedCard>
       </SingleColContainer>
-      <SingleColContainer minHeight="38rem">
+      <SingleColContainer minHeight={singleColContainerHeight}>
         <DoubleSidedCard
           otherSide={
             <div className="d-flex flex-column align-items-center justify-content-center h-100">
@@ -73,7 +98,7 @@ export default function Experiences() {
                   "Modélisation UML",
                   "Tests unitaires",
                 ]}
-                listElementsCssClasses="border-indigo-100 text-gray-800"
+                listElementsCssClasses="border-indigo-100 text-gray-800 list-elements-resize"
                 listCssClasses="list-group-flush"
               />
             </div>
@@ -91,6 +116,9 @@ export default function Experiences() {
                 </em>
               </p>
               <p className="card-text text-gray-800 lead fw-bold">Stage de développement web</p>
+              <i className="bi bi-hand-index thumb-icon text-gray-800">
+                <span className="ripple"></span>
+              </i>
             </div>
           </div>
         </DoubleSidedCard>
