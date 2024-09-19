@@ -24,7 +24,7 @@ export default function Skills() {
         transitionContainerClasses="parallax-bg-color-orange"
         transitionFillColor="#202428"
       />
-      <ParallaxContainer containerClasses="parallax-bg-color-orange">
+      <ParallaxContainer innerContainerClasses="parallax-bg-color-orange">
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
           <h2 className="h1 parallax-title border-orange-400">Des besoins au concept</h2>
         </div>
@@ -53,7 +53,7 @@ export default function Skills() {
         transitionContainerClasses="bg-transparent"
         transitionFillColor="rgb(208, 208, 255)"
       />
-      <ParallaxContainer containerClasses="parallax-bg-color-purple">
+      <ParallaxContainer innerContainerClasses="parallax-bg-color-purple">
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
           <h2 className="h1 parallax-title border-indigo-300">Conception</h2>
         </div>
@@ -84,7 +84,10 @@ export default function Skills() {
         transitionContainerClasses="bg-transparent"
         transitionFillColor="rgb(253, 207, 255)"
       />
-      <ParallaxContainer containerClasses="parallax-bg-color-pink">
+      <ParallaxContainer
+        innerContainerClasses="parallax-bg-color-pink mb-5"
+        containerClasses="last-parallax-container parallax-bg-color-pink"
+      >
         <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
           <h2 className="h1 parallax-title border-pink-400">Développement</h2>
         </div>

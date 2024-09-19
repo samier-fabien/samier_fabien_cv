@@ -87,3 +87,7 @@
 .bg-image-dev {
   background-image: url("../assets/vectors/etapes-projet_dev.svg");
 }
+
+.last-parallax-container {
+  padding-bottom: 63px;
+}
