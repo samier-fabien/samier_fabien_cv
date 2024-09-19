@@ -63,7 +63,9 @@ export default function Experiences() {
             <h2 className="card-title text-white">Extérieurstock</h2>
             <p className=" text-gray-700 mb-5">
               <em>
-                <small>Septembre 2022 ꭫ Septembre 2023</small>
+                <small>
+                  Septembre 2022 <i className="bi bi-arrow-right-short"></i> Septembre 2023
+                </small>
               </em>
             </p>
             <p className="card-text text-gray-800 lead fw-bold">Développement web</p>
@@ -106,7 +108,9 @@ export default function Experiences() {
               <h2 className="card-title text-white">Collectivité territoriale d'Auchonvillers</h2>
               <p className=" text-gray-700 mb-5">
                 <em>
-                  <small>Novembre 2021 ꭫ Janvier 2022</small>
+                  <small>
+                    Novembre 2021 <i className="bi bi-arrow-right-short"></i> Janvier 2022
+                  </small>
                 </em>
               </p>
               <p className="card-text text-gray-800 lead fw-bold">Stage de développement web</p>
