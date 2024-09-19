@@ -15,7 +15,7 @@ export default function About() {
         <TitleOneObserved
           classToAdd="translate-from-left"
           classToRemove="translate-init"
-          borderColor="var(--bs-primary)"
+          cssClasses="border-orange-400"
         >
           De manière succinte
         </TitleOneObserved>
@@ -37,7 +37,7 @@ export default function About() {
         <TitleOneObserved
           classToAdd="translate-from-right"
           classToRemove="translate-init"
-          borderColor="var(--bs-primary)"
+          cssClasses="border-indigo-300"
         >
           Le développement
         </TitleOneObserved>
@@ -72,7 +72,7 @@ export default function About() {
         <TitleOneObserved
           classToAdd="translate-from-right"
           classToRemove="translate-init"
-          borderColor="var(--bs-primary)"
+          cssClasses="border-pink-400"
         >
           Reconversion
         </TitleOneObserved>

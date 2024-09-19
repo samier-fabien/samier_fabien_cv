@@ -1,12 +1,7 @@
 import React, { useEffect, useRef } from "react";
+import "../css/titleOne.css";
 
-export default function TitleOneObserved({
-  children,
-  classToAdd,
-  classToRemove,
-  borderColor = "black",
-  cssClasses = "",
-}) {
+export default function TitleOneObserved({ children, classToAdd, classToRemove, cssClasses = "" }) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -48,8 +43,7 @@ export default function TitleOneObserved({
     <>
       <h2
         ref={ref}
-        style={{ borderLeft: `0.3rem solid ${borderColor}` }}
-        className={`display-6 mt-5 mb-3 ps-3 transition-duration-800 ${cssClasses} ${
+        className={`h1 mt-5 mb-3 ps-3 transition-duration-800 border-left ${cssClasses} ${
           classToRemove ? classToRemove : ""
         }`}
       >
