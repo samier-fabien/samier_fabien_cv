@@ -29,7 +29,7 @@ export default function Root() {
   function handleResize() {
     window.innerWidth >= 600
       ? setCda(
-          <div className="col text-light d-flex align-items-center justify-content-end">
+          <div className="col text-light d-flex align-items-center justify-content-center">
             <div className="text-center">
               <span className="text-indigo-300">C</span>onception
               <br />
