@@ -8,3 +8,9 @@
   padding: 3rem;
   margin-bottom: 7rem;
 }
+
+@media (max-width: 576px) {
+  .studies-card-text-resize {
+    font-size: 0.8em !important;
+  }
+}

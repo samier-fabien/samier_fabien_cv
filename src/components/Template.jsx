@@ -1,25 +1,48 @@
 import React, { useState, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import TransitionWrapper from "../components/TransitionWrapper";
-import RadialMenu from "../components/RadialMenu";
-import MenuListElement from "../components/MenuListElement";
 import WavyTransition from "../components/WavyTransition";
 import ImageFromAssets from "./ImageFromAssets";
-import "../css/home.css";
+import Menu from "./Menu";
+import "../css/template.css";
 
 export default function Root() {
   const [pageLoaded, setPageLoaded] = useState(false);
   const [hasClicked, setHasClicked] = useState(false);
+  const [cda, setCda] = useState("");
 
   useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
     setTimeout(() => {
       setPageLoaded(true);
     }, 1000);
     document.body.classList.add("page-home");
+
     return () => {
+      window.removeEventListener("resize", handleResize);
       document.body.classList.remove("page-home");
     };
   }, []);
+
+  function handleResize() {
+    window.innerWidth >= 600
+      ? setCda(
+          <div className="col text-light d-flex align-items-center justify-content-center">
+            <div className="text-center">
+              <span className="text-indigo-300">C</span>onception
+              <br />
+              <span className="text-pink-300">D</span>éveloppement
+            </div>
+            <div className="fs-3 pb-1 px-2 text-blue-300">{"}"}</div>
+            <div className="">
+              <span className="text-orange-300">A</span>pplication
+            </div>
+          </div>
+        )
+      : setCda(null);
+  }
 
   return (
     <div className="container-fluid bg-white p-0 m-0">
@@ -33,82 +56,20 @@ export default function Root() {
         <header className="container-fluid menu-padding bg-light">
           <div className="row d-flex d-flex align-items-center bg-dark shadow">
             <div className="col text-start text-light">
-              <span className="handwriting fs-4">Samier Fabien</span>
+              <Link className={"handwriting fs-4 text-white text-decoration-none"} to={"/"}>
+                Samier Fabien
+              </Link>
             </div>
-            <div className="col text-center text-white">
+            {cda ? cda : ""}
+            <div className="col text-end text-white">
               <Link to="https://www.linkedin.com/in/fabien-samier-0140a021b/">
                 <i className="bi bi-linkedin fs-2 text-blue-300"></i>
               </Link>
             </div>
-            <div className="col text-light d-flex align-items-center justify-content-end">
-              <div className="text-end">
-                <span className="text-indigo-300">C</span>onception
-                <br />
-                <span className="text-pink-300">D</span>éveloppement
-              </div>
-              <div className="fs-3 pb-1 px-2 text-blue-300">{"}"}</div>
-              <div className="">
-                <span className="text-orange-300">A</span>pplication
-              </div>
-            </div>
           </div>
           <div className="row menu-gradient py-4 px-0">
             <div className="col text-dark d-block text-center">
-              <RadialMenu
-                elements={[
-                  <MenuListElement
-                    iconName="bi bi-person"
-                    iconSize="2rem"
-                    tooltipText="À-propos"
-                    tooltipTextClasses="text-light"
-                    hyperlink="/a-propos"
-                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center button"
-                  />,
-                  <MenuListElement
-                    iconName="bi bi-code-slash"
-                    iconSize="2rem"
-                    tooltipText="Technologies"
-                    tooltipTextClasses="text-light"
-                    hyperlink="/technologies"
-                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
-                  />,
-                  <MenuListElement
-                    iconName="bi bi-gear"
-                    iconSize="2rem"
-                    tooltipText="Compétences"
-                    tooltipTextClasses="text-light"
-                    hyperlink="/competences"
-                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center button"
-                  />,
-                  <MenuListElement
-                    iconName="bi bi-journals"
-                    iconSize="2rem"
-                    tooltipText="Expériences"
-                    tooltipTextClasses="text-light"
-                    hyperlink="/experiences"
-                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
-                  />,
-                  <MenuListElement
-                    iconName="bi bi-award"
-                    iconSize="2rem"
-                    tooltipText="Etudes"
-                    tooltipTextClasses="text-light"
-                    hyperlink="/etudes"
-                    hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
-                  />,
-                ]}
-                firstItemAngleInRadians={Math.PI + 0.12}
-                lastItemAngleInRadians={-0.12}
-                menuRadius={170}
-                menuClasses="menu-button"
-                listElementRadius={40}
-                listElementClasses="bg-dark text-white"
-                buttonRadius={60}
-                buttonHyperlinkClasses="d-inline-flex justify-content-center align-items-center bg-dark rounded-circle"
-                button={<i className="bi bi-list text-white" style={{ fontSize: "3rem" }}></i>}
-                duration={300}
-                delay={100}
-              />
+              <Menu />
             </div>
           </div>
         </header>
@@ -123,37 +84,37 @@ export default function Root() {
           <ImageFromAssets
             src="/vectors/html-5-logo-coloured-no-text.svg"
             alt="logo d'HTML 5"
-            height="3rem"
+            imgClasses="footer-icon"
           />
           <ImageFromAssets
             src="/vectors/css-3-logo-coloured-no-text.svg"
             alt="logo de CSS 3"
-            height="3rem"
+            imgClasses="footer-icon"
           />
           <ImageFromAssets
             src="/vectors/sass-logo-coloured-text.svg"
             alt="logo de sass"
-            height="3rem"
+            imgClasses="footer-icon"
           />
           <ImageFromAssets
             src="/vectors/js-logo-coloured.svg"
             alt="logo de JavaScript"
-            height="2.8rem"
+            imgClasses="footer-icon"
           />
           <ImageFromAssets
             src="/vectors/node-logo-coloured-no-text.svg"
             alt="logo de Node.js"
-            height="3rem"
+            imgClasses="footer-icon"
           />
           <ImageFromAssets
             src="/vectors/react-logo-coloured-no-text.svg"
             alt="logo de React"
-            height="3rem"
+            imgClasses="footer-icon"
           />
           <ImageFromAssets
             src="/vectors/vite-svgrepo-com.svg"
             alt="logo de Vite.js"
-            height="3rem"
+            imgClasses="footer-icon"
           />
         </footer>
       </TransitionWrapper>

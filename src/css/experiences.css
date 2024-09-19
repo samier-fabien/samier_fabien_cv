@@ -1,0 +1,49 @@
+@media (max-width: 576px) {
+  .list-elements-resize {
+    font-size: 0.7em !important;
+    padding: 0.4em !important;
+  }
+}
+
+.thumb-icon {
+  padding: 2rem;
+  font-size: 1.5rem;
+  animation: clickEffect 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes clickEffect {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  75% {
+    transform: scale(1) translateY(0);
+  }
+  95% {
+    transform: scale(0.9) translateY(-4px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.ripple {
+  border-radius: 100%;
+  position: absolute;
+  width: 0.3rem;
+  height: 0.3rem;
+  top: 2.3rem;
+  left: 2.375rem;
+  animation: rippleEffect 2s infinite ease-out 1.9s;
+}
+
+@keyframes rippleEffect {
+  0% {
+    box-shadow: 0 0 0 0 rgba(96, 96, 96, 0.286);
+  }
+  25% {
+    box-shadow: 0 0 0 20px rgba(255, 0, 0, 0);
+  }
+  100% {
+  }
+}

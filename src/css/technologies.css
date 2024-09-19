@@ -1,0 +1,16 @@
+@media (max-width: 576px) {
+  .carousel-card-text-resize {
+    font-size: 0.8em !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-icon-resize {
+    height: 1.3em !important;
+  }
+}
+@media (min-width: 576px) {
+  .carousel-icon-resize {
+    height: 1.6em !important;
+  }
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../css/wavyTransition.css";
 
 export default function WavyTransition({
@@ -7,6 +7,28 @@ export default function WavyTransition({
   topRGB,
   bottomRGB,
 }) {
+  const [height, setHeight] = useState(null);
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  function handleResize() {
+    if (window.innerWidth >= 992) {
+      setHeight(transitionHeight);
+    } else if (window.innerWidth >= 768) {
+      setHeight(transitionHeight * 0.8);
+    } else if (window.innerWidth >= 576) {
+      setHeight(transitionHeight * 0.6);
+    } else {
+      setHeight(transitionHeight * 0.4);
+    }
+  }
+
   return (
     <div
       className="p-0 mb-0"
@@ -17,10 +39,13 @@ export default function WavyTransition({
       <svg
         className="waves"
         xmlns="http://www.w3.org/2000/svg"
-        height={transitionHeight}
+        height={height ? height : transitionHeight}
         viewBox="0 0 150 80"
         preserveAspectRatio="none"
         shapeRendering="auto"
+        style={{
+          marginBottom: "-1px", // marginBottom fix artifact on mobile
+        }}
       >
         <defs>
           <path
