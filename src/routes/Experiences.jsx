@@ -3,8 +3,7 @@ import Transition from "../components/Transition";
 import FooterTransition from "../components/FooterTransition";
 import DoubleSidedCard from "../components/DoubleSidedCard";
 import SingleColContainer from "../components/SingleColContainer";
-import ListGroupFlush from "../components/ListGroupFlush";
-import ListGroupItem from "../components/ListGroupItem";
+import ListGroup from "../components/ListGroup";
 
 export default function Experiences() {
   return (
@@ -24,37 +23,23 @@ export default function Experiences() {
           otherSide={
             <div className="d-flex flex-column align-items-center justify-content-center h-100">
               <h2 className="card-title p-3 text-white">Extérieurstock</h2>
-              <ListGroupFlush>
-                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
-                  Modifications d'APIs existantes
-                </ListGroupItem>
-                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
-                  Conception de bases de données
-                </ListGroupItem>
-                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
-                  Dialogue avec le personnel en vue de la réalisation d'algorithmes pour
-                  l'élaboration d'applications en lien avec leur travail
-                </ListGroupItem>
-                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
-                  Conception et développement d'APIs REST et GraphQL avec Symfony et Api Platform
-                </ListGroupItem>
-                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
-                  Développement front avec React, Jquery et Htmx
-                </ListGroupItem>
-                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
-                  Modification et développement de modules pour Prestashop
-                </ListGroupItem>
-                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
-                  Écriture de scripts en Bash et Python
-                </ListGroupItem>
-                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
-                  Documentation des applications créées
-                </ListGroupItem>
-                <ListGroupItem cssClasses="border-orange-100 text-gray-800">
-                  Rédaction d'articles sur les diverses technologies rencontrées et employées avec
-                  Onenote en guise de base de connaissances
-                </ListGroupItem>
-              </ListGroupFlush>
+              <ListGroup
+                listElements={[
+                  "Modifications d'APIs existantes",
+                  "Conception de bases de données",
+                  "Dialogue avec le personnel en vue de la réalisation d'algorithmes pour",
+                  "l'élaboration d'applications en lien avec leur travail",
+                  "Conception et développement d'APIs REST et GraphQL avec Symfony et Api Platform",
+                  "Développement front avec React, Jquery et Htmx",
+                  "Modification et développement de modules pour Prestashop",
+                  "Écriture de scripts en Bash et Python",
+                  "Documentation des applications créées",
+                  "Rédaction d'articles sur les diverses technologies rencontrées et employées avec",
+                  "Onenote en guise de base de connaissances",
+                ]}
+                listElementsCssClasses="border-indigo-100 text-gray-800"
+                listCssClasses="list-group-flush"
+              />
             </div>
           }
           cardClasses="bg-orange-300 border-5 border-gray-200"
@@ -79,26 +64,18 @@ export default function Experiences() {
               <h2 className="card-title p-3 text-white">
                 Collectivité territoriale d'Auchonvillers
               </h2>
-              <ListGroupFlush>
-                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
-                  Développement d'une application web pour la commune
-                </ListGroupItem>
-                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
-                  Choix des technologies: Symfony 5, Bootstrap, JQuery, Docker
-                </ListGroupItem>
-                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
-                  Conception de la base de données relationnelle (méthode merise)
-                </ListGroupItem>
-                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
-                  Maquettage avec Figma
-                </ListGroupItem>
-                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
-                  Modélisation UML
-                </ListGroupItem>
-                <ListGroupItem cssClasses="border-indigo-100 text-gray-800">
-                  Tests unitaires
-                </ListGroupItem>
-              </ListGroupFlush>
+              <ListGroup
+                listElements={[
+                  "Développement d'une application web pour la commune",
+                  "Choix des technologies: Symfony 5, Bootstrap, JQuery, Docker",
+                  "Conception de la base de données relationnelle (méthode merise)",
+                  "Maquettage avec Figma",
+                  "Modélisation UML",
+                  "Tests unitaires",
+                ]}
+                listElementsCssClasses="border-indigo-100 text-gray-800"
+                listCssClasses="list-group-flush"
+              />
             </div>
           }
           cardClasses="bg-indigo-200 border-5 border-gray-200"
