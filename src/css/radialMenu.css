@@ -1,0 +1,53 @@
+#radial-menu {
+  margin: 0;
+  padding: 0;
+  background-color: transparent !important;
+  z-index: 100;
+  border-radius: 50%;
+}
+
+#radial-menu > a {
+  transition: box-shadow 0.3s ease-in-out 0s !important;
+}
+#radial-menu > a:hover {
+  box-shadow: inset 0rem 1rem white;
+}
+
+#radial-menu > ul {
+  list-style-type: none;
+}
+
+#radial-menu > ul > li {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  animation: radial-menu-element-fade-out 0.3s ease forwards;
+}
+#radial-menu > ul > li:hover {
+  animation: radial-menu-element-fade-in 0.3s ease forwards;
+}
+@keyframes radial-menu-element-fade-in {
+  0% {
+    box-shadow: inset 0rem 0rem white;
+  }
+
+  100% {
+    box-shadow: inset 0rem 1rem white;
+  }
+}
+@keyframes radial-menu-element-fade-out {
+  0% {
+    box-shadow: inset 0rem 1rem white;
+  }
+  100% {
+    box-shadow: inset 0rem 0rem white;
+  }
+}
+
+.radial-menu-visible {
+  opacity: 1;
+}
+
+.radial-menu-hidden {
+  opacity: 0;
+}

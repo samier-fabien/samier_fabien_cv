@@ -1,0 +1,9 @@
+.double-sided-card {
+  transform-origin: center; /* définir l'origine de la rotation au centre */
+  transition: transform 0.5s; /* animation de 0.5 secondes pour la rotation */
+  cursor: pointer;
+}
+
+.card-flip {
+  transform: rotate3d(0, 1, 0, 360deg); /* rotation de 180 degrés */
+}

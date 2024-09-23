@@ -1,0 +1,93 @@
+.parallax-container {
+  height: 100vh;
+}
+
+.parallax-title {
+  position: relative;
+  top: -50%;
+  left: 0.5rem;
+  border-left: 0.4rem solid;
+  padding-left: 1rem;
+}
+
+.parallax-bg-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 300px;
+  border-radius: 3rem;
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+  .parallax-image-resize {
+    background-size: 260px;
+  }
+}
+@media (max-width: 576px) and (min-width: 450px) {
+  .parallax-image-resize {
+    background-size: 220px;
+  }
+}
+@media (max-width: 450px) {
+  .parallax-image-resize {
+    background-size: 180px;
+  }
+}
+
+@media (min-width: 768px) {
+  .radial-text {
+    padding: 0.6em !important;
+    font-size: 0.85em !important;
+  }
+}
+@media (max-width: 768px) and (min-width: 576px) {
+  .radial-text {
+    padding: 0.5em !important;
+    font-size: 0.8em !important;
+  }
+}
+@media (max-width: 576px) and (min-width: 450px) {
+  .radial-text {
+    padding: 0.5em !important;
+    font-size: 0.7em !important;
+  }
+}
+@media (max-width: 450px) and (min-width: 380px) {
+  .radial-text {
+    padding: 0.5em !important;
+    font-size: 0.6em !important;
+  }
+}
+@media (max-width: 380px) {
+  .radial-text {
+    padding: 0.4em !important;
+    font-size: 0.5em !important;
+  }
+}
+
+.parallax-bg-color-orange {
+  background-color: rgb(255, 221, 202);
+}
+
+.parallax-bg-color-purple {
+  background-color: rgb(208, 208, 255);
+}
+
+.parallax-bg-color-pink {
+  background-color: rgb(253, 207, 255);
+}
+
+.bg-image-needs {
+  background-image: url("../assets/vectors/etapes-projet_entretien.svg");
+}
+
+.bg-image-concept {
+  background-image: url("../assets/vectors/etapes-projet_conception.svg");
+}
+
+.bg-image-dev {
+  background-image: url("../assets/vectors/etapes-projet_dev.svg");
+}
+
+.last-parallax-container {
+  padding-bottom: 63px;
+}
