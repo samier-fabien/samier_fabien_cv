@@ -1,3 +1,4 @@
+import React from "react";
 import { useRouteError, useLocation } from "react-router-dom";
 import Transition from "../components/Transition";
 import FooterTransition from "../components/FooterTransition";
