@@ -55,46 +55,59 @@ export default function Technologies() {
                 <ListGroup
                   listElements={[
                     <>
-                      <ImageFromAssets
-                        src="/vectors/css-3-logo-coloured-no-text.svg"
-                        imgClasses="carousel-icon-resize"
+                      <img
+                        src="../assets/vectors/css-3-logo-coloured-no-text.svg"
+                        className="carousel-icon-resize"
                       />{" "}
                       CSS
                     </>,
                     <>
-                      <ImageFromAssets
-                        src="/vectors/bootstrap-fill-svgrepo-com.svg"
-                        imgClasses="carousel-icon-resize"
+                      <img
+                        src="../assets/vectors/bootstrap-fill-svgrepo-com.svg"
+                        className="carousel-icon-resize"
                       />{" "}
                       Bootstrap
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/js-logo-coloured.svg" imgClasses="carousel-icon-resize" />{" "}
+                      <img
+                        src="../assets/vectors/js-logo-coloured.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
                       JavaScript
                     </>,
                     <>
-                      <ImageFromAssets
-                        src="/vectors/node-logo-coloured-no-text.svg"
-                        imgClasses="carousel-icon-resize"
+                      <img
+                        src="../assets/vectors/node-logo-coloured-no-text.svg"
+                        className="carousel-icon-resize"
                       />{" "}
                       Node.js / npm
                     </>,
                     <>
-                      <ImageFromAssets
-                        src="/vectors/react-logo-coloured-no-text.svg"
-                        imgClasses="carousel-icon-resize"
+                      <img
+                        src="../assets/vectors/react-logo-coloured-no-text.svg"
+                        className="carousel-icon-resize"
                       />{" "}
                       React.js
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/vite-svgrepo-com.svg" imgClasses="carousel-icon-resize" />{" "}
+                      <img
+                        src="../assets/vectors/vite-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
                       Vite.js
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/code-svgrepo-com.svg" imgClasses="carousel-icon-resize" /> Htmx
+                      <img
+                        src="../assets/vectors/code-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
+                      Htmx
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/jquery-svgrepo-com.svg" imgClasses="carousel-icon-resize" />{" "}
+                      <img
+                        src="../assets/vectors/jquery-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
                       JQuery
                     </>,
                   ]}
@@ -106,21 +119,39 @@ export default function Technologies() {
                 <ListGroup
                   listElements={[
                     <>
-                      <ImageFromAssets src="/vectors/php-svgrepo-com.svg" imgClasses="carousel-icon-resize" /> PHP
+                      <img
+                        src="../assets/vectors/php-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
+                      PHP
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/composer-svgrepo-com.svg" imgClasses="carousel-icon-resize" />{" "}
+                      <img
+                        src="../assets/vectors/composer-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
                       Composer
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/symfony-logo.svg" imgClasses="carousel-icon-resize" /> Symfony
+                      <img
+                        src="../assets/vectors/symfony-logo.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
+                      Symfony
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/twig-svgrepo-com.svg" imgClasses="carousel-icon-resize" /> Twig
+                      <img
+                        src="../assets/vectors/twig-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
+                      Twig
                     </>,
                     <>
-                      <ImageFromAssets src="/bitmaps/Logo_Api_Patform.png" imgClasses="carousel-icon-resize" /> Api
-                      Platform
+                      <img
+                        src="../assets/bitmaps/Logo_Api_Patform.png"
+                        className="carousel-icon-resize"
+                      />{" "}
+                      Api Platform
                     </>,
                   ]}
                   listElementsCssClasses="border-indigo-100 text-gray-800 carousel-card-text-resize"
@@ -134,22 +165,32 @@ export default function Technologies() {
                 <ListGroup
                   listElements={[
                     <>
-                      <ImageFromAssets src="/vectors/drawio-svgrepo-com.svg" imgClasses="carousel-icon-resize" />{" "}
+                      <img
+                        src="../assets/vectors/drawio-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
                       Draw.io (UML)
                     </>,
                     <>
-                      <ImageFromAssets src="/bitmaps/looping_mcd.webp" imgClasses="carousel-icon-resize" />{" "}
+                      <img
+                        src="../assets/bitmaps/looping_mcd.webp"
+                        className="carousel-icon-resize"
+                      />{" "}
                       Looping-MCD (Merise)
                     </>,
                     <>
-                      <ImageFromAssets
-                        src="/vectors/trello-color-svgrepo-com.svg"
-                        imgClasses="carousel-icon-resize"
+                      <img
+                        src="../assets/vectors/trello-color-svgrepo-com.svg"
+                        className="carousel-icon-resize"
                       />{" "}
                       Trello
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/figma-svgrepo-com.svg" imgClasses="carousel-icon-resize" /> Figma
+                      <img
+                        src="../assets/vectors/figma-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
+                      Figma
                     </>,
                   ]}
                   listElementsCssClasses="border-indigo-100 text-gray-800 carousel-card-text-resize"
@@ -160,37 +201,59 @@ export default function Technologies() {
                 <ListGroup
                   listElements={[
                     <>
-                      <ImageFromAssets src="/vectors/vscode-svgrepo-com.svg" imgClasses="carousel-icon-resize" />{" "}
+                      <img
+                        src="../assets/vectors/vscode-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
                       VSCode
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/docker-svgrepo-com.svg" imgClasses="carousel-icon-resize" />{" "}
+                      <img
+                        src="../assets/vectors/docker-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
                       Docker / Docker compose
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/git-svgrepo-com.svg" imgClasses="carousel-icon-resize" /> Git
+                      <img
+                        src="../assets/vectors/git-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
+                      Git
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/laragon-svgrepo-com.svg" imgClasses="carousel-icon-resize" />{" "}
+                      <img
+                        src="../assets/vectors/laragon-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
                       Laragon / serveur PHP (selon l'OS)
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/insomnia-svgrepo-com.svg" imgClasses="carousel-icon-resize" />{" "}
+                      <img
+                        src="../assets/vectors/insomnia-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
                       Insomnia
                     </>,
                     <>
-                      <ImageFromAssets
-                        src="/vectors/postman-icon-svgrepo-com.svg"
-                        imgClasses="carousel-icon-resize"
+                      <img
+                        src="../assets/vectors/postman-icon-svgrepo-com.svg"
+                        className="carousel-icon-resize"
                       />{" "}
                       Postman
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/obsidian-svgrepo-com.svg" imgClasses="carousel-icon-resize" />{" "}
+                      <img
+                        src="../assets/vectors/obsidian-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
                       Obsidian
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/ms-onenote-svgrepo-com.svg" imgClasses="carousel-icon-resize" />{" "}
+                      <img
+                        src="../assets/vectors/ms-onenote-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
                       Onenote
                     </>,
                   ]}
@@ -202,25 +265,36 @@ export default function Technologies() {
                 <ListGroup
                   listElements={[
                     <>
-                      <ImageFromAssets src="/vectors/illustrator-svgrepo-com.svg" imgClasses="carousel-icon-resize" />{" "}
+                      <img
+                        src="../assets/vectors/illustrator-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
                       Illustrator
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/inkscape-svgrepo-com.svg" imgClasses="carousel-icon-resize" />{" "}
+                      <img
+                        src="../assets/vectors/inkscape-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
                       Inkscape
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/gimp-svgrepo-com.svg" imgClasses="carousel-icon-resize" /> Gimp
+                      <img
+                        src="../assets/vectors/gimp-svgrepo-com.svg"
+                        className="carousel-icon-resize"
+                      />{" "}
+                      Gimp
                     </>,
                     <>
-                      <ImageFromAssets
-                        src="/vectors/photoshop-color-svgrepo-com.svg"
-                        imgClasses="carousel-icon-resize"
+                      <img
+                        src="../assets/vectors/photoshop-color-svgrepo-com.svg"
+                        className="carousel-icon-resize"
                       />{" "}
                       Photoshop
                     </>,
                     <>
-                      <ImageFromAssets src="/vectors/" imgClasses="carousel-icon-resize" /> Générateurs en ligne
+                      <img src="../assets/vectors/" className="carousel-icon-resize" /> Générateurs
+                      en ligne
                     </>,
                   ]}
                   listElementsCssClasses="border-indigo-100 text-gray-800 carousel-card-text-resize"
