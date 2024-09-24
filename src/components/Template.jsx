@@ -63,7 +63,10 @@ export default function Root() {
         <header className="container-fluid menu-padding bg-light">
           <div className="row d-flex d-flex align-items-center bg-dark shadow">
             <div className="col text-start text-light">
-              <Link className={"handwriting fs-4 text-white text-decoration-none"} to={"/"}>
+              <Link
+                className={"handwriting fs-4 text-white text-decoration-none"}
+                to={"/samier_fabien_cv/"}
+              >
                 Samier Fabien
               </Link>
             </div>

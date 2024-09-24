@@ -14,7 +14,7 @@ export default function Menu() {
   useEffect(() => {
     handleResize();
     window.addEventListener("resize", handleResize);
-    
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -34,7 +34,7 @@ export default function Menu() {
               iconSize="2rem"
               tooltipText="À-propos"
               tooltipClasses="text-light"
-              uri="/a-propos"
+              uri="/samier_fabien_cv/a-propos"
               hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center button"
             />,
             <MenuListElement
@@ -42,7 +42,7 @@ export default function Menu() {
               iconSize="2rem"
               tooltipText="Technologies"
               tooltipClasses="text-light"
-              uri="/technologies"
+              uri="/samier_fabien_cv/technologies"
               hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
             />,
             <MenuListElement
@@ -50,7 +50,7 @@ export default function Menu() {
               iconSize="2rem"
               tooltipText="Compétences"
               tooltipClasses="text-light"
-              uri="/competences"
+              uri="/samier_fabien_cv/competences"
               hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center button"
             />,
             <MenuListElement
@@ -58,7 +58,7 @@ export default function Menu() {
               iconSize="2rem"
               tooltipText="Expériences"
               tooltipClasses="text-light"
-              uri="/experiences"
+              uri="/samier_fabien_cv/experiences"
               hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
             />,
             <MenuListElement
@@ -66,7 +66,7 @@ export default function Menu() {
               iconSize="2rem"
               tooltipText="Etudes"
               tooltipClasses="text-light"
-              uri="/etudes"
+              uri="/samier_fabien_cv/etudes"
               hyperlinkClasses="text-white text-center d-flex justify-content-center align-items-center"
             />,
           ]}

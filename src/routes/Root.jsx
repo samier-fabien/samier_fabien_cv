@@ -21,7 +21,7 @@ export default function Root() {
   return (
     <div className="background-gradient">
       <TransitionWrapper
-        path={"/a-propos"}
+        path={"/samier_fabien_cv/a-propos"}
         isInTransit={hasClicked}
         transitionClass="anim-fade-out"
         transitionTime="500"
