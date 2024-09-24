@@ -19,7 +19,7 @@ import * as bootstrap from "bootstrap";
 
 const router = createBrowserRouter([
   {
-    path: "/samier_fabien_cv",
+    path: "/samier_fabien_cv/",
     element: <Root />,
   },
   {
