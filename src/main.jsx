@@ -19,11 +19,11 @@ import * as bootstrap from "bootstrap";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/samier_fabien_cv",
     element: <Root />,
   },
   {
-    path: "/",
+    path: "/samier_fabien_cv",
     element: <Template />, // Template utilisé comme Layout global
     children: [
       {

@@ -5,6 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/samier_fabien_cv/",
+  assetsInlineLimit: 0,
   build: {
     outDir: "docs",
   },

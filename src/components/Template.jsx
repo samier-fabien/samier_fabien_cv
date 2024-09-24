@@ -5,6 +5,13 @@ import WavyTransition from "../components/WavyTransition";
 import ImageFromAssets from "./ImageFromAssets";
 import Menu from "./Menu";
 import "../css/template.css";
+import iconHtml5 from "./../assets/vectors/html-5-logo-coloured-no-text.svg";
+import iconCss3 from "./../assets/vectors/css-3-logo-coloured-no-text.svg";
+import iconSass from "./../assets/vectors/sass-logo-coloured-text.svg";
+import iconJs from "./../assets/vectors/js-logo-coloured.svg";
+import iconNode from "./../assets/vectors/node-logo-coloured-no-text.svg";
+import iconReact from "./../assets/vectors/react-logo-coloured-no-text.svg";
+import iconVite from "./../assets/vectors/vite-svgrepo-com.svg";
 
 export default function Root() {
   const [pageLoaded, setPageLoaded] = useState(false);
@@ -56,7 +63,10 @@ export default function Root() {
         <header className="container-fluid menu-padding bg-light">
           <div className="row d-flex d-flex align-items-center bg-dark shadow">
             <div className="col text-start text-light">
-              <Link className={"handwriting fs-4 text-white text-decoration-none"} to={"/"}>
+              <Link
+                className={"handwriting fs-4 text-white text-decoration-none"}
+                to={"/samier_fabien_cv/"}
+              >
                 Samier Fabien
               </Link>
             </div>
@@ -81,41 +91,13 @@ export default function Root() {
         />
         <Outlet />
         <footer className="container-fluid d-flex justify-content-center bg-dark text-light p-5">
-          <ImageFromAssets
-            src="/vectors/html-5-logo-coloured-no-text.svg"
-            alt="logo d'HTML 5"
-            imgClasses="footer-icon"
-          />
-          <ImageFromAssets
-            src="/vectors/css-3-logo-coloured-no-text.svg"
-            alt="logo de CSS 3"
-            imgClasses="footer-icon"
-          />
-          <ImageFromAssets
-            src="/vectors/sass-logo-coloured-text.svg"
-            alt="logo de sass"
-            imgClasses="footer-icon"
-          />
-          <ImageFromAssets
-            src="/vectors/js-logo-coloured.svg"
-            alt="logo de JavaScript"
-            imgClasses="footer-icon"
-          />
-          <ImageFromAssets
-            src="/vectors/node-logo-coloured-no-text.svg"
-            alt="logo de Node.js"
-            imgClasses="footer-icon"
-          />
-          <ImageFromAssets
-            src="/vectors/react-logo-coloured-no-text.svg"
-            alt="logo de React"
-            imgClasses="footer-icon"
-          />
-          <ImageFromAssets
-            src="/vectors/vite-svgrepo-com.svg"
-            alt="logo de Vite.js"
-            imgClasses="footer-icon"
-          />
+          <img src={iconHtml5} alt="logo d'HTML 5" className="footer-icon" />
+          <img src={iconCss3} alt="logo de CSS 3" className="footer-icon" />
+          <img src={iconSass} alt="logo de sass" className="footer-icon" />
+          <img src={iconJs} alt="logo de JavaScript" className="footer-icon" />
+          <img src={iconNode} alt="logo de Node.js" className="footer-icon" />
+          <img src={iconReact} alt="logo de React" className="footer-icon" />
+          <img src={iconVite} alt="logo de Vite.js" className="footer-icon" />
         </footer>
       </TransitionWrapper>
     </div>
