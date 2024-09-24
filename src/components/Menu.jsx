@@ -87,26 +87,36 @@ export default function Menu() {
           buttonHyperlinkClasses="d-inline-flex justify-content-center align-items-center bg-dark rounded-circle"
           button={<i className="bi bi-list text-white" style={{ fontSize: "3rem" }}></i>}
         >
-          <OffcanvasItem text="À-propos" uri="/a-propos" iconName="bi bi-person" size="1.5rem" />
+          <OffcanvasItem
+            text="À-propos"
+            uri="/samier_fabien_cv/a-propos"
+            iconName="bi bi-person"
+            size="1.5rem"
+          />
           <OffcanvasItem
             text="Technologies"
-            uri="/technologies"
+            uri="/samier_fabien_cv/technologies"
             iconName="bi bi-code-slash"
             size="1.5rem"
           />
           <OffcanvasItem
             text="Compétences"
-            uri="/competences"
+            uri="/samier_fabien_cv/competences"
             iconName="bi bi-gear"
             size="1.5rem"
           />
           <OffcanvasItem
             text="Expériences"
-            uri="/experiences"
+            uri="/samier_fabien_cv/experiences"
             iconName="bi bi-journals"
             size="1.5rem"
           />
-          <OffcanvasItem text="Etudes" uri="/etudes" iconName="bi bi-award" size="1.5rem" />
+          <OffcanvasItem
+            text="Etudes"
+            uri="/samier_fabien_cv/etudes"
+            iconName="bi bi-award"
+            size="1.5rem"
+          />
         </OffcanvasMenu>
       );
     }
