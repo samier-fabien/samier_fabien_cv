@@ -5,13 +5,13 @@ import WavyTransition from "../components/WavyTransition";
 import ImageFromAssets from "./ImageFromAssets";
 import Menu from "./Menu";
 import "../css/template.css";
-import iconHtml5 from "../assets/vectors/html-5-logo-coloured-no-text.svg";
-import iconCss3 from "../assets/vectors/css-3-logo-coloured-no-text.svg";
-import iconSass from "../assets/vectors/sass-logo-coloured-text.svg";
-import iconJs from "../assets/vectors/js-logo-coloured.svg";
-import iconNode from "../assets/vectors/node-logo-coloured-no-text.svg";
-import iconReact from "../assets/vectors/react-logo-coloured-no-text.svg";
-import iconVite from "../assets/vectors/vite-svgrepo-com.svg";
+import iconHtml5 from "./../assets/vectors/html-5-logo-coloured-no-text.svg";
+import iconCss3 from "./../assets/vectors/css-3-logo-coloured-no-text.svg";
+import iconSass from "./../assets/vectors/sass-logo-coloured-text.svg";
+import iconJs from "./../assets/vectors/js-logo-coloured.svg";
+import iconNode from "./../assets/vectors/node-logo-coloured-no-text.svg";
+import iconReact from "./../assets/vectors/react-logo-coloured-no-text.svg";
+import iconVite from "./../assets/vectors/vite-svgrepo-com.svg";
 
 export default function Root() {
   const [pageLoaded, setPageLoaded] = useState(false);

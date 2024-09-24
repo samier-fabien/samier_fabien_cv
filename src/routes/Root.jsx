@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import TransitionWrapper from "../components/TransitionWrapper";
 import WavyTransition from "../components/WavyTransition";
 import "../css/root.css";
+import iconHeadSquare from "./../assets/bitmaps/head-square.jpg";
 
 export default function Root() {
   const [pageLoaded, setPageLoaded] = useState(false);
@@ -30,7 +31,7 @@ export default function Root() {
         <div className="row">
           <div className="col position-absolute top-50 start-50 translate-middle text-center text-light">
             <img
-              src="../../src/assets/bitmaps/head-square.jpg"
+              src={iconHeadSquare}
               className="rounded-circle shadow anim-rotate-translate"
               alt="Une photo de moi"
             />
